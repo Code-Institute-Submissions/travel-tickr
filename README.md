@@ -1,6 +1,6 @@
 README
 <div style="text-align: center;">
-    <img src="#" alt="Logo" />
+    <img src="/docs/travel.jpg" alt="Logo" />
 </div>
 
 # Travel Tickr
