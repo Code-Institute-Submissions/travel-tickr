@@ -1,9 +1,6 @@
 README
-<div style="text-align: center;">
-    <img src="/docs/travel.jpg" alt="Logo" />
-</div>
 
-# Travel Tickr
+# ![Logo](/docs/travel.jpg)
 
 Travel Tickr is your ultimate destination for all things travel. Whether you're a globetrotter, an avid explorer, or simply seeking inspiration for your next adventure, Travel Tickr has got you covered. Share your travel tales, from exhilarating hikes to serene beach getaways, by uploading stunning photos accompanied by captivating stories. Connect with fellow travelers, exchange tips and recommendations, and create meaningful connections with people who share your passion for exploration. With Travel Tickr, your travel memories are beautifully organized, easily accessible, and ready to be shared with friends, family, and the global travel community. 
 
