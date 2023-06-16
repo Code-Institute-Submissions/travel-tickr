@@ -1,12 +1,10 @@
-README
-
 # ![Logo](/docs/travel.jpg)
 
 Travel Tickr is your ultimate destination for all things travel. Whether you're a globetrotter, an avid explorer, or simply seeking inspiration for your next adventure, Travel Tickr has got you covered. Share your travel tales, from exhilarating hikes to serene beach getaways, by uploading stunning photos accompanied by captivating stories. Connect with fellow travelers, exchange tips and recommendations, and create meaningful connections with people who share your passion for exploration. With Travel Tickr, your travel memories are beautifully organized, easily accessible, and ready to be shared with friends, family, and the global travel community. 
 
 Join Travel Tickr today and embark on a journey of discovery, connection, and endless travel inspiration.
 
-![Mockup image](#)
+![Mockup image](#) <br>
 Developer: Sandra Bergström <br>
 [Live webpage](#)
 
@@ -290,7 +288,13 @@ Each user story has been created as a GitHub issue, capturing the desired functi
 Bugs encountered during the development process have also been logged as GitHub issues. These issues contain details about the specific bug, its impact, and steps to reproduce it. By linking the bugs in the README.md to their respective GitHub issues, users can gain insights into the bugs' resolution progress and view any additional comments.
 
 ### Iterative Development Approach
-The Recipe Collective project adopts an iterative development approach, allowing for continuous improvement and progress within the given time constraints. Although the project timeline has been condensed, it has been structured to accommodate future iterations and enhancements.
+The Travel Tickr project adopts an iterative development approach, allowing for continuous improvement and progress within the given time constraints. The development process is divided into sprints, with each sprint lasting approximately 6 days. 
+
+#### Sprint 1 (June 13th - June 18th, 2023): 
+
+#### Sprint 2 (June 19th - June 24th, 2023):
+
+#### Sprint 3 (June 25th - July 1st, 2023): 
 
 ### Backlog and Subsequent Iterations 
 The user stories are tracked on the project board, and the "To do" column represents the backlog of user stories, indicating the tasks that will be addressed in subsequent iterations.
