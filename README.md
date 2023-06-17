@@ -340,6 +340,11 @@ Bugs encountered during the development process have also been logged as GitHub 
 The Travel Tickr project adopts an iterative development approach, allowing for continuous improvement and progress within the given time constraints. The development process is divided into sprints, with each sprint lasting approximately 6 days. 
 
 #### Sprint 1 (June 13th - June 18th, 2023): 
+* [ ] Create a repository for the api in Github
+- Start a django project in gitpod
+- Install necessary libraries and dependencies
+- Create an ElephantSQL database and connect it to the API
+- Connect image uploads to Cloudinary
 
 #### Sprint 2 (June 19th - June 24th, 2023):
 
