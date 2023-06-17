@@ -366,6 +366,8 @@ Within each sprint, a MoSCoW method is used to further prioritize user stories. 
 * [x] Comements (Must do)
 * [x] Likes (Must do)
 * [x] Follower (Should have)
+* [x] Bucketlist (Must do)
+* [ ] Challenge/warnings/info (Should have)
 
 **Frontend**
 * [x] Create a repository for the Travel Tickr (Should do)
