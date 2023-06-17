@@ -5,67 +5,86 @@ Travel Tickr is your ultimate destination for all things travel. Whether you're 
 Join Travel Tickr today and embark on a journey of discovery, connection, and endless travel inspiration.
 
 ![Mockup image](#) <br>
-Developer: Sandra Bergström <br>
-[Live webpage](#)
+Developer: [Sandra Bergström](https://github.com/SandraBergstrom) <br>
+[Live webapp](#)
+[Repository](#)
+[APi](#)
+[API Repository](#)
+
 
 ## Table of Content
 
-1. [Project Goals](#project-goals)
-    1. [User Goals](#user-goals)
-    2. [Site Owner Goals](#site-owner-goals)
-2. [User Experience](#user-experience)
-    1. [Target Audience](#target-audience)
-    2. [User Requirements and Expectations](#user-requirements-and-expectations)
-    3. [User Stories](#user-stories)
-3. [Database](#database)
-    1. [User App](#user-app)
-    2. [Cookbook App](#cookbook-app)
-4. [Design](#design)
-    1. [Design Choices](#design-choices)
-    2. [Colour](#colours)
-    3. [Fonts](#fonts)
-    4. [Structure](#structure)
-    5. [Wireframes](#wireframes)
-5. [Technologies Used](#technologies-used)
-    1. [Languages](#languages)
-    2. [Frameworks](#frameworks)
-    3. [Database](#database)
-    4. [Tools](#tools)
-    5. [Supporting Libraries and Packages](#supporting-libraries-and-packages)
-6. [Methodology](#methodology)
-    1. [Agile Project Management with GitHub Projects](#agile-project-management-with-github-projects)
-    2. [User Stories as GitHub Issues](#user-stories-as-github-issues)
-    3. [Bug Tracking](#bug-tracking)
-    4. [Iterative Development Approach](#iterative-development-approach)
-    5. [Backlog and Subsequent Iterations](#backlog-and-subsequent-iterations)
-7. [Features](#features)
-    1. [Landing Page](#landing-page)
-    2. [Cookbook Pages](#cookbook-pages)
-    3. [Recipe Pages](#recipe-pages)
-    4. [User Account Management](#user-account-management)
-    5. [Recipe Management](#recipe-management)
-    6. [Navigation](#navigation)
-    7. [Future Features](#future-features)
-8. [Testing](#testing)
-9. [Bugs](#bugs)
-    1. [Known bugs](#known-bugs)
-    2. [Fixed bugs](#fixed-bugs)
-10. [Deployment](#deployment)
-11. [Credits](#credits)
-12. [Acknowledgements](#acknowledgements)
+- [User Experience](#user-experience)
+  * [Objective:](#objective)
+  * [Strategy](#strategy)
+    + [Project Goals ](#project-goals)
+    + [User Goals](#user-goals)
+    + [Site Owner Goals](#site-owner-goals)
+    + [Target Audience](#target-audience)
+    + [User Requirements and Expectations](#user-requirements-and-expectations)
+  * [Scope](#scope)
+    + [Existing features](#existing-features)
+    + [Future Features](#future-features)
+    + [User Stories](#user-stories)
+  * [Structure](#structure)
+    + [Database](#database)
+  * [Skeleton](#skeleton)
+    + [Wireframes](#wireframes)
+  * [Surface](#surface)
+    + [Design Choices](#design-choices)
+    + [Colour](#colour)
+    + [Fonts](#fonts)
+- [Technologies Used](#technologies-used)
+  * [Languages](#languages)
+  * [Frameworks](#frameworks)
+  * [Database](#database-1)
+  * [Tools](#tools)
+  * [Supporting Libraries and Packages](#supporting-libraries-and-packages)
+- [Methodology](#methodology)
+  * [Agile Project Management with GitHub Projects](#agile-project-management-with-github-projects)
+  * [User Stories as GitHub Issues](#user-stories-as-github-issues)
+  * [Bug Tracking](#bug-tracking)
+  * [Iterative Development Approach](#iterative-development-approach)
+    + [Sprint 1 (June 13th - June 18th, 2023): ](#sprint-1-june-13th---june-18th-2023)
+    + [Sprint 2 (June 19th - June 24th, 2023):](#sprint-2-june-19th---june-24th-2023)
+    + [Sprint 3 (June 25th - July 1st, 2023): ](#sprint-3-june-25th---july-1st-2023)
+  * [Backlog and Subsequent Iterations ](#backlog-and-subsequent-iterations)
+- [Bugs](#bugs)
+  * [Known bugs](#known-bugs)
+  * [Fixed bugs ](#fixed-bugs)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
+  * [Media](#media)
+  * [Django Documentation:](#django-documentation)
+  * [W3 Schools:](#w3-schools)
+  * [Stackoverflow:](#stackoverflow)
+  * [Geeksforgeeks: ](#geeksforgeeks)
+  * [Various tutorials and YouTube channels:](#various-tutorials-and-youtube-channels)
+  * [Other open-source projects and packages:](#other-open-source-projects-and-packages)
+- [Acknowledgements](#acknowledgements)
 
-## Project Goals 
-**Create a Travel Memory Platform:** Develop a user-friendly web application that allows travelers to save and share their travel memories in the form of text and pictures. Provide a seamless experience for users to upload photos, write accompanying stories, and organize their memories into albums. Enable users to create, read, comment, and vote/like on contents.
+<!-- TOC end -->
 
-**Build a Traveler Community:** Foster a vibrant community of travelers by enabling users to connect with each other, follow fellow travelers, and like and comment on their travel experiences. Implement features that allow users to search, filter, and categorize content, enhancing the discoverability of travel stories and recommendations.
+## User Experience
+The travel memory platform is designed to cater to a diverse range of users who share a common interest in travel and creating and sharing travel memories. 
 
-**Offer Seamless Travel Exploration:** Implement features that enhance the travel exploration process, such as enable travelers to search and filter content based on username, popularity, date created, title, content keywords, and category. Provide search functionality that allows users to easily find relevant content and resources.
+### Objective:
+The objective of Travel Tickr is to create a travel memory platform that caters to the needs and expectations of travel enthusiasts, adventure seekers, storytellers, travel planners, and members of the travel community.
 
-**Provide a Clean and Intuitive User Interface:** Design an aesthetically pleasing and user-friendly interface that reflects the essence of a travel journal. Ensure the application meets accessibility guidelines, follows UX design principles, and provides a set of user interactions that intuitively guide users through the platform. Implement responsive design to ensure the application is accessible and functional across different devices.
+### Strategy
+#### Project Goals 
+- **Create a Travel Memory Platform:** Develop a user-friendly web application that allows travelers to save and share their travel memories in the form of text and pictures. Provide a seamless experience for users to upload photos, write accompanying stories, and organize their memories into albums. Enable users to create, read, comment, and vote/like on contents.
 
-**Implement Advanced Features *(if time permits)*:** Explore the possibility of implementing additional features, such as a world map where users' travel photos are geographically marked, a trip creation functionality that provide users with destination-specific information, safety warnings, packing checklists, and reminders for passport expiration.and a bucket list feature. Automatically create photo albums when a photo has a date that is within the time line of the created trip. A bucket list feature that will allow users to add destinations and travel experiences discovered through content shared by other users to their personal list of aspirations. Provide users with the ability to curate and manage their bucket list, making it a valuable tool for planning and tracking their travel goals.
+- **Build a Traveler Community:** Foster a vibrant community of travelers by enabling users to connect with each other, follow fellow travelers, and like and comment on their travel experiences. Implement features that allow users to search, filter, and categorize content, enhancing the discoverability of travel stories and recommendations.
 
-### User Goals
+- **Offer Seamless Travel Exploration:** Implement features that enhance the travel exploration process, such as enable travelers to search and filter content based on username, popularity, date created, title, content keywords, and category. Provide search functionality that allows users to easily find relevant content and resources.
+
+- **Provide a Clean and Intuitive User Interface:** Design an aesthetically pleasing and user-friendly interface that reflects the essence of a travel journal. Ensure the application meets accessibility guidelines, follows UX design principles, and provides a set of user interactions that intuitively guide users through the platform. Implement responsive design to ensure the application is accessible and functional across different devices.
+
+- **Implement Advanced Features *(if time permits)*:** Explore the possibility of implementing additional features, such as a world map where users' travel photos are geographically marked, a trip creation functionality that provide users with destination-specific information, safety warnings, packing checklists, and reminders for passport expiration.and a bucket list feature. Automatically create photo albums when a photo has a date that is within the time line of the created trip. A bucket list feature that will allow users to add destinations and travel experiences discovered through content shared by other users to their personal list of aspirations. Provide users with the ability to curate and manage their bucket list, making it a valuable tool for planning and tracking their travel goals.
+
+#### User Goals
 - **Capture and Preserve Travel Memories:** Users want to save and preserve their travel memories, including photos, stories, and experiences, in a secure and organized manner.
 
 - **Share Travel Experiences:** Users aim to share their travel experiences with others, allowing them to inspire and connect with fellow travelers.
@@ -80,7 +99,7 @@ Developer: Sandra Bergström <br>
 
 - **Access a User-Friendly Platform:** Users expect a user-friendly and intuitive platform that is easy to navigate, provides a seamless uploading and sharing experience, and offers search and filter functionalities for finding relevant content.
 
-### Site Owner Goals
+#### Site Owner Goals
 - **Create a Vibrant Travel Community:** The site owner aims to establish a vibrant community of travelers who actively engage, connect, and share their travel experiences and recommendations.
 
 - **Facilitate Content Sharing:** The site owner intends to provide a platform where users can easily upload, organize, and share their travel memories, fostering a culture of storytelling and inspiration.
@@ -93,12 +112,7 @@ Developer: Sandra Bergström <br>
 
 - **Monetization Opportunities:** The site owner may seek monetization opportunities through partnerships, advertising, or premium features, while ensuring they align with the overall user experience and add value to the community.
 
-[Back up](#table-of-content)
-
-## User Experience
-The travel memory platform is designed to cater to a diverse range of users who share a common interest in travel and creating and sharing travel memories. 
-
-### Target Audience
+#### Target Audience
 The target audience includes:
 
 - **Travel Enthusiasts:** People who have a passion for traveling and want a platform to document and share their travel experiences.
@@ -111,7 +125,7 @@ The target audience includes:
 
 - **Travel Community Members:** Individuals who value being part of a vibrant community of fellow travelers and engaging in discussions and interactions.
 
-### User Requirements and Expectations
+#### User Requirements and Expectations
 To meet the needs and expectations of the target audience, the travel memory platform should fulfill the following requirements:
 
 - **User-Friendly Interface:** Users expect an intuitive and easy-to-navigate interface that allows them to quickly access features and functionalities.
@@ -128,21 +142,70 @@ To meet the needs and expectations of the target audience, the travel memory pla
 
 By considering these user requirements and expectations, Travel Tickr can provide a positive and fulfilling user experience, encouraging user engagement, and fostering a vibrant community of travelers.
 
-### User Stories
+[Back up](#table-of-content)
 
-#### Epic 1: User Account Management
+### Scope
+#### Existing features
+
+##### User Account Management
+- Registration: Users can register for an account on the Travel Tickr platform to explore and share their travel memories.
+- Login: Users can log in to their Travel Tickr account using their registered email and password to access personalized features.
+- Logout: Users can securely log out of their Travel Tickr account to protect their account and maintain privacy.
+- Profile Update: Users can update their profile information to reflect their current preferences and interests.
+
+##### Post Management
+- Create Memory Post: Users can upload a photo with accompanying text to create a memory post and share their travel experiences with others.
+- View Posts: Users can view and read posts shared by other users to explore and discover travel stories.
+- Update Posts: Users can edit or add content to their own posts to make changes or additions to their shared content.
+- Delete Posts: Users can remove their own posts that are no longer relevant or desired.
+
+##### Interactions and Engagement
+- Search: Users can search for specific posts or users to discover new travel stories and connect with like-minded travelers.
+- Sorting: Users can sort posts based on criteria such as date, popularity, or relevance to find the most relevant and interesting content.
+- Like Posts: Users can like posts shared by other users to show appreciation for inspiring content.
+- Commenting: Users can comment on posts shared by other users to engage in discussions and interact with the travel community.
+- View Comments: Users can view and read comments on posts to follow conversations and opinions shared by other users.
+- Update Comments: Users can edit or correct their own comments to modify their shared opinions.
+- Delete Comments: Users can remove their own comments to retract or remove their previous statements.
+- Follow Users: Users can follow other users to stay updated on their travel journeys and experiences.
+- Site Owner Administration
+- Account, Post, and Comment Management: Site owners can delete user accounts, posts, and comments to maintain a safe and high-quality user environment.
+
+##### Navigation:
+###### Profile Navigation:
+Upon clicking on the profile image in the navigation bar, additional links are revealed, providing access to specific profile-related pages and actions:
+
+##### Unauthorized users
+
+#### Future Features
+
+##### Travel Memory Management
+- Add to Bucket List: Users will be able to add travel memories shared by others to their bucket list on the Travel Tickr platform, allowing them to save and revisit those memories later.
+- Multiple Photos per Post: Users will have the ability to upload several photos to a single post on the Travel Tickr platform, enabling them to share a collection of images for a particular memory.
+- Create Albums: Users will be able to create albums on the Travel Tickr platform, providing them with the capability to organize and categorize their travel memories.
+
+##### Visual Showcase
+- Word Map with Photos: Users will have the option to display a word map on their profile, with photos spread out as pins representing the locations of their travel memories on the Travel Tickr platform. This feature will allow users to visually showcase their travel experiences.
+
+##### Trip Planning and Information
+- Trip Creation and Auto-generated Photo Album: Users will be able to create a trip on the Travel Tickr platform before embarking on a journey. An auto-generated photo album will be created, incorporating photos taken during the trip. This feature will make it convenient for users to capture and share their travel moments seamlessly.
+- Trip Planning Resources: Users will have access to automated packing lists and information about destinations on the Travel Tickr platform. This information will include weather forecasts, safety warnings, recommended vaccinations, and other relevant details, ensuring that users are well-prepared for their travel plans.
+
+#### User Stories
+
+##### Epic 1: User Account Management
 - [As a first-time user, I can register for an account on the Travel Tickr platform, so that I can start exploring and sharing my travel memories.](https://github.com/SandraBergstrom/travel-tickr/issues/10)
 - [As a user, I can log in to the Travel Tickr platform using my registered email and password, so that I can access my account and personalized features.](https://github.com/SandraBergstrom/travel-tickr/issues/11)
 - [As a user, I can log out of the Travel Tickr platform, so that I can secure my account and maintain privacy.](https://github.com/SandraBergstrom/travel-tickr/issues/12)
 - [As a user, I can update my profile information on the Travel Tickr platform, so that my profile reflects my current preferences and interests.](https://github.com/SandraBergstrom/travel-tickr/issues/13)
 
-#### Epic 2: Post Management
+##### Epic 2: Post Management
 - [As a user, I can upload a photo with accompanying text to create a memory post on the Travel Tickr platform, so that I can share my travel experiences with others.](https://github.com/SandraBergstrom/travel-tickr/issues/14)
 - [As a user, I can view and read posts on the Travel Tickr platform, so that I can explore and discover travel stories shared by other users.](https://github.com/SandraBergstrom/travel-tickr/issues/15)
 - [As a user, I can update my own posts on the Travel Tickr platform, so that I can make edits or additions to my shared content.](https://github.com/SandraBergstrom/travel-tickr/issues/16)
 - [As a user, I can delete my own posts on the Travel Tickr platform, so that I can remove content that is no longer relevant or desired.](https://github.com/SandraBergstrom/travel-tickr/issues/17)
 
-#### Epic 3: Interactions and Engagement
+##### Epic 3: Interactions and Engagement
 - [As a user, I can search for specific posts or users on the Travel Tickr platform, so that I can discover new travel stories and connect with like-minded travelers.](https://github.com/SandraBergstrom/travel-tickr/issues/18)
 - [As a user, I can sort posts based on criteria such as date, popularity, or relevance, so that I can find the most relevant and interesting content.](https://github.com/SandraBergstrom/travel-tickr/issues/19)
 - [As a user, I can like posts shared by other users on the Travel Tickr platform, so that I can show appreciation for inspiring content.](https://github.com/SandraBergstrom/travel-tickr/issues/20)
@@ -152,61 +215,36 @@ By considering these user requirements and expectations, Travel Tickr can provid
 - [As a user, I can delete my own comments on the Travel Tickr platform, so that I can remove or retract my previous statements.](https://github.com/SandraBergstrom/travel-tickr/issues/24)
 - [As a user, I can follow other users on the Travel Tickr platform, so that I can stay updated on their travel journeys and experiences.](https://github.com/SandraBergstrom/travel-tickr/issues/25)
 
-#### Epic 4: Site Owner Administration
+##### Epic 4: Site Owner Administration
 - [As a site owner, I can delete user accounts, posts, and comments on the Travel Tickr platform, so that I can maintain a safe and high-quality user environment.](https://github.com/SandraBergstrom/travel-tickr/issues/26)
 
-#### Epic 5: Travel Memory Management
+##### Epic 5: Travel Memory Management
 - [As a user, I can add travel memories shared by others to my bucket list on the Travel Tickr platform, so that I can save and revisit them later.](https://github.com/SandraBergstrom/travel-tickr/issues/27)
 - [As a user, I can upload several photos to one post on the Travel Tickr platform, so that I can share a collection of images for a particular memory.](https://github.com/SandraBergstrom/travel-tickr/issues/28)
 - [As a user, I can create albums on the Travel Tickr platform, so that I can organize and categorize my travel memories.](https://github.com/SandraBergstrom/travel-tickr/issues/29)
 - [As a user, I can have a world map on my profile with photos spread out as pins, representing the locations of my travel memories on the Travel Tickr platform, so that I can visually showcase my travel experiences.](https://github.com/SandraBergstrom/travel-tickr/issues/30)
 
-#### Epic 6: Trip Planning and Information
+##### Epic 6: Trip Planning and Information
 - [As a user, I can create a trip on the Travel Tickr platform before going on a journey, and an auto-generated photo album will be created with photos taken during the trip, so that I can easily capture and share my travel moments.](https://github.com/SandraBergstrom/travel-tickr/issues/31)
 - [As a user, I can access automated packing lists and information about destinations such as weather forecasts, safety warnings, recommended vaccinations, and other relevant details on the Travel Tickr platform, so that I can be well-prepared for my travel plans.](https://github.com/SandraBergstrom/travel-tickr/issues/32)
 
 [Back up](#table-of-content)
 
-## Database
+### Structure
+#### Database
 The Travel Tickr utilizes the following database schema:
 <details><summary>See Database Schema</summary>
 <img src="#">
 </details>
 
-### Traveler App
+##### Traveler App
 
 ....
 
-
 [Back up](#table-of-content)
 
-## Design
-
-
-### Design Choices
-
-
-### Colour
-
-
-![Mockup image](#)
-
-### Fonts
-
-
-### Structure
-The Travel Tickr is designed with a user-friendly and intuitive structure, making it easy for users to navigate and learn their way around the website. The overall structure of the website is organized into the following sections and pages:
-
-#### Before Logged In:
-
-
-#### When Logged In:
-
-#### Profile Navigation:
-Upon clicking on the profile image in the navigation bar, additional links are revealed, providing access to specific profile-related pages and actions:
-
-
-### Wireframes
+### Skeleton
+#### Wireframes
 The wireframes provide a visual representation of the different pages and features of the web application. They serve as a blueprint for the design and layout of each page, helping to visualize the user interface and overall user experience. These wireframes were created using Balsamiq, a tool that enables quick and intuitive sketching of design ideas.
 
 <details><summary>Log in (landing page)</summary>
@@ -240,6 +278,17 @@ The wireframes provide a visual representation of the different pages and featur
 <img src="#">
 </details>
 <br>
+
+### Surface
+
+#### Design Choices
+
+
+#### Colour
+
+![Mockup image](#)
+
+#### Fonts
 
 [Back up](#table-of-content)
 
@@ -305,61 +354,6 @@ For a comprehensive view of the project progress, user stories, and bug tracking
 
 [Back up](#table-of-content)
 
-## Features
-
-### Existing features
-
-#### User Account Management
-- Registration: Users can register for an account on the Travel Tickr platform to explore and share their travel memories.
-- Login: Users can log in to their Travel Tickr account using their registered email and password to access personalized features.
-- Logout: Users can securely log out of their Travel Tickr account to protect their account and maintain privacy.
-- Profile Update: Users can update their profile information to reflect their current preferences and interests.
-
-#### Post Management
-- Create Memory Post: Users can upload a photo with accompanying text to create a memory post and share their travel experiences with others.
-- View Posts: Users can view and read posts shared by other users to explore and discover travel stories.
-- Update Posts: Users can edit or add content to their own posts to make changes or additions to their shared content.
-- Delete Posts: Users can remove their own posts that are no longer relevant or desired.
-
-#### Interactions and Engagement
-- Search: Users can search for specific posts or users to discover new travel stories and connect with like-minded travelers.
-- Sorting: Users can sort posts based on criteria such as date, popularity, or relevance to find the most relevant and interesting content.
-- Like Posts: Users can like posts shared by other users to show appreciation for inspiring content.
-- Commenting: Users can comment on posts shared by other users to engage in discussions and interact with the travel community.
-- View Comments: Users can view and read comments on posts to follow conversations and opinions shared by other users.
-- Update Comments: Users can edit or correct their own comments to modify their shared opinions.
-- Delete Comments: Users can remove their own comments to retract or remove their previous statements.
-- Follow Users: Users can follow other users to stay updated on their travel journeys and experiences.
-- Site Owner Administration
-- Account, Post, and Comment Management: Site owners can delete user accounts, posts, and comments to maintain a safe and high-quality user environment.
-
-### Navigation:
-
-#### Unauthorized users
-
-### Future Features
-
-#### Travel Memory Management
-- Add to Bucket List: Users will be able to add travel memories shared by others to their bucket list on the Travel Tickr platform, allowing them to save and revisit those memories later.
-- Multiple Photos per Post: Users will have the ability to upload several photos to a single post on the Travel Tickr platform, enabling them to share a collection of images for a particular memory.
-- Create Albums: Users will be able to create albums on the Travel Tickr platform, providing them with the capability to organize and categorize their travel memories.
-
-#### Visual Showcase
-- Word Map with Photos: Users will have the option to display a word map on their profile, with photos spread out as pins representing the locations of their travel memories on the Travel Tickr platform. This feature will allow users to visually showcase their travel experiences.
-
-#### Trip Planning and Information
-- Trip Creation and Auto-generated Photo Album: Users will be able to create a trip on the Travel Tickr platform before embarking on a journey. An auto-generated photo album will be created, incorporating photos taken during the trip. This feature will make it convenient for users to capture and share their travel moments seamlessly.
-- Trip Planning Resources: Users will have access to automated packing lists and information about destinations on the Travel Tickr platform. This information will include weather forecasts, safety warnings, recommended vaccinations, and other relevant details, ensuring that users are well-prepared for their travel plans.
-
-[Back up](#table-of-content)
-
-## Testing
-The Travel Tickr ....
-
-To view the complete testing details and results, please [click here](TESTING.md).
-
-[Back up](#table-of-content)
-
 ## Bugs
 
 ### Known bugs
@@ -374,6 +368,13 @@ To view the complete testing details and results, please [click here](TESTING.md
 | **Bug** | **Fix** |
 | ----------- | ----------- |
 
+
+[Back up](#table-of-content)
+
+## Testing
+The Travel Tickr ....
+
+To view the complete testing details and results, please [click here](TESTING.md).
 
 [Back up](#table-of-content)
 
@@ -424,7 +425,11 @@ I would like to express my sincere gratitude to the following resources, which h
 ### Other open-source projects and packages:
 ....
 
+[Back up](#table-of-content)
+
 ## Acknowledgements
 I would like to acknowledge ...
 
 I am truly grateful for their contributions, which have greatly enriched my learning and development.
+
+[Back up](#table-of-content)
