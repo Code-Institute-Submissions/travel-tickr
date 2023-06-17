@@ -23,7 +23,7 @@ Developer: [Sandra Bergström](https://github.com/SandraBergstrom) <br>
     + [Target Audience](#target-audience)
     + [User Requirements and Expectations](#user-requirements-and-expectations)
   * [Scope](#scope)
-    + [Existing features](#existing-features)
+    + [Features](#features)
     + [Future Features](#future-features)
     + [User Stories](#user-stories)
   * [Structure](#structure)
@@ -145,7 +145,7 @@ By considering these user requirements and expectations, Travel Tickr can provid
 [Back up](#table-of-content)
 
 ### Scope
-#### Existing features
+#### Features
 
 ##### User Account Management
 - Registration: Users can register for an account on the Travel Tickr platform to explore and share their travel memories.
