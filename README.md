@@ -6,10 +6,10 @@ Join Travel Tickr today and embark on a journey of discovery, connection, and en
 
 ![Mockup image](#) <br>
 Developer: [Sandra Bergström](https://github.com/SandraBergstrom) <br>
-[Live webapp](#)
-[Repository](#)
-[APi](#)
-[API Repository](#)
+[Live webapp](#) <br>
+[Repository](#) <br>
+[APi](#) <br>
+[API Repository](#) <br>
 
 
 ## Table of Content
@@ -337,18 +337,77 @@ Each user story has been created as a GitHub issue, capturing the desired functi
 Bugs encountered during the development process have also been logged as GitHub issues. These issues contain details about the specific bug, its impact, and steps to reproduce it. By linking the bugs in the README.md to their respective GitHub issues, users can gain insights into the bugs' resolution progress and view any additional comments.
 
 ### Iterative Development Approach
-The Travel Tickr project adopts an iterative development approach, allowing for continuous improvement and progress within the given time constraints. The development process is divided into sprints, with each sprint lasting approximately 6 days. 
+The Travel Tickr project follows an iterative development approach, allowing for continuous improvement and progress while adhering to time constraints. The development process is structured into sprints, with each sprint typically lasting around 6 days.
+
+To ensure efficient prioritization, the project employs the MuSCoW (Must have, Should have, Could have, Won't have) method. User stories critical to the app's success are categorized as Must-haves, followed by Should-haves, Could-haves, and Won't-haves. You can refer to the [Kanban board](https://github.com/users/SandraBergstrom/projects/7/views/1) to view the prioritization.
+
+Within each sprint, a MoSCoW method is used to further prioritize user stories. They are classified as Must Do, Should Do, Could Do, and Won't Do, representing the remaining user stories that will not be included in the sprints. This approach ensures a clear differentiation between the overall project prioritization and the prioritization within each sprint, minimizing any potential confusion.
 
 #### Sprint 1 (June 13th - June 18th, 2023): 
-* [x] Create a repository for the api in Github
-* [ ] Start a django project in gitpod
-- Install necessary libraries and dependencies
-- Create an ElephantSQL database and connect it to the API
-- Connect image uploads to Cloudinary
+**Planning & Documentation**
+* [x] Plan Sprint (Must do)
+* [x] Create and write readme.md (Must do)
+* [ ] Design Database Schema (Should do)
+* [ ] Create the wireframes (Should do)
+* [x] Plan Sprint 2 (Must do)
+
+**Backend**
+* [x] Create a repository for the api in Github (Must do)
+* [x] Start a django project in Gitpod (Must do)
+* [x] Install necessary libraries and dependencies (Must do)
+* [x] Create an ElephantSQL database and connect it to the API (Must do)
+* [x] Connect image uploads to Cloudinary (Must do)
+* [x] Add filtering (Should do)
+* [x] Deploy the Djano REST API (Should do)
+
+**Create Apps and models for:** 
+* [x] Traveler (extension of the user) (Must do)
+* [x] Posts (Must do)
+* [x] Comements (Must do)
+* [x] Likes (Must do)
+* [x] Follower (Should have)
+
+**Frontend**
+* [x] Create a repository for the Travel Tickr (Should do)
+* [x] Start a React project in Gitpod (Could do)
+* [ ] Test deploy project on Heroku (Could do)
+* [ ] Install component library (Could do)
+* [ ] Design and implement navigation bar (Could do)
+* [ ] Do so navigation bar and authorization works (Could do)
+* [ ] Design and implement footer (Could do)
+* [ ] Create a component for base page (Could do)
 
 #### Sprint 2 (June 19th - June 24th, 2023):
+* [ ] [USER STORY: Registration](https://github.com/SandraBergstrom/travel-tickr/issues/10)  (Must do)
+* [ ] [USER STORY: Login](https://github.com/SandraBergstrom/travel-tickr/issues/11) (Must do)
+* [ ] [USER STORY: Logout](https://github.com/SandraBergstrom/travel-tickr/issues/12) (Must do)
+* [ ] [USER STORY: Update profile](https://github.com/SandraBergstrom/travel-tickr/issues/13) (Should do)
+* [ ] [USER STORY: Create a post/Memory](https://github.com/SandraBergstrom/travel-tickr/issues/14) (Must do)
+* [ ] [USER STORY: View a post](https://github.com/SandraBergstrom/travel-tickr/issues/15) (Must do)
+* [ ] [USER STORY: Update a post](https://github.com/SandraBergstrom/travel-tickr/issues/16) (Must do)
+* [ ] [USER STORY: Delete a post](https://github.com/SandraBergstrom/travel-tickr/issues/17) (Must do)
+
+* [ ] [USER STORY: Search Posts](https://github.com/SandraBergstrom/travel-tickr/issues/18) (Should do)
+* [ ] [USER STORY: Sort Posts](https://github.com/SandraBergstrom/travel-tickr/issues/19) (Could do)
+* [ ] [USER STORY: Like Posts](https://github.com/SandraBergstrom/travel-tickr/issues/20) (Should do)
+
+* [ ] [USER STORY: Create a Comment](https://github.com/SandraBergstrom/travel-tickr/issues/21) (Could do)
+* [ ] [USER STORY: View Comments](https://github.com/SandraBergstrom/travel-tickr/issues/22) (Could do)
+* [ ] [USER STORY: Update Comment](https://github.com/SandraBergstrom/travel-tickr/issues/23) (Could do)
+* [ ] [USER STORY: Delete Comment](https://github.com/SandraBergstrom/travel-tickr/issues/24) (Could do)
+* [ ] Plan Sprint 2 (Must do)
 
 #### Sprint 3 (June 25th - July 1st, 2023): 
+
+Remaining user stories:
+* [ ] [USER STORY: Follow Users](https://github.com/SandraBergstrom/travel-tickr/issues/25)
+* [ ] [USER STORY: Maintain user enviornment](https://github.com/SandraBergstrom/travel-tickr/issues/26)
+* [ ] [USER STORY: Add Post to bucket list](https://github.com/SandraBergstrom/travel-tickr/issues/27)
+* [ ] [USER STORY: Upload multiple photos](https://github.com/SandraBergstrom/travel-tickr/issues/28)
+* [ ] [USER STORY: Photo Album](https://github.com/SandraBergstrom/travel-tickr/issues/29)
+* [ ] [USER STORY: Travel Map](https://github.com/SandraBergstrom/travel-tickr/issues/30)
+* [ ] [USER STORY: Create a trip](https://github.com/SandraBergstrom/travel-tickr/issues/31)
+* [ ] [USER STORY: Packing list and info](https://github.com/SandraBergstrom/travel-tickr/issues/32)
 
 ### Backlog and Subsequent Iterations 
 The user stories are tracked on the project board, and the "To do" column represents the backlog of user stories, indicating the tasks that will be addressed in subsequent iterations.
