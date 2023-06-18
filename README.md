@@ -234,7 +234,7 @@ Upon clicking on the profile image in the navigation bar, additional links are r
 #### Database
 The Travel Tickr utilizes the following database schema:
 <details><summary>See Database Schema</summary>
-<img src="#">
+<img src="/docs/database-diagram.png">
 </details>
 
 ##### Traveler App
