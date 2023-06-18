@@ -433,6 +433,7 @@ For a comprehensive view of the project progress, user stories, and bug tracking
 
 | **Bug** | **Fix** |
 | ----------- | ----------- |
+|npm start doesn't work|Whenever you you open a new terminal going forwards. you need to set the node version, you do that with the "nvm install 16" command. Then you can run your app with: npm start |
 
 
 [Back up](#table-of-content)
