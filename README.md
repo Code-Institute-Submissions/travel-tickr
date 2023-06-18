@@ -347,8 +347,8 @@ Within each sprint, a MoSCoW method is used to further prioritize user stories. 
 **Planning & Documentation**
 * [x] Plan Sprint (Must do)
 * [x] Create and write readme.md (Must do)
-* [ ] Design Database Schema (Should do)
-* [ ] Create the wireframes (Should do)
+* [x] Design Database Schema (Should do)
+* [x] Create the wireframes (Should do)
 * [x] Plan Sprint 2 (Must do)
 
 **Backend**
