@@ -367,27 +367,34 @@ Within each sprint, a MoSCoW method is used to further prioritize user stories. 
 * [x] Likes (Must do)
 * [x] Follower (Should have)
 * [x] Bucketlist (Must do)
-* [ ] Challenge/warnings/info (Should have)
+* [ ] Tags (Should have) *- Moved to next sprint*
 
 **Frontend**
 * [x] Create a repository for the Travel Tickr (Should do)
 * [x] Start a React project in Gitpod (Could do)
-* [ ] Test deploy project on Heroku (Could do)
-* [ ] Install component library (Could do)
-* [ ] Design and implement navigation bar (Could do)
-* [ ] Do so navigation bar and authorization works (Could do)
-* [ ] Design and implement footer (Could do)
-* [ ] Create a component for base page (Could do)
+* [ ] Test deploy project on Heroku (Could do) *- Moved to next sprint*
+* [ ] Install component library (Could do) *- Moved to next sprint*
+* [ ] Design and implement navigation bar (Could do) *- Moved to next sprint*
+* [ ] Do so navigation bar and authorization works (Could do) *- Moved to next sprint*
+* [ ] Design and implement footer (Could do) *- Moved to next sprint*
+* [ ] Create a component for base page (Could do) *- Moved to next sprint*
 
 #### Sprint 2 (June 19th - June 24th, 2023):
+* [ ] Tags (Must have) 
+* [ ] Test deploy project on Heroku (Must do) 
+* [ ] Install component library (Must do) 
+* [ ] Design and implement navigation bar (Must do)
+* [ ] Do so navigation bar and authorization works (Must do)
+* [ ] Design and implement footer (Must do)
+* [ ] Create a component for base page (Must do)
 * [ ] [USER STORY: Registration](https://github.com/SandraBergstrom/travel-tickr/issues/10)  (Must do)
 * [ ] [USER STORY: Login](https://github.com/SandraBergstrom/travel-tickr/issues/11) (Must do)
 * [ ] [USER STORY: Logout](https://github.com/SandraBergstrom/travel-tickr/issues/12) (Must do)
 * [ ] [USER STORY: Update profile](https://github.com/SandraBergstrom/travel-tickr/issues/13) (Should do)
 * [ ] [USER STORY: Create a post/Memory](https://github.com/SandraBergstrom/travel-tickr/issues/14) (Must do)
 * [ ] [USER STORY: View a post](https://github.com/SandraBergstrom/travel-tickr/issues/15) (Must do)
-* [ ] [USER STORY: Update a post](https://github.com/SandraBergstrom/travel-tickr/issues/16) (Must do)
-* [ ] [USER STORY: Delete a post](https://github.com/SandraBergstrom/travel-tickr/issues/17) (Must do)
+* [ ] [USER STORY: Update a post](https://github.com/SandraBergstrom/travel-tickr/issues/16) (Should do)
+* [ ] [USER STORY: Delete a post](https://github.com/SandraBergstrom/travel-tickr/issues/17) (Should do)
 
 * [ ] [USER STORY: Search Posts](https://github.com/SandraBergstrom/travel-tickr/issues/18) (Should do)
 * [ ] [USER STORY: Sort Posts](https://github.com/SandraBergstrom/travel-tickr/issues/19) (Could do)
