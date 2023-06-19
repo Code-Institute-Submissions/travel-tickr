@@ -286,7 +286,7 @@ The wireframes provide a visual representation of the different pages and featur
 
 #### Colour
 
-![Mockup image](#)
+![Mockup image](/docs/colors.png)
 
 #### Fonts
 

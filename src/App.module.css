@@ -1,6 +1,24 @@
 /* Add general styles like hover effects and such */
 
+:root {
+  --clr-primary-light: rgb(243, 243, 243);
+  --clr-primary-dark: rgb(35 32 14);
+
+  --clr-accent-pink: rgb(160  108 131);
+  -- 
+  --clr-accent-light: rgb(186 200 205);
+  --clr-accent-dark: rgb(72 102 113);
+}
+
 .App {
   text-align: center;
   min-height: 100dvh;
+}
+
+.Main {
+
+}
+
+a {
+  color: ;
 }
