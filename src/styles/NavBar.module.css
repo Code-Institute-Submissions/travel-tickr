@@ -1,3 +1,22 @@
-.navbar {
-    background-color: white;
+.NavBar {
+  background-color: var(--clr-neutral-light);
+  border: 1px solid var(--clr-accent-dark);
+}
+
+.NavLink {
+  padding: 5px 10px;
+  font-size: 1rem;
+}
+
+.Active {
+  color: var(--clr-accent-dark);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.ButtonPrimary {
+  padding: 5px 10px;
+  background-color: var(--clr-accent-dark);
+  color: var(--clr-primary-light);
+  border: 0px;
 }
