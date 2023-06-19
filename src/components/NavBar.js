@@ -32,17 +32,6 @@ const NavBar = () => {
             <Nav.Link><i className="fa-solid fa-door-open me-1"></i>Sign in</Nav.Link>
             <Nav.Link><i className="fa-solid fa-user-plus me-1"></i>Sign up</Nav.Link>
           </Nav>
-          <NavDropdown title="Profile" id="navbarScrollingDropdown" className="me-5">
-              <NavDropdown.Item href="#action3">Profile</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5" >
-              <i className="fa-solid fa-user-xmark me-2"></i>
-                Log out
-              </NavDropdown.Item>
-            </NavDropdown>
           <Form className="d-flex">
             <Form.Control
               type="search"
