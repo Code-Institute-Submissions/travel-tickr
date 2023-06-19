@@ -6,43 +6,43 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../assets/logo.webp'
+import styles from '../styles/NavBar.module.css'
 
 const NavBar = () => {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar expand="lg" fixed='top'>
       <Container fluid>
-        <Navbar.Brand href="#">
+        <Navbar.Brand>
         <img
               src={logo}
               width="auto"
               height="60"
               className="d-inline-block align-top"
-              alt="React Bootstrap logo"
+              alt="Travel Tickr logo"
             />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
+            style={{ maxHeight: '250px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+            <Nav.Link><i className="fa-solid fa-house me-1"></i>Home</Nav.Link>            
+            <Nav.Link><i className="fa-solid fa-door-open me-1"></i>Sign in</Nav.Link>
+            <Nav.Link><i className="fa-solid fa-user-plus me-1"></i>Sign up</Nav.Link>
+          </Nav>
+          <NavDropdown title="Profile" id="navbarScrollingDropdown" className="me-5">
+              <NavDropdown.Item href="#action3">Profile</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
                 Another action
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
+              <NavDropdown.Item href="#action5" >
+              <i className="fa-solid fa-user-xmark me-2"></i>
+                Log out
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Link
-            </Nav.Link>
-          </Nav>
           <Form className="d-flex">
             <Form.Control
               type="search"
@@ -50,7 +50,7 @@ const NavBar = () => {
               className="me-2"
               aria-label="Search"
             />
-            <Button variant="outline-success">Search</Button>
+            <Button variant="outline-success" className="me-5">Search</Button>
           </Form>
         </Navbar.Collapse>
       </Container>
