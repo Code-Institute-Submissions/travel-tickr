@@ -1,24 +1,37 @@
 /* Add general styles like hover effects and such */
 
 :root {
-  --clr-primary-light: rgb(243, 243, 243);
+  --clr-primary-light: rgba(243, 243, 243, 0.8);
   --clr-primary-dark: rgb(35 32 14);
 
-  --clr-accent-pink: rgb(160  108 131);
-  -- 
+  --clr-natural-light: rgb(255, 250, 243);
+
+  --clr-accent-pink: rgb(160 108 131);
   --clr-accent-light: rgb(186 200 205);
   --clr-accent-dark: rgb(72 102 113);
 }
 
 .App {
+  background-color: var(--clr-primary-light);
+  color: var(--clr-primary-dark);
   text-align: center;
   min-height: 100dvh;
 }
 
 .Main {
-
+  padding-top: 80px;
 }
 
 a {
-  color: ;
+  color: var(--clr-accent-dark);
+  transition: color ease-in-out 0.3s;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:hover i {
+  color: var(--clr-accent-pink);
+  transition: color ease-in-out 0.3s;
 }
