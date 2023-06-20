@@ -1,17 +1,3 @@
-/* Add general styles like hover effects and such */
-
-:root {
-  /* Colors */
-  --clr-primary-light: rgb(245, 245, 245);
-  --clr-primary-dark: rgb(35 32 14);
-
-  --clr-natural-light: rgb(255, 250, 243);
-
-  --clr-accent-pink: rgb(160 108 131);
-  --clr-accent-light: rgb(149, 164, 170);
-  --clr-accent-dark: rgb(72 102 113);
-}
-
 .App {
   background-color: var(--clr-primary-light);
   color: var(--clr-primary-dark);
