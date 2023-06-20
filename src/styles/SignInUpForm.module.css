@@ -5,7 +5,7 @@
     background: var(--clr-primary-light);
     border: 1px solid var(--clr-accent-light);
     box-sizing: border-box;
-    border-radius: 50px;
+    border-radius: 10px;
     color: var(--clr-accent-dark);
     text-align: center;
     padding: 8px;

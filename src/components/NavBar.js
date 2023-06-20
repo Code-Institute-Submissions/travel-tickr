@@ -8,6 +8,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import logo from "../assets/logo.webp";
 import { NavLink } from "react-router-dom";
 import styles from "../styles/NavBar.module.css";
+import btnStyles from "../styles/Button.module.css"
 
 const NavBar = () => {
   return (
@@ -61,7 +62,9 @@ const NavBar = () => {
               className="me-2"
               aria-label="Search"
             />
-            <Button className={styles.ButtonPrimary}>
+            <Button className={
+                `${btnStyles.Button} ${btnStyles.Bright}`
+              }>
               Search
             </Button>
           </Form>
