@@ -2,12 +2,24 @@
   background-color: var(--clr-primary-light);
   color: var(--clr-primary-dark);
   text-align: center;
-  min-height: 100dvh;
+  height: 100dvh;
 }
 
 .Main {
   padding-top: 80px;
 }
+
+.FillerImage {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+/* .Image {
+  height: 40vh;
+  max-width: 100%;
+  object-fit: contain;
+} */
 
 a {
   color: var(--clr-accent-light);
@@ -24,4 +36,33 @@ a:hover {
 a:hover i {
   color: var(--clr-accent-dark);
   transition: color ease-in-out 0.3s;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+i:hover {
+  cursor: pointer;
+  transition: color ease-in-out 0.3s;
+  color: var(--clr-accent-dark);
+}
+
+figure {
+  text-align: center;
+  display: inline-block;
+}
+
+/* scrollbar */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+*::-webkit-scrollbar-track {
+  background: var(--clr-primary-light);
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--clr-accent-light);
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--clr-accent-dark);
 }
