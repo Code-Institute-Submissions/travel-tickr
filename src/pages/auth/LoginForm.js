@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
@@ -15,7 +15,19 @@ import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
 function LogInForm() {
-  //   Add your component logic here
+  const [signInData, setSignInData] = useState({
+    username: "",
+    password: "",
+  });
+
+  const { username, password } = signInData;
+
+  const handleChange = (event) => {
+    setSignInData({
+      ...signInData,
+      [event.target.name]: event.targetvalue,
+    });
+  };
 
   return (
     <Row className={styles.Row}>
@@ -42,6 +54,8 @@ function LogInForm() {
                 type="text"
                 placeholder="Enter username"
                 name="username"
+                value={username}
+                onChange={handleChange}
               />
             </Form.Group>
 
@@ -51,6 +65,8 @@ function LogInForm() {
                 className={styles.Input}
                 type="password"
                 placeholder="Password"
+                value={password}
+                onChange={handleChange}
               />
             </Form.Group>
 
