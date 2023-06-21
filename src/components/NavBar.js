@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -8,9 +8,32 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import logo from "../assets/logo.webp";
 import { NavLink } from "react-router-dom";
 import styles from "../styles/NavBar.module.css";
-import btnStyles from "../styles/Button.module.css"
+import btnStyles from "../styles/Button.module.css";
+import { CurrentUserContext } from "../App";
 
 const NavBar = () => {
+  const currentUser = useContext(CurrentUserContext);
+  const loggedInIcons = <>{currentUser?.username}</>
+  const loggedOutIcons = (
+    <>
+      {" "}
+      <NavLink
+        to="/login"
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+      >
+        <i className="fa-solid fa-door-open me-1"></i>Login
+      </NavLink>
+      <NavLink
+        to="signup"
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+      >
+        <i className="fa-solid fa-user-plus me-1"></i>Sign up
+      </NavLink>
+    </>
+  );
+
   return (
     <Navbar expand="lg" fixed="top">
       <Container fluid>
@@ -40,20 +63,7 @@ const NavBar = () => {
             >
               <i className="fa-solid fa-house me-1"></i>Home
             </NavLink>
-            <NavLink
-              to="/login"
-              className={styles.NavLink}
-              activeClassName={styles.Active}
-            >
-              <i className="fa-solid fa-door-open me-1"></i>Login
-            </NavLink>
-            <NavLink
-              to="signup"
-              className={styles.NavLink}
-              activeClassName={styles.Active}
-            >
-              <i className="fa-solid fa-user-plus me-1"></i>Sign up
-            </NavLink>
+            {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
           <Form className="d-flex">
             <Form.Control
@@ -62,9 +72,7 @@ const NavBar = () => {
               className="me-2"
               aria-label="Search"
             />
-            <Button className={
-                `${btnStyles.Button} ${btnStyles.Bright}`
-              }>
+            <Button className={`${btnStyles.Button} ${btnStyles.Bright}`}>
               Search
             </Button>
           </Form>

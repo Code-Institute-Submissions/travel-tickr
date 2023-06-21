@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
@@ -17,8 +17,11 @@ import alertStyles from "../../styles/AlertMessages.module.css";
 
 import axios from "axios";
 import { useHistory } from "react-router-dom/";
+import { SetCurrentUserContext } from "../../App";
 
 function LogInForm() {
+  const SetCurrentUser = useContext(SetCurrentUserContext);
+
   const [logInData, setLogInData] = useState({
     username: "",
     password: "",
@@ -38,7 +41,8 @@ function LogInForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("/dj-rest-auth/login/", logInData);
+      const { data } = await axios.post("/dj-rest-auth/login/", logInData);
+      SetCurrentUser(data.user);
       history.push("/");
     } catch (err) {
       setErrors(err.response?.data);
@@ -121,7 +125,6 @@ function LogInForm() {
                 {message}
               </Alert>
             ))}
-            
           </Form>
         </Container>
         <Container className={`mt-3 ${appStyles.Content}`}>
