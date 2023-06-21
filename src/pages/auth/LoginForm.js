@@ -14,6 +14,9 @@ import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
+import axios from "axios";
+import { useHistory } from "react-router-dom/";
+
 function LogInForm() {
   const [signInData, setSignInData] = useState({
     username: "",
@@ -21,12 +24,21 @@ function LogInForm() {
   });
 
   const { username, password } = signInData;
+  const history = useHistory();
 
   const handleChange = (event) => {
     setSignInData({
       ...signInData,
-      [event.target.name]: event.targetvalue,
+      [event.target.name]: event.target.value,
     });
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      await axios.post("/dj-rest-auth/login/", signInData);
+      history.push("/");
+    } catch (err) {}
   };
 
   return (
@@ -46,7 +58,7 @@ function LogInForm() {
         <Container className={`${appStyles.Content} p-4 `}>
           <h1 className={styles.Header}>log in</h1>
 
-          <Form>
+          <Form onSubmit={handleSubmit}>
             <Form.Group controlId="username" className="mb-3">
               <Form.Label className="d-none">Username</Form.Label>
               <Form.Control
@@ -65,6 +77,7 @@ function LogInForm() {
                 className={styles.Input}
                 type="password"
                 placeholder="Password"
+                name="password"
                 value={password}
                 onChange={handleChange}
               />
