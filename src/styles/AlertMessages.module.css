@@ -1,0 +1,6 @@
+.alert-warning-custom {
+    background-color: var(--clr-accent-pink);
+    color: var(--clr-primary-light);
+    border: 1px solid var(--clr-accent-pink);
+    padding: 8px;
+}
