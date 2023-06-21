@@ -13,22 +13,24 @@ import { Link } from "react-router-dom";
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
+import alertStyles from "../../styles/AlertMessages.module.css";
 
 import axios from "axios";
 import { useHistory } from "react-router-dom/";
 
 function LogInForm() {
-  const [signInData, setSignInData] = useState({
+  const [logInData, setLogInData] = useState({
     username: "",
     password: "",
   });
 
-  const { username, password } = signInData;
+  const { username, password } = logInData;
   const history = useHistory();
+  const [errors, setErrors] = useState({});
 
   const handleChange = (event) => {
-    setSignInData({
-      ...signInData,
+    setLogInData({
+      ...logInData,
       [event.target.name]: event.target.value,
     });
   };
@@ -36,9 +38,11 @@ function LogInForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("/dj-rest-auth/login/", signInData);
+      await axios.post("/dj-rest-auth/login/", logInData);
       history.push("/");
-    } catch (err) {}
+    } catch (err) {
+      setErrors(err.response?.data);
+    }
   };
 
   return (
@@ -70,6 +74,15 @@ function LogInForm() {
                 onChange={handleChange}
               />
             </Form.Group>
+            {errors.username?.map((message, idx) => (
+              <Alert
+                variant="warning"
+                key={idx}
+                className={alertStyles["alert-warning-custom"]}
+              >
+                {message}
+              </Alert>
+            ))}
 
             <Form.Group controlId="password" className="mb-3">
               <Form.Label className="d-none">Password</Form.Label>
@@ -82,6 +95,15 @@ function LogInForm() {
                 onChange={handleChange}
               />
             </Form.Group>
+            {errors.password?.map((message, idx) => (
+              <Alert
+                variant="warning"
+                className={alertStyles["alert-warning-custom"]}
+                key={idx}
+              >
+                {message}
+              </Alert>
+            ))}
 
             <Button
               className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
@@ -89,6 +111,17 @@ function LogInForm() {
             >
               Login
             </Button>
+
+            {errors.non_field_errors?.map((message, idx) => (
+              <Alert
+                variant="warning"
+                key={idx}
+                className={alertStyles["alert-warning-custom"]}
+              >
+                {message}
+              </Alert>
+            ))}
+            
           </Form>
         </Container>
         <Container className={`mt-3 ${appStyles.Content}`}>
