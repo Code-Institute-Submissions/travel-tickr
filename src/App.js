@@ -5,7 +5,7 @@ import { Route, Switch } from "react-router-dom";
 import "./api/axiosDefaults";
 import SignUpForm from "./pages/auth/SignUpForm";
 import LoginForm from "./pages/auth/LoginForm";
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 
 export const CurrentUserContext = createContext();
@@ -22,18 +22,26 @@ function App() {
     }
   };
 
+  useEffect(() => {
+    handleMount();
+  }, []);
+
   return (
-    <div className={styles.App}>
-      <NavBar />
-      <Container className={styles.Main}>
-        <Switch>
-          <Route exact path="/" render={() => <h1>Home Page</h1>} />
-          <Route exact path="/login" render={() => <LoginForm />} />
-          <Route exact path="/signup" render={() => <SignUpForm />} />
-          <Route render={() => <p>Page not found!</p>} />
-        </Switch>
-      </Container>
-    </div>
+    <CurrentUserContext.Provider value={currentUser}>
+      <SetCurrentUserContext.Provider value={setCurrentUser}>
+        <div className={styles.App}>
+          <NavBar />
+          <Container className={styles.Main}>
+            <Switch>
+              <Route exact path="/" render={() => <h1>Home Page</h1>} />
+              <Route exact path="/login" render={() => <LoginForm />} />
+              <Route exact path="/signup" render={() => <SignUpForm />} />
+              <Route render={() => <p>Page not found!</p>} />
+            </Switch>
+          </Container>
+        </div>
+      </SetCurrentUserContext.Provider>
+    </CurrentUserContext.Provider>
   );
 }
 
