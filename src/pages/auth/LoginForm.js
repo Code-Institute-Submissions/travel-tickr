@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
@@ -17,10 +17,10 @@ import alertStyles from "../../styles/AlertMessages.module.css";
 
 import axios from "axios";
 import { useHistory } from "react-router-dom/";
-import { SetCurrentUserContext } from "../../App";
+import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 
 function LogInForm() {
-  const SetCurrentUser = useContext(SetCurrentUserContext);
+  const SetCurrentUser = useSetCurrentUser();
 
   const [logInData, setLogInData] = useState({
     username: "",
