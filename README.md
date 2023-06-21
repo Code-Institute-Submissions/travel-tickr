@@ -365,7 +365,7 @@ Within each sprint, a MoSCoW method is used to further prioritize user stories. 
 * [x] Posts (Must do)
 * [x] Comements (Must do)
 * [x] Likes (Must do)
-* [x] Follower (Should have)
+* [x] Follower (Should do)
 * [x] Bucketlist (Must do)
 * [ ] Tags (Should have) *- Moved to next sprint*
 
@@ -380,15 +380,15 @@ Within each sprint, a MoSCoW method is used to further prioritize user stories. 
 * [ ] Create a component for base page (Could do) *- Moved to next sprint*
 
 #### Sprint 2 (June 19th - June 24th, 2023):
-* [ ] Tags (Must have) 
-* [ ] Test deploy project on Heroku (Must do) 
-* [ ] Install component library (Must do) 
-* [ ] Design and implement navigation bar (Must do)
-* [ ] Do so navigation bar and authorization works (Must do)
+* [ ] Tags (Must do) 
+* [x] Test deploy project on Heroku (Must do) 
+* [x] Install component library (Must do) 
+* [x] Design and implement navigation bar (Must do)
+* [x] Do so navigation bar and authorization works (Must do)
 * [ ] Design and implement footer (Must do)
 * [ ] Create a component for base page (Must do)
-* [ ] [USER STORY: Registration](https://github.com/SandraBergstrom/travel-tickr/issues/10)  (Must do)
-* [ ] [USER STORY: Login](https://github.com/SandraBergstrom/travel-tickr/issues/11) (Must do)
+* [x] [USER STORY: Registration](https://github.com/SandraBergstrom/travel-tickr/issues/10)  (Must do)
+* [x] [USER STORY: Login](https://github.com/SandraBergstrom/travel-tickr/issues/11) (Must do)
 * [ ] [USER STORY: Logout](https://github.com/SandraBergstrom/travel-tickr/issues/12) (Must do)
 * [ ] [USER STORY: Update profile](https://github.com/SandraBergstrom/travel-tickr/issues/13) (Should do)
 * [ ] [USER STORY: Create a post/Memory](https://github.com/SandraBergstrom/travel-tickr/issues/14) (Must do)
