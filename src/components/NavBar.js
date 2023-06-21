@@ -16,7 +16,6 @@ const NavBar = () => {
   const loggedInIcons = <>{currentUser?.username}</>
   const loggedOutIcons = (
     <>
-      {" "}
       <NavLink
         to="/login"
         className={styles.NavLink}
