@@ -4,7 +4,7 @@ import { Link, useHistory } from "react-router-dom";
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
-import alertStyles from '../../styles/AlertMessages.module.css'
+import alertStyles from "../../styles/AlertMessages.module.css";
 
 import {
   Form,
@@ -69,13 +69,18 @@ const SignUpForm = () => {
                 className={styles.Input}
                 type="text"
                 placeholder="Username"
-                name="username"I
+                name="username"
+                I
                 value={username}
                 onChange={handleChange}
               />
             </Form.Group>
             {errors.username?.map((message, idx) => (
-              <Alert variant="warning" key={idx} className={alertStyles['alert-warning-custom']}>
+              <Alert
+                variant="warning"
+                key={idx}
+                className={alertStyles["alert-warning-custom"]}
+              >
                 {message}
               </Alert>
             ))}
@@ -92,7 +97,11 @@ const SignUpForm = () => {
               />
             </Form.Group>
             {errors.password1?.map((message, idx) => (
-              <Alert variant="warning" className={alertStyles['alert-warning-custom']} key={idx}>
+              <Alert
+                variant="warning"
+                className={alertStyles["alert-warning-custom"]}
+                key={idx}
+              >
                 {message}
               </Alert>
             ))}
@@ -109,7 +118,11 @@ const SignUpForm = () => {
               />
             </Form.Group>
             {errors.password2?.map((message, idx) => (
-              <Alert variant="warning" className={alertStyles['alert-warning-custom']} key={idx}>
+              <Alert
+                variant="warning"
+                className={alertStyles["alert-warning-custom"]}
+                key={idx}
+              >
                 {message}
               </Alert>
             ))}
@@ -121,7 +134,11 @@ const SignUpForm = () => {
               Sign up!
             </Button>
             {errors.non_field_errors?.map((message, idx) => (
-              <Alert variant="warning" key={idx}>
+              <Alert
+                variant="warning"
+                key={idx}
+                className={alertStyles["alert-warning-custom"]}
+              >
                 {message}
               </Alert>
             ))}
