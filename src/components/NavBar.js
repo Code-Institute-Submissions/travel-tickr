@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -19,8 +19,11 @@ import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
 const NavBar = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
+  const searchRef = useRef(null);
 
-  const { expanded, setExpanded, ref } = useClickOutsideToggle();
+  const { expanded, setExpanded, ref } = useClickOutsideToggle({
+    ignoreRefs: [searchRef],
+  });
 
   const handleSignOut = async () => {
     try {
@@ -125,11 +128,11 @@ const NavBar = () => {
             >
               <i className="fa-solid fa-house me-1"></i>Home
             </NavLink>
-
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
           <Form className="d-flex">
             <Form.Control
+              ref={searchRef}
               type="search"
               placeholder="Search"
               className="me-2"

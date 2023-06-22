@@ -1,11 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 
-const useClickOutsideToggle = () => {
+const useClickOutsideToggle = ({ ignoreRefs = [] } = {}) => {
   const [expanded, setExpanded] = useState(false);
   const ref = useRef(null);
+  
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (ref.current && !ref.current.contains(event.target)) {
+      const isOutside = ignoreRefs.every((ignoreRef) => (
+        !ignoreRef.current || !ignoreRef.current.contains(event.target)
+      ));
+
+      if (ref.current && !ref.current.contains(event.target) && isOutside) {
         setExpanded(false);
       }
     };
@@ -14,7 +19,8 @@ const useClickOutsideToggle = () => {
     return () => {
       document.removeEventListener("mouseup", handleClickOutside);
     };
-  }, [ref]);
+  }, [ref, ignoreRefs]);
+
   return { expanded, setExpanded, ref };
 };
 
