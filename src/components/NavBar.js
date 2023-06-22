@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -18,6 +18,21 @@ import axios from "axios";
 const NavBar = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
+
+  const [expanded, setExpanded] = useState(false);
+  const ref = useRef(null);
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (ref.current && !ref.current.contains(event.target)) {
+        setExpanded(false);
+      }
+    };
+
+    document.addEventListener('mouseup', handleClickOutside)
+    return () => {
+      document.removeEventListener('mouseup', handleClickOutside)
+    }
+  }, [ref]);
 
   const handleSignOut = async () => {
     try {
@@ -84,7 +99,12 @@ const NavBar = () => {
   );
 
   return (
-    <Navbar expand="lg" fixed="top" className={styles.NavBar}>
+    <Navbar
+      expanded={expanded}
+      expand="lg"
+      fixed="top"
+      className={styles.NavBar}
+    >
       <Container fluid>
         <NavLink to="/" className={styles.NavLink}>
           <Navbar.Brand>
@@ -98,7 +118,11 @@ const NavBar = () => {
           </Navbar.Brand>
         </NavLink>
         {currentUser && addMemoryIcon}
-        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Toggle
+          ref={ref}
+          onClick={() => setExpanded(!expanded)}
+          aria-controls="navbarScroll"
+        />
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"
