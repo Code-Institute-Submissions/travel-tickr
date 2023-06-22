@@ -34,7 +34,7 @@ const NavBar = () => {
       className={styles.NavLink}
       activeClassName={styles.Active}
     >
-      <i className="fa-solid fa-circle-plus"></i>Add Memory
+      <i className="fa-solid fa-circle-plus"></i>Memory
     </NavLink>
   );
 
@@ -57,13 +57,13 @@ const NavBar = () => {
       <NavLink to="/" onClick={handleSignOut} className={styles.NavLink}>
         <i className="fa-solid fa-door-closed"></i>Logout
       </NavLink>
-
       <NavLink className={styles.NavLink} to={`/travelers/${currentUser?.pk}`}>
         <Avatar src={currentUser?.traveler_image} height={40} />
         {currentUser?.username}
       </NavLink>
     </>
   );
+
   const loggedOutIcons = (
     <>
       <NavLink
@@ -84,7 +84,7 @@ const NavBar = () => {
   );
 
   return (
-    <Navbar expand="lg" fixed="top">
+    <Navbar expand="lg" fixed="top" className={styles.NavBar}>
       <Container fluid>
         <NavLink to="/" className={styles.NavLink}>
           <Navbar.Brand>
@@ -97,6 +97,7 @@ const NavBar = () => {
             />
           </Navbar.Brand>
         </NavLink>
+        {currentUser && addMemoryIcon}
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -112,7 +113,7 @@ const NavBar = () => {
             >
               <i className="fa-solid fa-house me-1"></i>Home
             </NavLink>
-            {currentUser && addMemoryIcon}
+
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
           <Form className="d-flex">
