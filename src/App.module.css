@@ -6,14 +6,11 @@
 }
 
 .Main {
-  padding-top: 80px;
+  padding-top: 100px;
 }
 
 .Content {
-  /* background-color: #ffffff; */
   padding: 10px;
-  /* border-radius: 2px;
-  border: 1px solid #dadadf; */
 }
 
 .FillerImage {
