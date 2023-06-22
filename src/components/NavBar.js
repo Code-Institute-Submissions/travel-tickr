@@ -8,12 +8,25 @@ import logo from "../assets/logo.webp";
 import { NavLink } from "react-router-dom";
 import styles from "../styles/NavBar.module.css";
 import btnStyles from "../styles/Button.module.css";
-import { useCurrentUser } from "../contexts/CurrentUserContext";
+import {
+  useCurrentUser,
+  useSetCurrentUser,
+} from "../contexts/CurrentUserContext";
 import Avatar from "./Avatar";
+import axios from "axios";
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
-  const setCurrentUser = setCurrentUser();
+  const setCurrentUser = useSetCurrentUser();
+
+  const handleSignOut = async () => {
+    try {
+      await axios.post("dj-rest-auth/logout/");
+      setCurrentUser(null);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const addMemoryIcon = (
     <NavLink
@@ -41,7 +54,7 @@ const NavBar = () => {
       >
         <i className="fa-solid fa-heart"></i>Liked
       </NavLink>
-      <NavLink to="/" onClick={() => {}} className={styles.NavLink}>
+      <NavLink to="/" onClick={handleSignOut} className={styles.NavLink}>
         <i className="fa-solid fa-door-closed"></i>Logout
       </NavLink>
 
