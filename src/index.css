@@ -3,7 +3,7 @@
   --clr-primary-light: rgb(245, 245, 245);
   --clr-primary-dark: rgb(35 32 14);
 
-  --clr-natural-light: rgb(255, 250, 243);
+  --clr-natural-light: rgb(248, 246, 244);
 
   --clr-accent-pink: rgb(196, 104, 145);
   --clr-accent-danger: rgb(128, 27, 72);
@@ -23,4 +23,16 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.form-control {
+  background-color: white;
+}
+
+.form-control:focus {
+  color: var(--clr-primary-dark);
+  background-color: var(--clr-natural-light);
+  border-color: var(--clr-accent-dark);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(72, 102, 113, 0.25);
 }
