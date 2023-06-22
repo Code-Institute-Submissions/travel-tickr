@@ -4,17 +4,53 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import logo from "../assets/logo.webp";
 import { NavLink } from "react-router-dom";
 import styles from "../styles/NavBar.module.css";
 import btnStyles from "../styles/Button.module.css";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
+import Avatar from "./Avatar";
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
+  const setCurrentUser = setCurrentUser();
 
-  const loggedInIcons = <>{currentUser?.username}</>
+  const addMemoryIcon = (
+    <NavLink
+      to="/posts/create"
+      className={styles.NavLink}
+      activeClassName={styles.Active}
+    >
+      <i className="fa-solid fa-circle-plus"></i>Add Memory
+    </NavLink>
+  );
+
+  const loggedInIcons = (
+    <>
+      <NavLink
+        to="/feed"
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+      >
+        <i className="fa-sharp fa-regular fa-images"></i>Feed
+      </NavLink>
+      <NavLink
+        to="/liked"
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+      >
+        <i className="fa-solid fa-heart"></i>Liked
+      </NavLink>
+      <NavLink to="/" onClick={() => {}} className={styles.NavLink}>
+        <i className="fa-solid fa-door-closed"></i>Logout
+      </NavLink>
+
+      <NavLink className={styles.NavLink} to={`/travelers/${currentUser?.pk}`}>
+        <Avatar src={currentUser?.traveler_image} height={40} />
+        {currentUser?.username}
+      </NavLink>
+    </>
+  );
   const loggedOutIcons = (
     <>
       <NavLink
@@ -63,6 +99,7 @@ const NavBar = () => {
             >
               <i className="fa-solid fa-house me-1"></i>Home
             </NavLink>
+            {currentUser && addMemoryIcon}
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
           <Form className="d-flex">
