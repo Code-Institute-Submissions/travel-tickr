@@ -25,6 +25,11 @@
   object-fit: contain;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+
 a {
   color: var(--clr-accent-light);
   transition: color ease-in-out 0.3s;
@@ -44,6 +49,13 @@ a:hover i {
 
 input[type="file"] {
   display: none;
+}
+
+i {
+  color: var(--clr-accent-light);
+  font-size: 1.6rem;
+  padding: 7px;
+  vertical-align: middle;
 }
 
 i:hover {
