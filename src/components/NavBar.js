@@ -116,7 +116,7 @@ const NavBar = () => {
         />
         <Navbar.Collapse id="navbarScroll">
           <Nav
-            className={`me-auto my-2 my-lg-0 ${styles.navBarScroll}`}
+            className={`ms-auto my-2 my-lg-0 ${styles.navBarScroll} justify-content-end`}
             style={{ maxHeight: "250px" }}
             navbarScroll
           >
@@ -126,22 +126,10 @@ const NavBar = () => {
               className={styles.NavLink}
               activeClassName={styles.Active}
             >
-              <i className="fa-solid fa-house me-1"></i>Home
+              <i className="fa-solid fa-house me-2"></i>Home
             </NavLink>
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              ref={searchRef}
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button className={`${btnStyles.Button} ${btnStyles.Bright}`}>
-              Search
-            </Button>
-          </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>
