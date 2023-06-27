@@ -25,7 +25,6 @@ function App() {
             render={() => (
               <PostsPage
                 message="No results found. Adjust the search keyword."
-                filter={`owner__followed__owner__traveler=${traveler_id}&`}
               />
             )}
           />
