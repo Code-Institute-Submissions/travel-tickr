@@ -12,7 +12,7 @@ import { useCurrentUser } from "./contexts/CurrentUserContext";
 
 function App() {
   const currentUser = useCurrentUser();
-  const profile_id = currentUser?.profile_id || "";
+  const traveler_id = currentUser?.traveler_id || "";
 
   return (
     <div className={styles.App}>
@@ -25,7 +25,7 @@ function App() {
             render={() => (
               <PostsPage
                 message="No results found. Adjust the search keyword."
-                filter={`owner__followed__owner__profile=${profile_id}&`}
+                filter={`owner__followed__owner__traveler=${traveler_id}&`}
               />
             )}
           />
@@ -35,7 +35,7 @@ function App() {
             render={() => (
               <PostsPage
                 message="No results found. Adjust the search keyword or follow a user."
-                filter={`owner__followed__owner__profile=${profile_id}&`}
+                filter={`owner__followed__owner__traveler=${traveler_id}&`}
               />
             )}
           />
@@ -45,7 +45,7 @@ function App() {
             render={() => (
               <PostsPage
                 message="No results found. Adjust the search keyword or like a post."
-                filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`}
+                filter={`likes__owner__traveler=${traveler_id}&ordering=-likes__created_at&`}
               />
             )}
           />
