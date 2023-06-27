@@ -405,14 +405,14 @@ Within each sprint, a MoSCoW method is used to further prioritize user stories. 
 * [x] Plan Sprint 2 (Must do)
 
 #### Sprint 3 (June 25th - July 1st, 2023): 
-* [ ] Design and implement footer (Must do)
+* [ ] Design and implement footer (Could do)
 * [ ] [USER STORY: Update profile](https://github.com/SandraBergstrom/travel-tickr/issues/13) (Must do)
-* [ ] [USER STORY: View a post](https://github.com/SandraBergstrom/travel-tickr/issues/15) (Must do)
+* [x] [USER STORY: View a post](https://github.com/SandraBergstrom/travel-tickr/issues/15) (Must do)
 * [ ] [USER STORY: Update a post](https://github.com/SandraBergstrom/travel-tickr/issues/16) (Must do)
 * [ ] [USER STORY: Delete a post](https://github.com/SandraBergstrom/travel-tickr/issues/17) (Must do)
 
-* [ ] [USER STORY: Search Posts](https://github.com/SandraBergstrom/travel-tickr/issues/18) (Must do)
-* [ ] [USER STORY: Sort Posts](https://github.com/SandraBergstrom/travel-tickr/issues/19) (Could do)
+* [x] [USER STORY: Search Posts](https://github.com/SandraBergstrom/travel-tickr/issues/18) (Must do)
+* [x] [USER STORY: Sort Posts](https://github.com/SandraBergstrom/travel-tickr/issues/19) (Must do)
 * [x] [USER STORY: Like Posts](https://github.com/SandraBergstrom/travel-tickr/issues/20) (Must do)
 
 * [ ] [USER STORY: Create a Comment](https://github.com/SandraBergstrom/travel-tickr/issues/21) (Must do)
@@ -421,7 +421,7 @@ Within each sprint, a MoSCoW method is used to further prioritize user stories. 
 * [ ] [USER STORY: Delete Comment](https://github.com/SandraBergstrom/travel-tickr/issues/24) (Must do)
 
 * [ ] [USER STORY: Follow Users](https://github.com/SandraBergstrom/travel-tickr/issues/25) (Must do) 
-* [ ] [USER STORY: Maintain user enviornment](https://github.com/SandraBergstrom/travel-tickr/issues/26) (Must do)
+* [x] [USER STORY: Maintain user enviornment](https://github.com/SandraBergstrom/travel-tickr/issues/26) (Must do)
 * [ ] [USER STORY: Add Post to bucket list](https://github.com/SandraBergstrom/travel-tickr/issues/27) (Must do)
 
 * [ ] [USER STORY: Upload multiple photos](https://github.com/SandraBergstrom/travel-tickr/issues/28) (Should do)
