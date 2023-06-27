@@ -1,6 +1,8 @@
 import React from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import styles from "../styles/MoreDropdown.module.css"
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Tooltip from "react-bootstrap/Tooltip";
 
 // The forwardRef is important!!
 // Dropdown needs access to the DOM node in order to position the Menu
@@ -36,7 +38,12 @@ const ThreeDots = React.forwardRef(({ onClick }, ref) => (
             onClick={handleDelete}
             aria-label="delete"
           >
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Are you sure you want to delete your post?!</Tooltip>}
+            >
             <i className="fas fa-trash-alt" />
+            </OverlayTrigger>
           </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
