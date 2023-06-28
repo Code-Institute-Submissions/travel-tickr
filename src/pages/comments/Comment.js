@@ -22,7 +22,7 @@ const Comment = (props) => {
     setComments,
   } = props;
 
-  const [setShowEditForm, setShowEditForm] = useState(false);
+  const [showEditForm, setShowEditForm] = useState(false);
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
