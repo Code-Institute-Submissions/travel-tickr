@@ -40,7 +40,7 @@ const ThreeDots = React.forwardRef(({ onClick }, ref) => (
           >
             <OverlayTrigger
               placement="top"
-              overlay={<Tooltip>Are you sure you want to delete your post?!</Tooltip>}
+              overlay={<Tooltip>Are you sure you want to delete?!</Tooltip>}
             >
             <i className="fas fa-trash-alt" />
             </OverlayTrigger>
