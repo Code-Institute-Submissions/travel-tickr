@@ -416,9 +416,9 @@ Within each sprint, a MoSCoW method is used to further prioritize user stories. 
 * [x] [USER STORY: Like Posts](https://github.com/SandraBergstrom/travel-tickr/issues/20) (Must do)
 
 * [x] [USER STORY: Create a Comment](https://github.com/SandraBergstrom/travel-tickr/issues/21) (Must do)
-* [ ] [USER STORY: View Comments](https://github.com/SandraBergstrom/travel-tickr/issues/22) (Must do)
+* [x] [USER STORY: View Comments](https://github.com/SandraBergstrom/travel-tickr/issues/22) (Must do)
 * [ ] [USER STORY: Update Comment](https://github.com/SandraBergstrom/travel-tickr/issues/23) (Must do)
-* [ ] [USER STORY: Delete Comment](https://github.com/SandraBergstrom/travel-tickr/issues/24) (Must do)
+* [x] [USER STORY: Delete Comment](https://github.com/SandraBergstrom/travel-tickr/issues/24) (Must do)
 
 * [ ] [USER STORY: Follow Users](https://github.com/SandraBergstrom/travel-tickr/issues/25) (Must do) 
 * [x] [USER STORY: Maintain user enviornment](https://github.com/SandraBergstrom/travel-tickr/issues/26) (Must do)
