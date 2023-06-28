@@ -41,26 +41,20 @@
   
   .BlueOutline,
   .Blue:hover {
-    /* border: 1px solid #2142b2; */
     background-color: #ffffff;
     color: var(--clr-accent-dark);
   }
   
-  .Black,
-  .BlackOutline:hover {
-    /* background-color: #242a3d;
-    color: white; */
-    background-color: #242a3d;
-    color: aliceblue;
+  .Pink,
+  .PinkOutline:hover {
+    background-color: var(--clr-accent-danger);
+    color: var(--clr-primary-light);
   }
   
-  .Black:hover,
-  .BlackOutline {
-    /* background-color: #dadadf;
-    color: #242a3d;
-    border-color: #242a3d; */
-    background-color: aliceblue;
-    color: #242a3d;
+  .Pink:hover,
+  .PinkOutline {
+    background-color: var(--clr-accent-pink);
+    color: var(--clr-primary-light);
   }
   
   .Bright {
