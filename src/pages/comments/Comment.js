@@ -56,7 +56,7 @@ const Comment = (props) => {
           <p>{content}</p>
         </Media.Body>
         {is_owner && (
-          <MoreDropdown handleEdit={() => {}} handleDelete={() => {}} />
+          <MoreDropdown handleEdit={() => {}} handleDelete={handleDelete} />
         )}
       </Media>
     </div>
