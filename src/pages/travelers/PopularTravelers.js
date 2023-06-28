@@ -3,6 +3,7 @@ import appStyles from "../../App.module.css";
 import Container from "react-bootstrap/Container";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import Asset from "../../components/Asset";
 
 const PopularTravelers = () => {
   const [travelerData, setTravelerData] = useState({
@@ -10,7 +11,7 @@ const PopularTravelers = () => {
     popularTravelers: { results: [] },
   });
   const { popularTravelers } = travelerData;
-  const currentUser = useCurrentUser()
+  const currentUser = useCurrentUser();
 
   useEffect(() => {
     const handleMount = async () => {
@@ -19,23 +20,29 @@ const PopularTravelers = () => {
           "/travelers/?ordering=-followers_count"
         );
         setTravelerData((prevState) => ({
-            ...prevState,
-            popularTravelers: data,
-        }))
+          ...prevState,
+          popularTravelers: data,
+        }));
       } catch (err) {
-        console.log(err)
+        console.log(err);
       }
     };
 
-    handleMount()
+    handleMount();
   }, [currentUser]);
 
   return (
     <Container className={appStyles.Container}>
-      <p>Most followed travelers</p>
-      {popularTravelers.results.map(traveler => (
-        <p key={traveler.id}>{traveler.owner}</p>
-      ))}
+      {popularTravelers.results.length ? (
+        <>
+          <p>Most followed travelers</p>
+          {popularTravelers.results.map((traveler) => (
+            <p key={traveler.id}>{traveler.owner}</p>
+          ))}
+        </>
+      ) : (
+        <Asset spinner />
+      )}
     </Container>
   );
 };
