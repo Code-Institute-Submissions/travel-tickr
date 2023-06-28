@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Asset from "../../components/Asset";
+import Traveler from "./Traveler";
 
 const PopularTravelers = ({ mobile }) => {
   const [travelerData, setTravelerData] = useState({
@@ -39,17 +40,21 @@ const PopularTravelers = ({ mobile }) => {
     >
       {popularTravelers.results.length ? (
         <>
-          <p className="d-flex justify-content-center">Most followed travelers</p>
+          <p className="d-flex justify-content-center">
+            Most followed travelers
+          </p>
           {mobile ? (
             <div className="d-flex justify-content-around">
               {popularTravelers.results.slice(0, 4).map((traveler) => (
-                <p key={traveler.id}>{traveler.owner}</p>
+                <Traveler key={traveler.id} traveler={traveler} mobile />
               ))}
             </div>
           ) : (
             popularTravelers.results
               .slice(0, 4)
-              .map((traveler) => <p key={traveler.id}>{traveler.owner}</p>)
+              .map((traveler) => (
+                <Traveler key={traveler.id} traveler={traveler} />
+              ))
           )}
         </>
       ) : (
