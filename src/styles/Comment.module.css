@@ -1,0 +1,19 @@
+.Body {
+    display: flex;
+    flex-direction: column;
+}
+
+.Owner {
+  font-weight: bold;
+  color: var(--clr-accent-dark);
+  margin-right: 8px;
+}
+
+.Date {
+  font-weight: lighter;
+  color: var(--clr-accent-light);
+}
+
+p {
+  text-align: left;
+}
