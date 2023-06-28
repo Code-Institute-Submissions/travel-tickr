@@ -58,7 +58,18 @@ const Comment = (props) => {
             <span className={styles.Owner}>{owner}</span>
             <span className={styles.Date}>{updated_at}</span>
           </div>
-          {showEditForm ? <CommentEditForm /> : <p>{content}</p>}
+          {showEditForm ? (
+            <CommentEditForm
+              id={id}
+              traveler_id={traveler_id}
+              content={content}
+              traveler_image={traveler_image}
+              setComments={setComments}
+              setShowEditForm={setShowEditForm}
+            />
+          ) : (
+            <p>{content}</p>
+          )}
         </Media.Body>
         {is_owner && !showEditForm && (
           <MoreDropdown
