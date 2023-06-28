@@ -214,6 +214,7 @@ Upon clicking on the profile image in the navigation bar, additional links are r
 - [As a user, I can update my own comments on the Travel Tickr platform, so that I can make edits or corrections to my shared opinions.](https://github.com/SandraBergstrom/travel-tickr/issues/23)
 - [As a user, I can delete my own comments on the Travel Tickr platform, so that I can remove or retract my previous statements.](https://github.com/SandraBergstrom/travel-tickr/issues/24)
 - [As a user, I can follow other users on the Travel Tickr platform, so that I can stay updated on their travel journeys and experiences.](https://github.com/SandraBergstrom/travel-tickr/issues/25)
+- [As a user I can see which the most popular travelers are so that I can get inspired by them](https://github.com/SandraBergstrom/travel-tickr/issues/50)
 
 ##### Epic 4: Site Owner Administration
 - [As a site owner, I can delete user accounts, posts, and comments on the Travel Tickr platform, so that I can maintain a safe and high-quality user environment.](https://github.com/SandraBergstrom/travel-tickr/issues/26)
@@ -227,6 +228,7 @@ Upon clicking on the profile image in the navigation bar, additional links are r
 ##### Epic 6: Trip Planning and Information
 - [As a user, I can create a trip on the Travel Tickr platform before going on a journey, and an auto-generated photo album will be created with photos taken during the trip, so that I can easily capture and share my travel moments.](https://github.com/SandraBergstrom/travel-tickr/issues/31)
 - [As a user, I can access automated packing lists and information about destinations such as weather forecasts, safety warnings, recommended vaccinations, and other relevant details on the Travel Tickr platform, so that I can be well-prepared for my travel plans.](https://github.com/SandraBergstrom/travel-tickr/issues/32)
+- [As a user I can see a posts location so that I can know where the memory was made](https://github.com/SandraBergstrom/travel-tickr/issues/36)
 
 [Back up](#table-of-content)
 
@@ -421,6 +423,7 @@ Within each sprint, a MoSCoW method is used to further prioritize user stories. 
 * [x] [USER STORY: Delete Comment](https://github.com/SandraBergstrom/travel-tickr/issues/24) (Must do)
 
 * [ ] [USER STORY: Follow Users](https://github.com/SandraBergstrom/travel-tickr/issues/25) (Must do) 
+* [ ] [USER STORY: Popular Profiles](https://github.com/SandraBergstrom/travel-tickr/issues/50) (Must do)
 * [x] [USER STORY: Maintain user enviornment](https://github.com/SandraBergstrom/travel-tickr/issues/26) (Must do)
 * [ ] [USER STORY: Add Post to bucket list](https://github.com/SandraBergstrom/travel-tickr/issues/27) (Must do)
 
