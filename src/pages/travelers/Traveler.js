@@ -25,7 +25,7 @@ const Traveler = (props) => {
       <div className={`mx-2 ${styles.WordBreak}`}>
         <strong>{owner}</strong>
       </div>
-      <div className={`text-right ${!mobile && "ml-auto"}`}>
+      <div className={`text-right ms-auto ${!mobile && "ml-auto"}`}>
         {!mobile &&
           currentUser &&
           !is_owner &&
@@ -38,7 +38,7 @@ const Traveler = (props) => {
             </Button>
           ) : (
             <Button
-              className={`me-1 btn-sm ${btnStyles.Button} ${btnStyles.PinkOutline}`}
+              className={`me-1 ${btnStyles.Button} ${btnStyles.PinkOutline}`}
               onClick={() => {}}
             >
               follow
