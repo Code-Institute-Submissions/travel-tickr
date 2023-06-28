@@ -409,6 +409,7 @@ Within each sprint, a MoSCoW method is used to further prioritize user stories. 
 #### Sprint 3 (June 25th - July 1st, 2023): 
 * [ ] Design and implement footer (Could do)
 * [ ] [USER STORY: Update profile](https://github.com/SandraBergstrom/travel-tickr/issues/13) (Must do)
+* [x] [USER STORY: Popular Profiles](https://github.com/SandraBergstrom/travel-tickr/issues/50) (Must do)
 * [x] [USER STORY: View a post](https://github.com/SandraBergstrom/travel-tickr/issues/15) (Must do)
 * [x] [USER STORY: Update a post](https://github.com/SandraBergstrom/travel-tickr/issues/16) (Must do)
 * [x] [USER STORY: Delete a post](https://github.com/SandraBergstrom/travel-tickr/issues/17) (Must do)
@@ -423,7 +424,6 @@ Within each sprint, a MoSCoW method is used to further prioritize user stories. 
 * [x] [USER STORY: Delete Comment](https://github.com/SandraBergstrom/travel-tickr/issues/24) (Must do)
 
 * [ ] [USER STORY: Follow Users](https://github.com/SandraBergstrom/travel-tickr/issues/25) (Must do) 
-* [ ] [USER STORY: Popular Profiles](https://github.com/SandraBergstrom/travel-tickr/issues/50) (Must do)
 * [x] [USER STORY: Maintain user enviornment](https://github.com/SandraBergstrom/travel-tickr/issues/26) (Must do)
 * [ ] [USER STORY: Add Post to bucket list](https://github.com/SandraBergstrom/travel-tickr/issues/27) (Must do)
 
