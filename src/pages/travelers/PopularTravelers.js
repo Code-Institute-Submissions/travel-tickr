@@ -5,7 +5,7 @@ import { axiosReq } from "../../api/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Asset from "../../components/Asset";
 
-const PopularTravelers = () => {
+const PopularTravelers = ({ mobile }) => {
   const [travelerData, setTravelerData] = useState({
     pageTraveler: { results: [] },
     popularTravelers: { results: [] },
@@ -32,13 +32,25 @@ const PopularTravelers = () => {
   }, [currentUser]);
 
   return (
-    <Container className={appStyles.Container}>
+    <Container
+      className={`${appStyles.Content} ${
+        mobile && "d-lg-none text-center mb-3"
+      }`}
+    >
       {popularTravelers.results.length ? (
         <>
-          <p>Most followed travelers</p>
-          {popularTravelers.results.map((traveler) => (
-            <p key={traveler.id}>{traveler.owner}</p>
-          ))}
+          <p className="d-flex justify-content-center">Most followed travelers</p>
+          {mobile ? (
+            <div className="d-flex justify-content-around">
+              {popularTravelers.results.slice(0, 4).map((traveler) => (
+                <p key={traveler.id}>{traveler.owner}</p>
+              ))}
+            </div>
+          ) : (
+            popularTravelers.results
+              .slice(0, 4)
+              .map((traveler) => <p key={traveler.id}>{traveler.owner}</p>)
+          )}
         </>
       ) : (
         <Asset spinner />
