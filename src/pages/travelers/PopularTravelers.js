@@ -33,6 +33,9 @@ const PopularTravelers = () => {
   return (
     <Container className={appStyles.Container}>
       <p>Most followed travelers</p>
+      {popularTravelers.results.map(traveler => (
+        <p key={traveler.id}>{traveler.owner}</p>
+      ))}
     </Container>
   );
 };
