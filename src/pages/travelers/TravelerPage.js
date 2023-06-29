@@ -29,7 +29,7 @@ function TravelerPage() {
   const [hasLoaded, setHasLoaded] = useState(false);
   const currentUser = useCurrentUser();
   const { id } = useParams();
-  const { setTravelerData, handleFollow } = useSetTravelerData();
+  const { setTravelerData, handleFollow, handleUnFollow } = useSetTravelerData();
   const { pageTraveler } = useTravelerData();
   const [traveler] = pageTraveler.results;
   const is_owner = currentUser?.username === traveler?.owner;
@@ -90,7 +90,7 @@ function TravelerPage() {
             (traveler?.following_id ? (
               <Button
                 className={`${btnStyles.Button} ${btnStyles.Bright}`}
-                onClick={() => {}}
+                onClick={() => handleUnFollow(traveler)}
               >
                 Unfollow
               </Button>

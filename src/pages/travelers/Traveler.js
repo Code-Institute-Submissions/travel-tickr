@@ -14,7 +14,7 @@ const Traveler = (props) => {
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
 
-  const {handleFollow} = useSetTravelerData();
+  const {handleFollow, handleUnFollow} = useSetTravelerData();
 
   return (
     <div
@@ -35,7 +35,7 @@ const Traveler = (props) => {
           (following_id ? (
             <Button
               className={`me-1 ${btnStyles.Button} ${btnStyles.Bright}`}
-              onClick={() => {}}
+              onClick={() => handleUnFollow(traveler)}
             >
               unfollow
             </Button>

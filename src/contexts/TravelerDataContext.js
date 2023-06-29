@@ -86,7 +86,7 @@ export const TravelerDataProvider = ({ children }) => {
   return (
     <TravelerDataContext.Provider value={travelerData}>
       <SetTravelerDataContext.Provider
-        value={{ setTravelerData, handleFollow }}
+        value={{ setTravelerData, handleFollow, handleUnFollow }}
       >
         {children}
       </SetTravelerDataContext.Provider>
