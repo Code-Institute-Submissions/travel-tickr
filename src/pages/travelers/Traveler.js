@@ -5,6 +5,7 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { Button } from "react-bootstrap";
+import { useSetTravelerData } from "../../contexts/TravelerDataContext";
 
 const Traveler = (props) => {
   const { traveler, mobile, imageSize = 55 } = props;
@@ -12,6 +13,8 @@ const Traveler = (props) => {
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
+
+  const {handleFollow} = useSetTravelerData();
 
   return (
     <div
@@ -39,7 +42,7 @@ const Traveler = (props) => {
           ) : (
             <Button
               className={`me-1 ${btnStyles.Button} ${btnStyles.PinkOutline}`}
-              onClick={() => {}}
+              onClick={() => handleFollow(traveler)}
             >
               follow
             </Button>
