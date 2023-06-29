@@ -6,8 +6,7 @@ export const TravelerDataContext = createContext();
 export const SetTravelerDataContext = createContext();
 
 export const useTravelerData = () => useContext(TravelerDataContext);
-export const useSetTravelerData = () =>
-  useContext(SetTravelerDataContext);
+export const useSetTravelerData = () => useContext(SetTravelerDataContext);
 
 export const TravelerDataProvider = ({ children }) => {
   const [travelerData, setTravelerData] = useState({
@@ -19,13 +18,55 @@ export const TravelerDataProvider = ({ children }) => {
 
   const handleFollow = async (clickedTraveler) => {
     try {
-      const {data} = await axiosRes.post('/followers/', {
-        followed: clickedTraveler.id
-      })
+      const { data } = await axiosRes.post("/followers/", {
+        followed: clickedTraveler.id,
+      });
+
+      setTravelerData((prevState) => ({
+        ...prevState,
+        pageTraveler: {
+          results: prevState.pageTraveler.results.map((traveler) => {
+            return traveler.id === clickedTraveler.id
+              ? // If this is the traveler I clicked on, update its followers
+                // count and set its following id
+                {
+                  ...traveler,
+                  followers_count: traveler.followers_count + 1,
+                  following_id: data.id,
+                }
+              : traveler.is_owner
+              ? // If this is logged in user, update it's following count
+                { ...traveler, following_count: traveler.following_count + 1 }
+              : // if this is not the clicked on traveler or the logged
+                // in users own, just return it unchanged
+                traveler;
+          }),
+        },
+
+        popularTravelers: {
+          ...prevState.popularTravelers,
+          results: prevState.popularTravelers.results.map((traveler) => {
+            return traveler.id === clickedTraveler.id
+              ? // If this is the traveler I clicked on, update its followers
+                // count and set its following id
+                {
+                  ...traveler,
+                  followers_count: traveler.followers_count + 1,
+                  following_id: data.id,
+                }
+              : traveler.is_owner
+              ? // If this is logged in user, update it's following count
+                { ...traveler, following_count: traveler.following_count + 1 }
+              : // if this is not the clicked on traveler or the logged
+                // in users own, just return it unchanged
+                traveler;
+          }),
+        },
+      }));
     } catch (err) {
-      console.log(err)
+      console.log(err);
     }
-  }
+  };
 
   useEffect(() => {
     const handleMount = async () => {
@@ -47,7 +88,9 @@ export const TravelerDataProvider = ({ children }) => {
 
   return (
     <TravelerDataContext.Provider value={travelerData}>
-      <SetTravelerDataContext.Provider value={{setTravelerData, handleFollow}}>
+      <SetTravelerDataContext.Provider
+        value={{ setTravelerData, handleFollow }}
+      >
         {children}
       </SetTravelerDataContext.Provider>
     </TravelerDataContext.Provider>
