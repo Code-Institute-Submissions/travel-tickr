@@ -48,8 +48,8 @@ const TravelerEditForm = () => {
       if (currentUser?.traveler_id?.toString() === id) {
         try {
           const { data } = await axiosReq.get(`/travelers/${id}/`);
-          const { name, content, image } = data;
-          setTravelerData({ name, content, image });
+          const { name, content, image, favorite_place, one_important_thing } = data;
+          setTravelerData({ name, content, image, favorite_place, one_important_thing });
         } catch (err) {
           console.log(err);
           history.push("/");
@@ -112,13 +112,32 @@ const TravelerEditForm = () => {
           {message}
         </Alert>
       ))}
+      <Form.Group>
+              <Form.Label className="mt-3">What is your favorite place on earth?</Form.Label>
+              <Form.Control
+                type="text"
+                value={favorite_place}
+                onChange={handleChange}
+                name="favorite_place"
+              />
+              <Form.Label className="mt-3">
+                If you could only pack one thing on your next trip, what would
+                it be?
+              </Form.Label>
+              <Form.Control
+                type="text"
+                value={one_important_thing}
+                onChange={handleChange}
+                name="one_important_thing"
+              />
+            </Form.Group>
       <Button
-        className={`${btnStyles.Button} ${btnStyles.Blue}`}
+        className={`mt-3 me-1 ${btnStyles.Button} ${btnStyles.Bright}`}
         onClick={() => history.goBack()}
       >
         cancel
       </Button>
-      <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
+      <Button className={`mt-3 ms-1  ${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
         save
       </Button>
     </>
@@ -162,25 +181,7 @@ const TravelerEditForm = () => {
                 }}
               />
             </Form.Group>
-            <Form.Group>
-              <Form.Label>What is your favorite place on earth?</Form.Label>
-              <Form.Control
-                type="text"
-                value={favorite_place}
-                onChange={handleChange}
-                name="favorite_place"
-              />
-              <Form.Label>
-                If you could only pack one thing on your next trip, what would
-                it be?
-              </Form.Label>
-              <Form.Control
-                type="text"
-                value={one_important_thing}
-                onChange={handleChange}
-                name="one_important_thing"
-              />
-            </Form.Group>
+            
             <div className="d-md-none">{textFields}</div>
           </Container>
         </Col>
