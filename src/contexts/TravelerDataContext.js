@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { axiosReq } from "../api/axiosDefaults";
+import { axiosReq, axiosRes } from "../api/axiosDefaults";
 import { useCurrentUser } from "./CurrentUserContext";
 
 export const TravelerDataContext = createContext();
@@ -16,6 +16,16 @@ export const TravelerDataProvider = ({ children }) => {
   });
   const { popularTravelers } = travelerData;
   const currentUser = useCurrentUser();
+
+  const handleFollow = async (clickedTraveler) => {
+    try {
+      const {data} = await axiosRes.post('/followers/', {
+        followed: clickedTraveler.id
+      })
+    } catch (err) {
+      console.log(err)
+    }
+  }
 
   useEffect(() => {
     const handleMount = async () => {
@@ -37,7 +47,7 @@ export const TravelerDataProvider = ({ children }) => {
 
   return (
     <TravelerDataContext.Provider value={travelerData}>
-      <SetTravelerDataContext.Provider value={setTravelerData}>
+      <SetTravelerDataContext.Provider value={{setTravelerData, handleFollow}}>
         {children}
       </SetTravelerDataContext.Provider>
     </TravelerDataContext.Provider>
