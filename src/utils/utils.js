@@ -14,3 +14,20 @@ export const fetchMoreData = async (resource, setResource) => {
     }));
   } catch (err) {}
 };
+
+export const followHelper = (traveler, clickedTraveler, following_id) => {
+  return traveler.id === clickedTraveler.id
+    ? // If this is the traveler I clicked on, update its followers
+      // count and set its following id
+      {
+        ...traveler,
+        followers_count: traveler.followers_count + 1,
+        following_id
+      }
+    : traveler.is_owner
+    ? // If this is logged in user, update it's following count
+      { ...traveler, following_count: traveler.following_count + 1 }
+    : // if this is not the clicked on traveler or the logged
+      // in users own, just return it unchanged
+      traveler;
+};

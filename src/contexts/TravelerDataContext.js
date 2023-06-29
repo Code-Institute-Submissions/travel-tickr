@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { axiosReq, axiosRes } from "../api/axiosDefaults";
 import { useCurrentUser } from "./CurrentUserContext";
+import { followHelper } from "../utils/utils";
 
 export const TravelerDataContext = createContext();
 export const SetTravelerDataContext = createContext();
@@ -25,42 +26,16 @@ export const TravelerDataProvider = ({ children }) => {
       setTravelerData((prevState) => ({
         ...prevState,
         pageTraveler: {
-          results: prevState.pageTraveler.results.map((traveler) => {
-            return traveler.id === clickedTraveler.id
-              ? // If this is the traveler I clicked on, update its followers
-                // count and set its following id
-                {
-                  ...traveler,
-                  followers_count: traveler.followers_count + 1,
-                  following_id: data.id,
-                }
-              : traveler.is_owner
-              ? // If this is logged in user, update it's following count
-                { ...traveler, following_count: traveler.following_count + 1 }
-              : // if this is not the clicked on traveler or the logged
-                // in users own, just return it unchanged
-                traveler;
-          }),
+          results: prevState.pageTraveler.results.map((traveler) =>
+            followHelper(traveler, clickedTraveler, data.id)
+          ),
         },
 
         popularTravelers: {
           ...prevState.popularTravelers,
-          results: prevState.popularTravelers.results.map((traveler) => {
-            return traveler.id === clickedTraveler.id
-              ? // If this is the traveler I clicked on, update its followers
-                // count and set its following id
-                {
-                  ...traveler,
-                  followers_count: traveler.followers_count + 1,
-                  following_id: data.id,
-                }
-              : traveler.is_owner
-              ? // If this is logged in user, update it's following count
-                { ...traveler, following_count: traveler.following_count + 1 }
-              : // if this is not the clicked on traveler or the logged
-                // in users own, just return it unchanged
-                traveler;
-          }),
+          results: prevState.popularTravelers.results.map((traveler) =>
+            followHelper(traveler, clickedTraveler, data.id)
+          ),
         },
       }));
     } catch (err) {
