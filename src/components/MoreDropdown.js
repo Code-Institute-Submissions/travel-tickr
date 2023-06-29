@@ -3,6 +3,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 import styles from "../styles/MoreDropdown.module.css"
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
+import { useHistory } from "react-router-dom";
 
 // The forwardRef is important!!
 // Dropdown needs access to the DOM node in order to position the Menu
@@ -16,6 +17,37 @@ const ThreeDots = React.forwardRef(({ onClick }, ref) => (
       }}
     />
   ));
+
+  export function TravelerEditDropdown({ id }) {
+    const history = useHistory();
+    return (
+      <Dropdown className={`ml-auto px-3 ${styles.Absolute}`} drop="left">
+        <Dropdown.Toggle as={ThreeDots} />
+        <Dropdown.Menu>
+          <Dropdown.Item
+            onClick={() => history.push(`/travelers/${id}/edit`)}
+            aria-label="edit-traveler"
+          >
+            <i className="fas fa-edit" /> edit traveler
+          </Dropdown.Item>
+          <Dropdown.Item
+            onClick={() => history.push(`/travelers/${id}/edit/username`)}
+            aria-label="edit-username"
+          >
+            <i className="far fa-id-card" />
+            change username
+          </Dropdown.Item>
+          <Dropdown.Item
+            onClick={() => history.push(`/travelers/${id}/edit/password`)}
+            aria-label="edit-password"
+          >
+            <i className="fas fa-key" />
+            change password
+          </Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+    );
+  }
 
   export const MoreDropdown = ({ handleEdit, handleDelete }) => {
     return (
