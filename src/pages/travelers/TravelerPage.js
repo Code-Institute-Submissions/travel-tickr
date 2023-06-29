@@ -112,12 +112,23 @@ function TravelerPage() {
       </Row>
       <hr />
       <Row noGutters className={`px-3 text-center d-flex ${styles.Info}`}>
-        {traveler?.content && <Col className="mb-2"><i>About me: "{traveler.content}"</i></Col>}
+        {traveler?.content && (
+          <Col className="mb-2">
+            <i>"{traveler.content}"</i>
+          </Col>
+        )}
         {traveler?.favorite_place && (
-          <Col className="mb-2"><i>My favorite place in the world is {traveler.favorite_place}</i></Col>
+          <Col className="mb-2">
+            <i>"My favorite place in the world is {traveler.favorite_place}"</i>
+          </Col>
         )}
         {traveler?.one_important_thing && (
-          <Col className="mb-2"><i>The most important thing in my luggage is {traveler.one_important_thing}</i></Col>
+          <Col className="mb-2">
+            <i>
+              "The most important thing in my luggage is{" "}
+              {traveler.one_important_thing}"
+            </i>
+          </Col>
         )}
       </Row>
     </>
@@ -126,7 +137,9 @@ function TravelerPage() {
   const mainTravelerPosts = (
     <>
       <hr />
-      <p className="text-center">{traveler?.owner}'s memory lane <i class="fa-solid fa-paper-plane"></i></p>
+      <p className="text-center">
+        {traveler?.owner}'s memory lane <i class="fa-solid fa-paper-plane"></i>
+      </p>
       {travelerPosts.results.length ? (
         <InfiniteScroll
           children={travelerPosts.results.map((post) => (
