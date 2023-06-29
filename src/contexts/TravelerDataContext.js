@@ -6,7 +6,7 @@ export const TravelerDataContext = createContext();
 export const SetTravelerDataContext = createContext();
 
 export const useTravelerData = () => useContext(TravelerDataContext);
-export const useSetTravelerDataContext = () =>
+export const useSetTravelerData = () =>
   useContext(SetTravelerDataContext);
 
 export const TravelerDataProvider = ({ children }) => {
