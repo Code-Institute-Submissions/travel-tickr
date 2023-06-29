@@ -31,3 +31,15 @@ export const followHelper = (traveler, clickedTraveler, following_id) => {
       // in users own, just return it unchanged
       traveler;
 };
+
+export const unfollowHelper = (traveler, clickedTraveler) => {
+  return traveler.id === clickedTraveler.id
+  ? {
+    ...traveler,
+    followers_count: traveler.followers_count -1,
+    following_id: null,
+  }
+  : traveler.is_owner
+  ? {...traveler, following_count: traveler.following_count -1 }
+  : traveler;
+}
