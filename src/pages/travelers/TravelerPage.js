@@ -12,14 +12,33 @@ import btnStyles from "../../styles/Button.module.css";
 
 import PopularTravelers from "./PopularTravelers";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import { axiosReq } from "../../api/axiosDefaults";
+import { useSetTravelerData } from "../../contexts/TravelerDataContext";
 
 function TravelerPage() {
   const [hasLoaded, setHasLoaded] = useState(false);
   const currentUser = useCurrentUser();
+  const { id } = useParams();
+  const setTravelerData = useSetTravelerData();
 
   useEffect(() => {
-      setHasLoaded(true);
-  }, [])
+    const fetchData = async () => {
+      try {
+        const [{ data: pageTraveler }] = await Promise.all([
+          axiosReq.get(`/travelers/${id}/`),
+        ]);
+        setTravelerData((prevState) => ({
+          ...prevState,
+          pageTraveler: { results: [pageTraveler] },
+        }));
+        setHasLoaded(true);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
+  }, [id, setTravelerData]);
 
   const mainTraveler = (
     <>
@@ -32,7 +51,7 @@ function TravelerPage() {
           <p>Traveler stats</p>
         </Col>
         <Col lg={3} className="text-lg-right">
-        <p>Follow button</p>
+          <p>Follow button</p>
         </Col>
         <Col className="p-3">Traveler content</Col>
       </Row>
