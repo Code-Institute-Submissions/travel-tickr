@@ -89,14 +89,14 @@ function TravelerPage() {
             !is_owner &&
             (traveler?.following_id ? (
               <Button
-                className={`${btnStyles.Button} ${btnStyles.Pink}`}
+                className={`${btnStyles.Button} ${btnStyles.Bright}`}
                 onClick={() => {}}
               >
                 Unfollow
               </Button>
             ) : (
               <Button
-                className={`${btnStyles.Button} ${btnStyles.PinkOutline}`}
+                className={`${btnStyles.Button} ${btnStyles.Blue}`}
                 onClick={() => handleFollow(traveler)}
               >
                 follow

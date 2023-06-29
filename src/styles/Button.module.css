@@ -33,16 +33,15 @@
   }
   
   .Blue,
-  .BlueOutline:hover,
-  .Bright:hover {
+  .BlueOutline:hover {
     background-color: var(--clr-accent-dark);
     color: #ffffff;
   }
   
   .BlueOutline,
   .Blue:hover {
-    background-color: #ffffff;
-    color: var(--clr-accent-dark);
+    background-color: var(--clr-accent-light);
+    color: var(--clr-primary-light);
   }
   
   .Pink,
@@ -58,6 +57,12 @@
   }
   
   .Bright {
-    background-color: var(--clr-accent-dark);
+    background-color: var(--clr-primary-light);
+    color: var(--clr-accent-dark);
+    border-color: var(--clr-accent-dark);
+  }
+
+  .Bright:hover {
+    background-color: var(--clr-accent-danger);
     color: var(--clr-primary-light);
   }

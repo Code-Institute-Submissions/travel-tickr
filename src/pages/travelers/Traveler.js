@@ -34,14 +34,14 @@ const Traveler = (props) => {
           !is_owner &&
           (following_id ? (
             <Button
-              className={`me-1 ${btnStyles.Button} ${btnStyles.Pink}`}
+              className={`me-1 ${btnStyles.Button} ${btnStyles.Bright}`}
               onClick={() => {}}
             >
               unfollow
             </Button>
           ) : (
             <Button
-              className={`me-1 ${btnStyles.Button} ${btnStyles.PinkOutline}`}
+              className={`me-1 ${btnStyles.Button} ${btnStyles.Blue}`}
               onClick={() => handleFollow(traveler)}
             >
               follow
