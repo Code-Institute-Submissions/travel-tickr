@@ -24,13 +24,17 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import Post from "../posts/Post";
 import { fetchMoreData } from "../../utils/utils";
 import NoResult from "../../assets/no-results.png";
-import { ProfileEditDropdown, TravelerEditDropdown } from "../../components/MoreDropdown"
+import {
+  ProfileEditDropdown,
+  TravelerEditDropdown,
+} from "../../components/MoreDropdown";
 
 function TravelerPage() {
   const [hasLoaded, setHasLoaded] = useState(false);
   const currentUser = useCurrentUser();
   const { id } = useParams();
-  const { setTravelerData, handleFollow, handleUnFollow } = useSetTravelerData();
+  const { setTravelerData, handleFollow, handleUnFollow } =
+    useSetTravelerData();
   const { pageTraveler } = useTravelerData();
   const [traveler] = pageTraveler.results;
   const is_owner = currentUser?.username === traveler?.owner;
@@ -60,7 +64,7 @@ function TravelerPage() {
 
   const mainTraveler = (
     <>
-    {traveler?.is_owner && <TravelerEditDropdown id={traveler?.id} />}
+      {traveler?.is_owner && <TravelerEditDropdown id={traveler?.id} />}
       <Row noGutters className="px-3 text-center">
         <Col lg={3} className="text-lg-left">
           <Image
@@ -105,12 +109,15 @@ function TravelerPage() {
               </Button>
             ))}
         </Col>
-        {traveler?.content && <Col className="p-3">{traveler.content}</Col>}
+      </Row>
+      <hr />
+      <Row noGutters className={`px-3 text-center d-flex ${styles.Info}`}>
+        {traveler?.content && <Col className="mb-2"><i>About me: "{traveler.content}"</i></Col>}
         {traveler?.favorite_place && (
-          <Col className="p-3">{traveler.favorite_place}</Col>
+          <Col className="mb-2"><i>My favorite place in the world is {traveler.favorite_place}</i></Col>
         )}
         {traveler?.one_important_thing && (
-          <Col className="p-3">{traveler.one_important_thing}</Col>
+          <Col className="mb-2"><i>The most important thing in my luggage is {traveler.one_important_thing}</i></Col>
         )}
       </Row>
     </>
@@ -119,8 +126,7 @@ function TravelerPage() {
   const mainTravelerPosts = (
     <>
       <hr />
-      <p className="text-center">{traveler?.owner}'s posts</p>
-      <hr />
+      <p className="text-center">{traveler?.owner}'s memory lane <i class="fa-solid fa-paper-plane"></i></p>
       {travelerPosts.results.length ? (
         <InfiniteScroll
           children={travelerPosts.results.map((post) => (
@@ -142,8 +148,8 @@ function TravelerPage() {
 
   return (
     <Row>
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <PopularTravelers mobile />
+      <Col className="py-3 p-0 p-lg-2" lg={12}>
+        {/* <PopularTravelers mobile /> */}
         <Container className={appStyles.Content}>
           {hasLoaded ? (
             <>
@@ -156,7 +162,7 @@ function TravelerPage() {
         </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-        <PopularTravelers />
+        {/* <PopularTravelers /> */}
       </Col>
     </Row>
   );

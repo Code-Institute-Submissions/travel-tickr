@@ -11,3 +11,17 @@
         height: 250px;
     }
 }
+
+.Info i {
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 770px) {
+    .Info {
+        flex-direction: column;
+    }
+
+    .Info i {
+        padding: 5px;
+    }
+}

@@ -9,6 +9,12 @@
   padding-top: 100px;
 }
 
+@media screen and (max-width: 375px) {
+  .Main {
+    padding-top: 120px;
+  }
+}
+
 .Content {
   padding: 10px;
 }
