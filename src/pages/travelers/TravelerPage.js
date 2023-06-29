@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
+import Image from "react-bootstrap/Image";
 
 import Asset from "../../components/Asset";
 
@@ -14,13 +15,22 @@ import PopularTravelers from "./PopularTravelers";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
-import { useSetTravelerData } from "../../contexts/TravelerDataContext";
+import {
+  useSetTravelerData,
+  useTravelerData,
+} from "../../contexts/TravelerDataContext";
+import { Button } from "react-bootstrap";
 
 function TravelerPage() {
   const [hasLoaded, setHasLoaded] = useState(false);
   const currentUser = useCurrentUser();
   const { id } = useParams();
   const setTravelerData = useSetTravelerData();
+  const { pageTraveler } = useTravelerData();
+  const [traveler] = pageTraveler.results;
+  const is_owner = currentUser?.username === traveler?.owner;
+
+  const [travelerPosts, setTravelerPost] = useState({ results: [] });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -44,16 +54,55 @@ function TravelerPage() {
     <>
       <Row noGutters className="px-3 text-center">
         <Col lg={3} className="text-lg-left">
-          <p>Image</p>
+          <Image
+            className={styles.TravelerImage}
+            roundedCircle
+            src={traveler?.image}
+          />
         </Col>
         <Col lg={6}>
-          <h3 className="m-2">Traveler username</h3>
-          <p>Traveler stats</p>
+          <h3 className="m-2">{traveler?.owner}</h3>
+          <Row className="justify-content-center no-gutters">
+            <Col xs={3} className="my-2">
+              <div>{traveler?.posts_count}</div>
+              <div>posts</div>
+            </Col>
+            <Col xs={3} className="my-2">
+              <div>{traveler?.followers_count}</div>
+              <div>followers</div>
+            </Col>
+            <Col xs={3} className="my-2">
+              <div>{traveler?.following_count}</div>
+              <div>following</div>
+            </Col>
+          </Row>
         </Col>
         <Col lg={3} className="text-lg-right">
-          <p>Follow button</p>
+          {currentUser &&
+            !is_owner &&
+            (traveler?.following_id ? (
+              <Button
+                className={`${btnStyles.Button} ${btnStyles.Pink}`}
+                onClick={() => {}}
+              >
+                Unfollow
+              </Button>
+            ) : (
+              <Button
+                className={`${btnStyles.Button} ${btnStyles.PinkOutline}`}
+                onClick={() => {}}
+              >
+                follow
+              </Button>
+            ))}
         </Col>
-        <Col className="p-3">Traveler content</Col>
+        {traveler?.content && <Col className="p-3">{traveler.content}</Col>}
+        {traveler?.favorite_place && (
+          <Col className="p-3">{traveler.favorite_place}</Col>
+        )}
+        {traveler?.one_important_thing && (
+          <Col className="p-3">{traveler.one_important_thing}</Col>
+        )}
       </Row>
     </>
   );
