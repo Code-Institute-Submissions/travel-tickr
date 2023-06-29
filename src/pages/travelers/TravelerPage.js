@@ -29,7 +29,7 @@ function TravelerPage() {
   const [hasLoaded, setHasLoaded] = useState(false);
   const currentUser = useCurrentUser();
   const { id } = useParams();
-  const setTravelerData = useSetTravelerData();
+  const { setTravelerData, handleFollow } = useSetTravelerData();
   const { pageTraveler } = useTravelerData();
   const [traveler] = pageTraveler.results;
   const is_owner = currentUser?.username === traveler?.owner;
@@ -97,7 +97,7 @@ function TravelerPage() {
             ) : (
               <Button
                 className={`${btnStyles.Button} ${btnStyles.PinkOutline}`}
-                onClick={() => {}}
+                onClick={() => handleFollow(traveler)}
               >
                 follow
               </Button>
