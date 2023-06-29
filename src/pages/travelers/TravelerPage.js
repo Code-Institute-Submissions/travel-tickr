@@ -20,6 +20,10 @@ import {
   useTravelerData,
 } from "../../contexts/TravelerDataContext";
 import { Button } from "react-bootstrap";
+import InfiniteScroll from "react-infinite-scroll-component";
+import Post from "../posts/Post";
+import { fetchMoreData } from "../../utils/utils";
+import NoResult from "../../assets/no-results.png";
 
 function TravelerPage() {
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -30,18 +34,21 @@ function TravelerPage() {
   const [traveler] = pageTraveler.results;
   const is_owner = currentUser?.username === traveler?.owner;
 
-  const [travelerPosts, setTravelerPost] = useState({ results: [] });
+  const [travelerPosts, setTravelerPosts] = useState({ results: [] });
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [{ data: pageTraveler }] = await Promise.all([
-          axiosReq.get(`/travelers/${id}/`),
-        ]);
+        const [{ data: pageTraveler }, { data: travelerPosts }] =
+          await Promise.all([
+            axiosReq.get(`/travelers/${id}/`),
+            axiosReq.get(`/posts/?owner__traveler=${id}`),
+          ]);
         setTravelerData((prevState) => ({
           ...prevState,
           pageTraveler: { results: [pageTraveler] },
         }));
+        setTravelerPosts(travelerPosts);
         setHasLoaded(true);
       } catch (err) {
         console.log(err);
@@ -110,8 +117,24 @@ function TravelerPage() {
   const mainTravelerPosts = (
     <>
       <hr />
-      <p className="text-center">Traveler owner's posts</p>
+      <p className="text-center">{traveler?.owner}'s posts</p>
       <hr />
+      {travelerPosts.results.length ? (
+        <InfiniteScroll
+          children={travelerPosts.results.map((post) => (
+            <Post key={post.id} {...post} setPosts={setTravelerPosts} />
+          ))}
+          dataLength={travelerPosts.results.length}
+          loader={<Asset spinner />}
+          hasMore={!!travelerPosts.next}
+          next={() => fetchMoreData(travelerPosts, setTravelerPosts)}
+        />
+      ) : (
+        <Asset
+          src={NoResult}
+          message={`No results found, ${traveler?.owner} hasn't posted anything yet.`}
+        />
+      )}
     </>
   );
 
