@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { axiosReq, axiosRes } from "../api/axiosDefaults";
 import { useCurrentUser } from "./CurrentUserContext";
-import { followHelper } from "../utils/utils";
+import { followHelper, unfollowHelper } from "../utils/utils";
 
 export const TravelerDataContext = createContext();
 export const SetTravelerDataContext = createContext();
@@ -35,6 +35,28 @@ export const TravelerDataProvider = ({ children }) => {
           ...prevState.popularTravelers,
           results: prevState.popularTravelers.results.map((traveler) =>
             followHelper(traveler, clickedTraveler, data.id)
+          ),
+        },
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleUnFollow = async (clickedTraveler) => {
+    try {
+      await axiosRes.delete(`/followers/${clickedTraveler.following_id}`);
+      setTravelerData((prevState) => ({
+        ...prevState,
+        pageTraveler: {
+          results: prevState.pageTraveler.results.map((traveler) =>
+            unfollowHelper(traveler, clickedTraveler)
+          ),
+        },
+        popularTravelers: {
+          ...prevState.popularTravelers,
+          results: prevState.popularTravelers.results.map((traveler) =>
+            unfollowHelper(traveler, clickedTraveler)
           ),
         },
       }));
