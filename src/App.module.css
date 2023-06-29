@@ -2,6 +2,7 @@
   background-color: var(--clr-primary-light);
   color: var(--clr-primary-dark);
   text-align: center;
+  min-height: 100dvh;
 }
 
 .Main {
