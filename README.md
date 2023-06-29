@@ -215,6 +215,8 @@ Upon clicking on the profile image in the navigation bar, additional links are r
 - [As a user, I can delete my own comments on the Travel Tickr platform, so that I can remove or retract my previous statements.](https://github.com/SandraBergstrom/travel-tickr/issues/24)
 - [As a user, I can follow other users on the Travel Tickr platform, so that I can stay updated on their travel journeys and experiences.](https://github.com/SandraBergstrom/travel-tickr/issues/25)
 - [As a user I can see which the most popular travelers are so that I can get inspired by them](https://github.com/SandraBergstrom/travel-tickr/issues/50)
+- [As a user I can see other users profile so that I can learn more about them](https://github.com/SandraBergstrom/travel-tickr/issues/51)
+
 
 ##### Epic 4: Site Owner Administration
 - [As a site owner, I can delete user accounts, posts, and comments on the Travel Tickr platform, so that I can maintain a safe and high-quality user environment.](https://github.com/SandraBergstrom/travel-tickr/issues/26)
@@ -408,6 +410,7 @@ Within each sprint, a MoSCoW method is used to further prioritize user stories. 
 
 #### Sprint 3 (June 25th - July 1st, 2023): 
 * [ ] Design and implement footer (Could do)
+* [ ] [USER STORY: Profile page](https://github.com/SandraBergstrom/travel-tickr/issues/51) (Must do)
 * [ ] [USER STORY: Update profile](https://github.com/SandraBergstrom/travel-tickr/issues/13) (Must do)
 * [x] [USER STORY: Popular Profiles](https://github.com/SandraBergstrom/travel-tickr/issues/50) (Must do)
 * [x] [USER STORY: View a post](https://github.com/SandraBergstrom/travel-tickr/issues/15) (Must do)
