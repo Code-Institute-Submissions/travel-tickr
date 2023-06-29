@@ -34,12 +34,12 @@ export const TravelerDataProvider = ({ children }) => {
 
     handleMount();
   }, [currentUser]);
-};
 
-return (
+  return (
     <TravelerDataContext.Provider value={travelerData}>
-        <SetTravelerDataContext.Provider value={setTravelerData}>
-            {children}
-        </SetTravelerDataContext.Provider>
+      <SetTravelerDataContext.Provider value={setTravelerData}>
+        {children}
+      </SetTravelerDataContext.Provider>
     </TravelerDataContext.Provider>
-)
+  );
+};
