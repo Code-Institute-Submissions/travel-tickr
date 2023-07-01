@@ -23,9 +23,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import Post from "../posts/Post";
 import { fetchMoreData } from "../../utils/utils";
 import NoResult from "../../assets/no-results.png";
-import {
-  TravelerEditDropdown,
-} from "../../components/MoreDropdown";
+import { TravelerEditDropdown } from "../../components/MoreDropdown";
 
 function TravelerPage() {
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -141,7 +139,12 @@ function TravelerPage() {
       {travelerPosts.results.length ? (
         <InfiniteScroll
           children={travelerPosts.results.map((post) => (
-            <Post key={post.id} {...post} setPosts={setTravelerPosts} />
+            <Post
+              key={post.id}
+              {...post}
+              setPosts={setTravelerPosts}
+              truncated={true}
+            />
           ))}
           dataLength={travelerPosts.results.length}
           loader={<Asset spinner />}
