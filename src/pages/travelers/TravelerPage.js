@@ -11,7 +11,6 @@ import styles from "../../styles/TravelerPage.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
-import PopularTravelers from "./PopularTravelers";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
@@ -25,7 +24,6 @@ import Post from "../posts/Post";
 import { fetchMoreData } from "../../utils/utils";
 import NoResult from "../../assets/no-results.png";
 import {
-  ProfileEditDropdown,
   TravelerEditDropdown,
 } from "../../components/MoreDropdown";
 

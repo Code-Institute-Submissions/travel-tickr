@@ -9,7 +9,6 @@ import Alert from "react-bootstrap/Alert";
 
 import Upload from "../../assets/upload.png";
 import Asset from "../../components/Asset";
-import LocationForm from "../../components/LocationForm";
 
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
@@ -108,7 +107,6 @@ function PostCreateForm() {
           {message}
         </Alert>
       ))}
-      <LocationForm />
 
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}

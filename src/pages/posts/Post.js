@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 import styles from "../../styles/Post.module.css";

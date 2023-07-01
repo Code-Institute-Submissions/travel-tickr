@@ -14,7 +14,6 @@ export const TravelerDataProvider = ({ children }) => {
     pageTraveler: { results: [] },
     popularTravelers: { results: [] },
   });
-  const { popularTravelers } = travelerData;
   const currentUser = useCurrentUser();
 
   const handleFollow = async (clickedTraveler) => {

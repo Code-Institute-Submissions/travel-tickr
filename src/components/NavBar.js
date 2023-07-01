@@ -1,13 +1,10 @@
 import React, { useRef } from "react";
-import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import logo from "../assets/logo.webp";
 import { NavLink } from "react-router-dom";
 import styles from "../styles/NavBar.module.css";
-import btnStyles from "../styles/Button.module.css";
 import {
   useCurrentUser,
   useSetCurrentUser,
