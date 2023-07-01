@@ -26,13 +26,12 @@ const Post = (props) => {
     bucketlist_id,
     title,
     content,
+    truncated,
     image,
     updated_at,
     postPage,
     setPosts,
   } = props;
-
-  console.log(likes_count);
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
@@ -66,7 +65,7 @@ const Post = (props) => {
       console.log(err);
     }
   };
-  
+
   const handleBucketlist = async () => {
     try {
       const { data } = await axiosReq.post("/bucketlist/", { post: id });
@@ -74,7 +73,11 @@ const Post = (props) => {
         ...prevPosts,
         results: prevPosts.results.map((post) => {
           return post.id === id
-            ? { ...post, bucketlists_count: post.bucketlists_count + 1, bucketlist_id: data.id }
+            ? {
+                ...post,
+                bucketlists_count: post.bucketlists_count + 1,
+                bucketlist_id: data.id,
+              }
             : post;
         }),
       }));
@@ -106,7 +109,11 @@ const Post = (props) => {
         ...prevPosts,
         results: prevPosts.results.map((post) => {
           return post.id === id
-            ? { ...post, bucketlists_count: post.bucketlists_count - 1, bucketlist_id: null }
+            ? {
+                ...post,
+                bucketlists_count: post.bucketlists_count - 1,
+                bucketlist_id: null,
+              }
             : post;
         }),
       }));
@@ -139,7 +146,11 @@ const Post = (props) => {
       </Link>
       <Card.Body>
         {title && <Card.Title className="text-center">{title}</Card.Title>}
-        {content && <Card.Text>{content}</Card.Text>}
+        {truncated && content && (
+          <Card.Text>{content.substring(0, 150)}...</Card.Text>
+        )}
+        {!truncated && content && <Card.Text>{content}</Card.Text>}
+
         <div className={styles.PostBar}>
           {is_owner ? (
             <OverlayTrigger
@@ -165,20 +176,20 @@ const Post = (props) => {
             </OverlayTrigger>
           )}
           {likes_count}
-            {bucketlist_id ? (
-            <span onClick={handleRemoveFromBucketlist}>
-              <i className={`fa-solid fa-bucket ${styles.Heart}`} />
-            </span>
-            ) : (
-              <span onClick={handleBucketlist}>
-              <i className={`fa-solid fa-bucket ${styles.HeartOutline}`} />
-              </span>
-            )}
-          {bucketlists_count}
           <Link to={`/posts/${id}`}>
             <i className="far fa-comments" />
           </Link>
           {comments_count}
+          {bucketlist_id ? (
+            <span onClick={handleRemoveFromBucketlist}>
+              <i className={`fa-solid fa-bucket ${styles.Heart}`} />
+            </span>
+          ) : (
+            <span onClick={handleBucketlist}>
+              <i className={`fa-solid fa-bucket ${styles.HeartOutline}`} />
+            </span>
+          )}
+          {bucketlists_count}
         </div>
       </Card.Body>
     </Card>
