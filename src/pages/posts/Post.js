@@ -147,7 +147,7 @@ const Post = (props) => {
       <Card.Body>
         {title && <Card.Title className="text-center">{title}</Card.Title>}
         {truncated && content && (
-          <Card.Text>{content.substring(0, 150)}...</Card.Text>
+          <Card.Text>{content.substring(0, 200)} ...</Card.Text>
         )}
         {!truncated && content && <Card.Text>{content}</Card.Text>}
 
