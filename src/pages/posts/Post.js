@@ -22,6 +22,8 @@ const Post = (props) => {
     comments_count,
     likes_count,
     like_id,
+    bucketlists_count,
+    bucketlist_id,
     title,
     content,
     image,
@@ -64,6 +66,22 @@ const Post = (props) => {
       console.log(err);
     }
   };
+  
+  const handleBucketlist = async () => {
+    try {
+      const { data } = await axiosReq.post("/bucketlist/", { post: id });
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, bucketlists_count: post.bucketlists_count + 1, bucketlist_id: data.id }
+            : post;
+        }),
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const handleUnlike = async () => {
     try {
@@ -73,6 +91,22 @@ const Post = (props) => {
         results: prevPosts.results.map((post) => {
           return post.id === id
             ? { ...post, likes_count: post.likes_count - 1, like_id: null }
+            : post;
+        }),
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleRemoveFromBucketlist = async () => {
+    try {
+      await axiosReq.delete(`/bucketlist/${bucketlist_id}/`);
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, bucketlists_count: post.bucketlists_count - 1, bucketlist_id: null }
             : post;
         }),
       }));
@@ -131,6 +165,16 @@ const Post = (props) => {
             </OverlayTrigger>
           )}
           {likes_count}
+            {bucketlist_id ? (
+            <span onClick={handleRemoveFromBucketlist}>
+              <i className={`fa-solid fa-bucket ${styles.Heart}`} />
+            </span>
+            ) : (
+              <span onClick={handleBucketlist}>
+              <i className={`fa-solid fa-bucket ${styles.HeartOutline}`} />
+              </span>
+            )}
+          {bucketlists_count}
           <Link to={`/posts/${id}`}>
             <i className="far fa-comments" />
           </Link>

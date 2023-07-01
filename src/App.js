@@ -28,9 +28,7 @@ function App() {
             exact
             path="/"
             render={() => (
-              <PostsPage
-                message="No results found. Adjust the search keyword."
-              />
+              <PostsPage message="No results found. Adjust the search keyword." />
             )}
           />
           <Route
@@ -53,15 +51,37 @@ function App() {
               />
             )}
           />
+          <Route
+            exact
+            path="/bucketlist"
+            render={() => (
+              <PostsPage
+                message="No results found. Adjust the search keyword or add a post to your bucketlist."
+                filter={`bucketlist__owner=${traveler_id}&ordering=-created_at&`}
+              />
+            )}
+          />
           <Route exact path="/login" render={() => <LoginForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />
           <Route exact path="/posts/create" render={() => <PostCreateForm />} />
           <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
           <Route exact path="/posts/:id" render={() => <PostPage />} />
           <Route exact path="/travelers/:id" render={() => <TravelerPage />} />
-          <Route exact path="/travelers/:id/edit/username" render={() => <UsernameForm />} />
-          <Route exact path="/travelers/:id/edit/password" render={() => <UserPasswordForm />} />
-          <Route exact path="/travelers/:id/edit" render={() => <TravelerEditForm />} />
+          <Route
+            exact
+            path="/travelers/:id/edit/username"
+            render={() => <UsernameForm />}
+          />
+          <Route
+            exact
+            path="/travelers/:id/edit/password"
+            render={() => <UserPasswordForm />}
+          />
+          <Route
+            exact
+            path="/travelers/:id/edit"
+            render={() => <TravelerEditForm />}
+          />
           <Route render={() => <p>Page not found!</p>} />
         </Switch>
       </Container>

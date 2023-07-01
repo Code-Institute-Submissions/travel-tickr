@@ -60,6 +60,13 @@ const NavBar = () => {
       >
         <i className="fa-solid fa-heart"></i>Liked
       </NavLink>
+      <NavLink
+        to="/bucketlist"
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+      >
+        <i class="fa-solid fa-bucket"></i>Bucketlist
+      </NavLink>
       <NavLink to="/" onClick={handleSignOut} className={styles.NavLink}>
         <i className="fa-solid fa-door-closed"></i>Logout
       </NavLink>
