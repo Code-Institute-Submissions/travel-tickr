@@ -58,7 +58,7 @@ function App() {
             render={() => (
               <PostsPage
                 message="No results found. Adjust the search keyword or add a post to your bucketlist."
-                filter={`bucketlist__owner=${traveler_id}&ordering=-created_at&`}
+                filter={`bucketlist__owner__traveler=${traveler_id}&ordering=-bucketlist__created_at&`}
               />
             )}
           />
