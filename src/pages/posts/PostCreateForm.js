@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -18,19 +18,40 @@ import alertStyles from "../../styles/AlertMessages.module.css";
 import { Image } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
+import { useRedirect } from "../../hooks/useRedirect";
 
-function PostCreateForm() {
+function PostCreateForm({ userId }) {
+  useRedirect("loggedOut");
   const [errors, setErrors] = useState({});
 
   const [postData, setPostData] = useState({
     title: "",
     content: "",
     image: "",
+    location: "",
+    country: "",
   });
-  const { title, content, image } = postData;
+  const { title, content, image, location, country } = postData;
+
+  const [countries, setCountries] = useState([]);
 
   const imageInput = useRef(null);
   const history = useHistory();
+
+  useEffect(() => {
+    // Fetch list of countries from Restcountries API
+    const fetchCountries = async () => {
+      try {
+        const response = await axiosReq.get(
+          "https://restcountries.com/v3.1/all"
+        );
+        setCountries(response.data)
+      } catch (err) {
+        console.log("Error fetching countries:", err);
+      }
+    };
+    fetchCountries();
+  }, []);
 
   const handleChange = (event) => {
     setPostData({
@@ -56,6 +77,9 @@ function PostCreateForm() {
     formData.append("title", title);
     formData.append("content", content);
     formData.append("image", imageInput.current.files[0]);
+    formData.append("location", location);
+    formData.append("country", country);
+    console.log(formData, "<--- Formdata")
 
     try {
       const { data } = await axiosReq.post("/posts/", formData);
@@ -107,7 +131,30 @@ function PostCreateForm() {
           {message}
         </Alert>
       ))}
-
+      <Form.Group>
+        <Form.Label>Location name:</Form.Label>
+        <Form.Control
+          type="text"
+          name="location"
+          value={location}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      <Form.Group>
+        <Form.Label>Country</Form.Label>
+        <Form.Control
+          as="select"
+          name="country"
+          value={country}
+          onChange={handleChange}
+        >
+          {countries.map((country) => (
+            <option key={country.cca2} value={country.name.common}>
+              {country.name.common}
+            </option>
+          ))}
+        </Form.Control>
+      </Form.Group>
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
         onClick={() => history.goBack()}
