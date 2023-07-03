@@ -19,6 +19,7 @@ function App() {
   const currentUser = useCurrentUser();
   const traveler_id = currentUser?.traveler_id || "";
 
+
   return (
     <div className={styles.App}>
       <NavBar />
@@ -63,7 +64,7 @@ function App() {
           />
           <Route exact path="/login" render={() => <LoginForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />
-          <Route exact path="/posts/create" render={() => <PostCreateForm />} />
+          <Route exact path="/posts/create" render={() => <PostCreateForm userId={traveler_id} />} />
           <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
           <Route exact path="/posts/:id" render={() => <PostPage />} />
           <Route exact path="/travelers/:id" render={() => <TravelerPage />} />
