@@ -31,6 +31,8 @@ const Post = (props) => {
     updated_at,
     postPage,
     setPosts,
+    location,
+    country,
   } = props;
 
   const currentUser = useCurrentUser();
@@ -190,6 +192,10 @@ const Post = (props) => {
             </span>
           )}
           {bucketlists_count}
+        </div>
+        <hr />
+        <div className="d-flex align-items-center justify-content-end">
+            <span>With love from {location} in {country}</span>
         </div>
       </Card.Body>
     </Card>
