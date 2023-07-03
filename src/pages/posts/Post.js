@@ -133,7 +133,7 @@ const Post = (props) => {
             {owner}
           </Link>
           <div className="d-flex align-items-center">
-            <span>{updated_at}</span>
+            <span className={styles.smallText}>{updated_at}</span>
             {is_owner && postPage && (
               <MoreDropdown
                 handleEdit={handleEdit}
@@ -147,7 +147,7 @@ const Post = (props) => {
         <Card.Img src={image} alt={title} />
       </Link>
       <Card.Body>
-        {title && <Card.Title className="text-center">{title}</Card.Title>}
+        {title && <Card.Title className={`text-center ${styles.TitleText}`}>{title}</Card.Title>}
         {truncated && content && (
           <Card.Text>{content.substring(0, 200)} ...</Card.Text>
         )}
@@ -195,7 +195,9 @@ const Post = (props) => {
         </div>
         <hr />
         <div className="d-flex align-items-center justify-content-end">
-            <span>With love from {location} in {country}</span>
+          <span className={styles.smallText}>
+            With love from {location} in {country}
+          </span>
         </div>
       </Card.Body>
     </Card>

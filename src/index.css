@@ -29,6 +29,16 @@ code {
   background-color: white;
 }
 
+ h1, h2, h3, h4, h5 {
+  font-family: 'Lato' sans-serif;
+  color: var(--clr-accent-dark);
+} 
+
+p {
+  font-family: 'Roboto', sans-serif;
+  color: var(--clr-accent-dark);
+}
+
 .form-control:focus {
   color: var(--clr-primary-dark);
   background-color: var(--clr-natural-light);
