@@ -118,7 +118,9 @@ The website was tested on the following browsers:
 
 <br>
 
+
 ## Manual Testing
+
 
 ### Testing user stories UPDATE
 
