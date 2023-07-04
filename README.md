@@ -199,7 +199,7 @@ Upon clicking on the profile image in the navigation bar, additional links are r
 - [As a user, I can log out of the Travel Tickr platform, so that I can secure my account and maintain privacy.](https://github.com/SandraBergstrom/travel-tickr/issues/12)
 - [As a user, I can update my profile information on the Travel Tickr platform, so that my profile reflects my current preferences and interests.](https://github.com/SandraBergstrom/travel-tickr/issues/13)
 
-##### Epic 2: Post Management
+##### Epic 2: Post (CRUD) Management
 - [As a user, I can upload a photo with accompanying text to create a memory post on the Travel Tickr platform, so that I can share my travel experiences with others.](https://github.com/SandraBergstrom/travel-tickr/issues/14)
 - [As a user, I can view and read posts on the Travel Tickr platform, so that I can explore and discover travel stories shared by other users.](https://github.com/SandraBergstrom/travel-tickr/issues/15)
 - [As a user, I can update my own posts on the Travel Tickr platform, so that I can make edits or additions to my shared content.](https://github.com/SandraBergstrom/travel-tickr/issues/16)
@@ -221,7 +221,7 @@ Upon clicking on the profile image in the navigation bar, additional links are r
 ##### Epic 4: Site Owner Administration
 - [As a site owner, I can delete user accounts, posts, and comments on the Travel Tickr platform, so that I can maintain a safe and high-quality user environment.](https://github.com/SandraBergstrom/travel-tickr/issues/26)
 
-##### Epic 5: Travel Memory Management
+##### Epic 5: Memory Management
 - [As a user, I can add travel memories shared by others to my bucket list on the Travel Tickr platform, so that I can save and revisit them later.](https://github.com/SandraBergstrom/travel-tickr/issues/27)
 - [As a user, I can upload several photos to one post on the Travel Tickr platform, so that I can share a collection of images for a particular memory.](https://github.com/SandraBergstrom/travel-tickr/issues/28)
 - [As a user, I can create albums on the Travel Tickr platform, so that I can organize and categorize my travel memories.](https://github.com/SandraBergstrom/travel-tickr/issues/29)
@@ -409,9 +409,9 @@ Within each sprint, a MoSCoW method is used to further prioritize user stories. 
 * [x] Plan Sprint 2 (Must do)
 
 #### Sprint 3 (June 25th - July 1st, 2023): 
-* [ ] Design and implement footer (Could do)
-* [ ] [USER STORY: Profile page](https://github.com/SandraBergstrom/travel-tickr/issues/51) (Must do)
-* [ ] [USER STORY: Update profile](https://github.com/SandraBergstrom/travel-tickr/issues/13) (Must do)
+* [ ] Design and implement footer (Could do) *- Moved to next sprint*
+* [x] [USER STORY: Profile page](https://github.com/SandraBergstrom/travel-tickr/issues/51) (Must do)
+* [x] [USER STORY: Update profile](https://github.com/SandraBergstrom/travel-tickr/issues/13) (Must do)
 * [x] [USER STORY: Popular Profiles](https://github.com/SandraBergstrom/travel-tickr/issues/50) (Must do)
 * [x] [USER STORY: View a post](https://github.com/SandraBergstrom/travel-tickr/issues/15) (Must do)
 * [x] [USER STORY: Update a post](https://github.com/SandraBergstrom/travel-tickr/issues/16) (Must do)
@@ -420,6 +420,7 @@ Within each sprint, a MoSCoW method is used to further prioritize user stories. 
 * [x] [USER STORY: Search Posts](https://github.com/SandraBergstrom/travel-tickr/issues/18) (Must do)
 * [x] [USER STORY: Sort Posts](https://github.com/SandraBergstrom/travel-tickr/issues/19) (Must do)
 * [x] [USER STORY: Like Posts](https://github.com/SandraBergstrom/travel-tickr/issues/20) (Must do)
+* [ ] [USER STORY: Location](https://github.com/SandraBergstrom/travel-tickr/issues/36) (Should do) *- Moved to next sprint*
 
 * [x] [USER STORY: Create a Comment](https://github.com/SandraBergstrom/travel-tickr/issues/21) (Must do)
 * [x] [USER STORY: View Comments](https://github.com/SandraBergstrom/travel-tickr/issues/22) (Must do)
@@ -428,17 +429,39 @@ Within each sprint, a MoSCoW method is used to further prioritize user stories. 
 
 * [x] [USER STORY: Follow Users](https://github.com/SandraBergstrom/travel-tickr/issues/25) (Must do) 
 * [x] [USER STORY: Maintain user enviornment](https://github.com/SandraBergstrom/travel-tickr/issues/26) (Must do)
-* [ ] [USER STORY: Add Post to bucket list](https://github.com/SandraBergstrom/travel-tickr/issues/27) (Must do)
+* [x] [USER STORY: Add Post to bucket list](https://github.com/SandraBergstrom/travel-tickr/issues/27) (Must do)
 
-* [ ] [USER STORY: Upload multiple photos](https://github.com/SandraBergstrom/travel-tickr/issues/28) (Should do)
-* [ ] [USER STORY: Photo Album](https://github.com/SandraBergstrom/travel-tickr/issues/29) (Should do)
-* [ ] [USER STORY: Travel Map](https://github.com/SandraBergstrom/travel-tickr/issues/30) (Could do)
-* [ ] [USER STORY: Create a trip](https://github.com/SandraBergstrom/travel-tickr/issues/31) (Wont do)
-* [ ] [USER STORY: Packing list and info](https://github.com/SandraBergstrom/travel-tickr/issues/32) (Wont do)
-* [ ] [USER STORY: Location](https://github.com/SandraBergstrom/travel-tickr/issues/36) (Must do)
+* [ ] [USER STORY: Upload multiple photos](https://github.com/SandraBergstrom/travel-tickr/issues/28) (Should do) *- Moved to next sprint*
+* [ ] [USER STORY: Photo Album](https://github.com/SandraBergstrom/travel-tickr/issues/29) (Should do) *- Moved to next sprint*
+* [ ] [USER STORY: Travel Map](https://github.com/SandraBergstrom/travel-tickr/issues/30) (Could do) *- Moved to next sprint*
+* [ ] [USER STORY: Create a trip](https://github.com/SandraBergstrom/travel-tickr/issues/31) (Wont do) *- Moved to next sprint*
+* [ ] [USER STORY: Packing list and info](https://github.com/SandraBergstrom/travel-tickr/issues/32) (Wont do) *- Moved to next sprint*
+* [ ] [USER STORY: Location](https://github.com/SandraBergstrom/travel-tickr/issues/36) (Must do) *- Moved to next sprint*
+
+**Sprint 3 recap:** Although I have decided to move the "Location" user story to the next sprint, we have successfully accomplished a significant portion of the planned tasks for Sprint 3. 
+
+#### Sprint 4 (July 2nd - July 7th, 2023): 
+* [ ] Design and implement footer (Must do) 
+* [x] [USER STORY: Like comments](https://github.com/SandraBergstrom/travel-tickr/issues/54) (Must do)
+* [ ] Testing  (Must do)
+* [ ] Documentatino (Must do)
+* [ ] [USER STORY: Upload multiple photos](https://github.com/SandraBergstrom/travel-tickr/issues/28) (Should do) *- Moved to backlog*
+* [ ] [USER STORY: Photo Album](https://github.com/SandraBergstrom/travel-tickr/issues/29) (Could do) *- Moved to backlog*
+* [ ] [USER STORY: Travel Map](https://github.com/SandraBergstrom/travel-tickr/issues/30) (Could do) *- Moved to backlog*
+* [ ] [USER STORY: Create a trip](https://github.com/SandraBergstrom/travel-tickr/issues/31) (Wont do) *- Moved to backlog*
+* [ ] [USER STORY: Packing list and info](https://github.com/SandraBergstrom/travel-tickr/issues/32) (Wont do) *- Moved to backlog*
+* [x] [USER STORY: Location](https://github.com/SandraBergstrom/travel-tickr/issues/36) (Must do) 
+
+#### Backlog
+* [ ] [USER STORY: Upload multiple photos](https://github.com/SandraBergstrom/travel-tickr/issues/28) 
+* [ ] [USER STORY: Photo Album](https://github.com/SandraBergstrom/travel-tickr/issues/29)
+* [ ] [USER STORY: Travel Map](https://github.com/SandraBergstrom/travel-tickr/issues/30)
+* [ ] [USER STORY: Create a trip](https://github.com/SandraBergstrom/travel-tickr/issues/31)
+* [ ] [USER STORY: Packing list and info](https://github.com/SandraBergstrom/travel-tickr/issues/32)
+
 
 ### Backlog and Subsequent Iterations 
-The user stories are tracked on the project board, and the "To do" column represents the backlog of user stories, indicating the tasks that will be addressed in subsequent iterations.
+The user stories are tracked on the project board, and the "To do" column represents the backlog of user stories (also see above), indicating the tasks that will be addressed in subsequent iterations.
 
 Please note that even though the project timeline has been accelerated, the iterative development approach allows for ongoing improvements and enhancements to meet the evolving needs of users.
 

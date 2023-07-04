@@ -125,29 +125,17 @@ The website was tested on the following browsers:
 #### As a first-time user...
 | **User Story** | **Action** | **Expected Result** | **Pass** |
 --- | --- | --- | :---:
-|[I can create an account so that I can save my recipes](https://github.com/SandraBergstrom/theRecipeCollective/issues/3#issue-1676151139)|Click on the "Signup" navigation link or the signup button on the landing page|The user should be redirected to the signup form|:white_check_mark:
-|[I want to be able to access the About page so that I can learn more about the purpose, features, and benefits of Travel Tickr without needing to create an account](https://github.com/SandraBergstrom/theRecipeCollective/issues/37#issue-1708609060)|Click on the "About" button in the navigation bar on the landing page|The user should be directed to the About page|:white_check_mark:
+
 
 #### As a returning user...
 | **User Story** | **Action** | **Expected Result** | **Pass** |
 --- | --- | --- | :---:
-|[I can log in to my account](https://github.com/SandraBergstrom/theRecipeCollective/issues/4#issue-1676185860)|Press the login button either on the landing page or in the navbar|The user should be directed to the login page|:white_check_mark:
-|[I can log out of my account](https://github.com/SandraBergstrom/theRecipeCollective/issues/4#issue-1676185860)|Press the profile button and then select the logout option|The user should be logged out of their account|:white_check_mark:
-|[I can go to my profile page so that I can see my saved recipes and personal information](https://github.com/SandraBergstrom/theRecipeCollective/issues/12#issue-1676233050)|Press the profile button on the right side of the navbar and then on Profile in the drop down menu|The user should be redirected to their profile page|:white_check_mark:
-|[I want to be able to navigate through a long list of recipes using pagination so that I can view and interact with the list easily](https://github.com/SandraBergstrom/theRecipeCollective/issues/21#issue-1688404118)|Scroll down to the bottom of the Cookbook, My Recipes, or Favorites section|If there are more than 9 recipes, pagination is displayed to navigate through the list|:white_check_mark:
-|[I can view all recipes so that I can find new recipes to try](https://github.com/SandraBergstrom/theRecipeCollective/issues/2#issue-1676140284)|Click on the "Cookbook" link in the navigation bar|The user is directed to the recipe list view|:white_check_mark:
-|[I can click on a recipe so that I can get all details and instructions about it](https://github.com/SandraBergstrom/theRecipeCollective/issues/6#issue-1676195459)|Click on the recipe title or the info button|The user is taken to the recipe detail page|:white_check_mark:
-|[I can save recipes that I find in my own "cookbook" so that I can find them easily in the future](https://github.com/SandraBergstrom/theRecipeCollective/issues/17#issue-1676239448)|Click on the heart icon on the upper right part of the recipe detail page|The recipe is added to the favorites page, and a flash message appears confirming that it has been saved to favorites|:white_check_mark:
-|[I can add a new recipe so that I can share it with others and save it for myself](https://github.com/SandraBergstrom/theRecipeCollective/issues/5#issue-1676191345)|Press the profile button and then "Add recipe in the dropdown navigation bar|The user is directed to the recipe form|:white_check_mark:
-|[I can edit my own recipes so that I can update them if needed](https://github.com/SandraBergstrom/theRecipeCollective/issues/7#issue-1676198620)|Click on the "Update" button in the upper right corner of the recipe detail page|The user is directed to the recipe form to update the recipe|:white_check_mark:
-|[I can delete my own recipe so that I can remove them if wanted](https://github.com/SandraBergstrom/theRecipeCollective/issues/8#issue-1676201972)|Click the delete button on the recipe detail page|The user is taken to a confirmation page to confirm the deletion of the recipe. Upon confirming, the recipe is deleted|:white_check_mark:
-|[I can comment on a recipe so that share my thoughts and suggestions](https://github.com/SandraBergstrom/theRecipeCollective/issues/11#issue-1676227838)|Scroll down to the comment form on the recipe detail card and add a comment|The comment is successfully added|:white_check_mark:
+
 
 #### As a site owner...
 | **User Story** | **Action** | **Expected Result** | **Pass** |
 --- | --- | --- | :---:
-|[I can view and manage user accounts to ensure the security and integrity of the site and its users](https://github.com/SandraBergstrom/theRecipeCollective/issues/1#issue-1676139643)|Access the Django admin section and navigate to the user management section|The admin section displays all users and their associated information. The owner can perform actions such as deleting users and managing their comments|:white_check_mark:
-|[I can view and manage recipes to maintain a high standard of content and ensure the quality of the recipes on the site](https://github.com/SandraBergstrom/theRecipeCollective/issues/1#issue-1676139643)|Access the admin page and navigate to the recipe management section|The admin page allows the owner to view and manage all recipes, ensuring the quality and standards of the content|:white_check_mark:
+
 
 [Back to the top](#table-of-content)
 
