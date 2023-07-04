@@ -1,4 +1,6 @@
-const baseUrl = "https://travel-tickr-api-e57198555b47.herokuapp.com/";
+import { rest } from "msw";
+
+const baseURL = "https://travel-tickr-api-e57198555b47.herokuapp.com/";
 
 export const handlers = [
   rest.get(`${baseURL}dj-rest-auth/user/`, (req, res, ctx) => {
@@ -15,7 +17,7 @@ export const handlers = [
       })
     );
   }),
-  rest.post(`${baseURL}dj-res-auth/logout/`, (req, res, ctx) => {
+  rest.post(`${baseURL}dj-rest-auth/logout/`, (req, res, ctx) => {
     return res(ctx.status(200));
   }),
 ];
