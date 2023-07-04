@@ -161,38 +161,40 @@ Each participant was encouraged to provide feedback and report any issues or imp
 |--- | --- | --- | :---:
 
 
-### Full testing
+### Full testing Unauthorized user
 
-#### Unauthorized user
-##### Navbar 
+#### Navbar 
 |**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
 |--- | --- | --- | --- | :---:
 |Logo|Redirects to index.page|Clicked on logo|index page loads|:white_check_mark:
 |Login|Redirects to the login page|clicked on link "Login"|loads the login page and form|:white_check_mark:
 |Sign up|Redirects to to the signup page and form|clicked on the link "Sign up"|loads the sign up page and form|:white_check_mark:
 
-##### Posts list
+#### Posts list
+|**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
 |--- | --- | --- | --- | :---:
-|Search|Search result should only contain the post with the specified title.|Try to search for a post by a specific title and verify that the search result only includes that post.|:white_check_mark:
+|Search|Search result should only contain the post with the specified title|Try to search for a post by a specific title and verify that the search result only includes that post|:white_check_mark:
 |Like a post|The functionality should prompt the user to log in before they can like the post|Like a post and verify that a popup comes with text to login.|:white_check_mark:
 |Comment on a Post|The functionality should prompt the user to log in before they can comment.|Varify that I can not make a comment and be prompted to login. |:white_check_mark:
 |Like a comment|The functionality should prompt the user to log in before they can like the comment|Like a comment and verify that a popup comes with text to login.|:white_check_mark:
 |Add to bucketlist|The functionality should prompt the user to log in before they can add post to the bucketlist|Add a post to bucketlist and verify that a popup comes with text to login.|:white_check_mark:
 
-##### Create an account
+#### Create an account
+|**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
 |--- | --- | --- | --- | :---:
 |No match passwords|The account creation should fail, and an error message should be displayed indicating password mismatch.|Provide different passwords.|:white_check_mark:
 |No username|The account creation should fail, and an error message should be displayed indicating a missing username.|Submit the form without entering a username.|:white_check_mark:
 |Submit valid data|The account should be successfully created, and the user should be redirected to the home page.|Submit the form with a valid username and matching passwords.|:white_check_mark:
 
-##### Log in
+#### Log in
+|**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
 |--- | --- | --- | --- | :---:
 |No/wrong username|The login should fail, and an error message should be displayed indicating a missing username.|Attempt to log in without entering a username and then the wrong username.|:white_check_mark:
 |No/wrong password|The login should fail, and an error message should be displayed indicating a missing password.|Attempt to log in without entering a password and then the wrong password.|:white_check_mark:
 |Valid username and password|The login should be successful, and the user should be redirected to the home page.|Log in with a valid username and password.|:white_check_mark:
 
-#### Authorized user
-##### Navbar
+### Authorized user
+#### Navbar
 |**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
 |--- | --- | --- | --- | :---:
 |Logo|Redirects to index.page|Clicked on logo|index page loads|:white_check_mark:
@@ -216,6 +218,7 @@ Each participant was encouraged to provide feedback and report any issues or imp
 ||The user should first see an alert about deleting, then if pressing the post should be successfully deleted.|Delete one of your own posts by accessing the memory detail view, going to the menu, and selecting the delete option.|:white_check_mark:
 
 #### Comments
+|**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
 |--- | --- | --- | --- | :---:
 |Add a comment to another user's post|The comment should be successfully added to the post and the comments counter should increase.|Scroll to the comments field, add a comment, and save it.|:white_check_mark:
 |Update comment|A valid comment update should be saved.|Update one of your own comments on another user's post by accessing the memory detail view, scrolling to the comments field, accessing the menu for your comment, and selecting the update option.|:white_check_mark:
@@ -225,27 +228,30 @@ Each participant was encouraged to provide feedback and report any issues or imp
 |Unlike a Comment|The comment should be successfully unliked and the counter should decrease.|Press the thumbs icon again to unlike the comment.|:white_check_mark:
 
 
-##### Home Page
+#### Home Page
+|**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
 |--- | --- | --- | --- | :---:
 |Search|The search functionality should return relevant posts based on the search query.|Search for a post.|:white_check_mark:
 |Like post|The post should be successfully liked, and the like count should increment.|Like a post.|:white_check_mark:
 |Add to bucketlist|The post should be successfully added to bucketlist, and the like count should increment.|Like a post.|:white_check_mark:
 |Infinity scroll|The home page should load more posts as the user scrolls down, demonstrating infinite scrolling.|Scroll through the home page.|:white_check_mark:
 
-##### Following page
+#### Following page
+|**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
 |--- | --- | --- | --- | :---:
 |No followers|Page should display the appropriate icon and text to prompt you to follow another traveler.|Go to the following feed page by clicking the link in the navbar|:white_check_mark:
 |Follow|The user should be successfully followed, their posts should appear in the "Following" page, the users followers count should increase with 1 as will the followers follower count.|Click the follow button on a user.|:white_check_mark:
 |Unfollow|The user should be successfully unfollowed, their posts should not appear in the "Following" feed anymore. Users followers count should go down by one|Click the follow button on a user.|:white_check_mark:
 
-##### Bucketlist page
+#### Bucketlist page
+|**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
 |--- | --- | --- | --- | :---:
 |No bucketlist items|Page should display the appropriate icon and text to prompt you to add posts to the bucketlist.|Go to the bucketlist page by clicking the link in the navbar|:white_check_mark:
 |Add to bucketlist|The post should be successfully added and the counter for that posts bucketlists should increase by one.|Click the bucket on a post.|:white_check_mark:
 |Remove post|The post should be successfully removed from the bucketlist and the counter should go down with one.|Click the bucket on a post.|:white_check_mark:
 
-
-##### Travelers profile page
+#### Travelers profile page
+|**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
 |--- | --- | --- | --- | :---:
 |Go to profile|Users profile page should be displayed.|Click on your avatar to navigate to your profile.|:white_check_mark:
 |Menu|Dropdown list with options to update profile, change username and password will appear.|Click the 3 dots in the upper right corner and go to the "Update Profile" option.|:white_check_mark:
