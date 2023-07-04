@@ -44,16 +44,6 @@ function App() {
           />
           <Route
             exact
-            path="/liked"
-            render={() => (
-              <PostsPage
-                message="No results found. Adjust the search keyword or like a post."
-                filter={`likes__owner__traveler=${traveler_id}&ordering=-likes__created_at&`}
-              />
-            )}
-          />
-          <Route
-            exact
             path="/bucketlist"
             render={() => (
               <PostsPage
