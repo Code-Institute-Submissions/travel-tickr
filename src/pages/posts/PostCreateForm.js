@@ -79,7 +79,6 @@ function PostCreateForm({ userId }) {
     formData.append("image", imageInput.current.files[0]);
     formData.append("location", location);
     formData.append("country", country);
-    console.log(formData, "<--- Formdata");
 
     try {
       const { data } = await axiosReq.post("/posts/", formData);
