@@ -1,6 +1,5 @@
 import React from "react";
 import NoResults from "../assets/no-results.png";
-import styles from "../styles/NotFound.module.css";
 import Asset from "../components/Asset";
 
 const NotFound = () => {
