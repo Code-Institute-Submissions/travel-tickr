@@ -14,7 +14,7 @@ const Traveler = (props) => {
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
 
-  const {handleFollow, handleUnFollow} = useSetTravelerData();
+  const { handleFollow, handleUnFollow } = useSetTravelerData();
 
   return (
     <div

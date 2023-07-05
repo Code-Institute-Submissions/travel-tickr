@@ -6,7 +6,7 @@ import Traveler from "./Traveler";
 import { useTravelerData } from "../../contexts/TravelerDataContext";
 
 const PopularTravelers = ({ mobile }) => {
-  const { popularTravelers }  = useTravelerData();
+  const { popularTravelers } = useTravelerData();
 
   return (
     <Container

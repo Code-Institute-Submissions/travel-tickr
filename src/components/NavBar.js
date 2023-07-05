@@ -50,7 +50,8 @@ const NavBar = () => {
         className={styles.NavLink}
         activeClassName={styles.Active}
       >
-        <i className={`fa-solid fa-shoe-prints ${styles.RotatedIcon}`}></i>Following
+        <i className={`fa-solid fa-shoe-prints ${styles.RotatedIcon}`}></i>
+        Following
       </NavLink>
       <NavLink
         to="/bucketlist"
@@ -63,7 +64,7 @@ const NavBar = () => {
         <i className="fa-solid fa-door-closed"></i>Log out
       </NavLink>
       <NavLink className={styles.NavLink} to={`/travelers/${currentUser?.pk}`}>
-        <Avatar src={currentUser?.traveler_image} height={40} alt='traveler' />
+        <Avatar src={currentUser?.traveler_image} height={40} alt="traveler" />
         {currentUser?.username}
       </NavLink>
     </>

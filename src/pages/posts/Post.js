@@ -2,7 +2,7 @@ import React from "react";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 import styles from "../../styles/Post.module.css";
-import counterStyles from "../../styles/Counter.module.css"
+import counterStyles from "../../styles/Counter.module.css";
 
 import Card from "react-bootstrap/Card";
 import Media from "react-bootstrap/Media";

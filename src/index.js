@@ -8,13 +8,13 @@ import { CurrentUserProvider } from "./contexts/CurrentUserContext";
 import { TravelerDataProvider } from "./contexts/TravelerDataContext";
 
 ReactDOM.render(
-    <Router>
-      <CurrentUserProvider>
-        <TravelerDataProvider>
-          <App />
-        </TravelerDataProvider>
-      </CurrentUserProvider>
-    </Router>,
+  <Router>
+    <CurrentUserProvider>
+      <TravelerDataProvider>
+        <App />
+      </TravelerDataProvider>
+    </CurrentUserProvider>
+  </Router>,
   document.getElementById("root")
 );
 

@@ -145,18 +145,18 @@ function PostEditForm() {
             className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
           >
             <Form.Group className="text-center">
-                  <figure>
-                    <Image className={appStyles.Image} src={image} rounded />
-                  </figure>
-                  <div>
-                    <Form.Label
-                      className={`&{btnStyles.Button} &{btnStyles.Blue} btn`}
-                      htmlFor="image-upload"
-                    >
-                      {" "}
-                      Change the image{" "}
-                    </Form.Label>
-                  </div>
+              <figure>
+                <Image className={appStyles.Image} src={image} rounded />
+              </figure>
+              <div>
+                <Form.Label
+                  className={`&{btnStyles.Button} &{btnStyles.Blue} btn`}
+                  htmlFor="image-upload"
+                >
+                  {" "}
+                  Change the image{" "}
+                </Form.Label>
+              </div>
 
               <Form.File
                 id="image-upload"
