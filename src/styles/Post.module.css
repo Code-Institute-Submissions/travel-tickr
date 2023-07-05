@@ -32,3 +32,9 @@ h5 {
   font-size: small;
   color: var(--clr-accent-dark);
 }
+
+.PostBar {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}

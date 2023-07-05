@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import styles from "../../styles/Comment.module.css";
-import btnStyles from "../../styles/Button.module.css";
+import counterStyles from "../../styles/Counter.module.css";
 import CommentEditForm from "./CommentEditForm";
 
 import { Link } from "react-router-dom/";
@@ -119,10 +119,9 @@ const Comment = (props) => {
             </div>
           )}
         </Media.Body>
-        <div
-          className={styles.iconsRight}>
-          <div className="d-flex align-items-center">
-            {likes_count}
+        <div className={styles.iconsRight}>
+          <div className="d-flex align-items-end">
+            <span className={counterStyles.counter}>{likes_count}</span>
             {is_owner ? (
               <OverlayTrigger
                 placement="top"

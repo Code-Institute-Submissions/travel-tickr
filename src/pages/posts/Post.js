@@ -2,6 +2,7 @@ import React from "react";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 import styles from "../../styles/Post.module.css";
+import counterStyles from "../../styles/Counter.module.css"
 
 import Card from "react-bootstrap/Card";
 import Media from "react-bootstrap/Media";
@@ -182,11 +183,11 @@ const Post = (props) => {
               <i className="far fa-heart" />
             </OverlayTrigger>
           )}
-          {likes_count}
+          <span className={counterStyles.counter}>{likes_count}</span>
           <Link to={`/posts/${id}`}>
             <i className="far fa-comments" />
           </Link>
-          {comments_count}
+          <span className={counterStyles.counter}>{comments_count}</span>
           {bucketlist_id ? (
             <span onClick={handleRemoveFromBucketlist}>
               <i className={`fa-solid fa-bucket ${styles.Heart}`} />
@@ -196,7 +197,7 @@ const Post = (props) => {
               <i className={`fa-solid fa-bucket ${styles.HeartOutline}`} />
             </span>
           )}
-          {bucketlists_count}
+          <span className={counterStyles.counter}>{bucketlists_count}</span>
         </div>
         <hr />
         <div className="d-flex align-items-center justify-content-end">
