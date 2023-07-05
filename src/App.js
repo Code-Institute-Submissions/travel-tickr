@@ -14,6 +14,7 @@ import TravelerPage from "./pages/travelers/TravelerPage";
 import UsernameForm from "./pages/travelers/UsernameForm";
 import UserPasswordForm from "./pages/travelers/UserPasswordForm";
 import TravelerEditForm from "./pages/travelers/TravelerEditForm";
+import NotFound from "./components/NotFound";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -73,7 +74,7 @@ function App() {
             path="/travelers/:id/edit"
             render={() => <TravelerEditForm />}
           />
-          <Route render={() => <p>Page not found!</p>} />
+          <Route render={() => <NotFound />} />
         </Switch>
       </Container>
     </div>
