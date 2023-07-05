@@ -95,7 +95,7 @@ const Comment = (props) => {
   return (
     <div>
       <hr />
-      <Media className="d-flex">
+      <Media className={styles.mediaGroup}>
         <Link to={`/travelers/${traveler_id}`}>
           <Avatar src={traveler_image} />
         </Link>
@@ -115,46 +115,45 @@ const Comment = (props) => {
             />
           ) : (
             <div className="d-flex justify-content-between align-items-end">
-              <p>{content}</p>
-              <div className="d-flex align-items-center">
-                {likes_count}
-                {is_owner ? (
-                  <OverlayTrigger
-                    placement="top"
-                    overlay={
-                      <Tooltip>You can't like your own comment!</Tooltip>
-                    }
-                  >
-                    <i className="fa-solid fa-thumbs-up"></i>
-                  </OverlayTrigger>
-                ) : like_id ? (
-                  <span onClick={handleUnlike}>
-                    <i className={`fa-solid fa-thumbs-up ${styles.Heart}`} />
-                  </span>
-                ) : currentUser ? (
-                  <span onClick={handleLike}>
-                    <i
-                      className={`fa-solid fa-thumbs-up ${styles.HeartOutline}`}
-                    />
-                  </span>
-                ) : (
-                  <OverlayTrigger
-                    placement="top"
-                    overlay={<Tooltip>Log in to like comments!</Tooltip>}
-                  >
-                    <i className="fa-solid fa-thumbs-up" />
-                  </OverlayTrigger>
-                )}
-              </div>
+              <p className={styles.commentText}>{content}</p>
             </div>
           )}
         </Media.Body>
-        {is_owner && !showEditForm && (
-          <MoreDropdown
-            handleEdit={() => setShowEditForm(true)}
-            handleDelete={handleDelete}
-          />
-        )}
+        <div
+          className={styles.iconsRight}>
+          <div className="d-flex align-items-center">
+            {likes_count}
+            {is_owner ? (
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip>You can't like your own comment!</Tooltip>}
+              >
+                <i className="fa-solid fa-thumbs-up"></i>
+              </OverlayTrigger>
+            ) : like_id ? (
+              <span onClick={handleUnlike}>
+                <i className={`fa-solid fa-thumbs-up ${styles.Heart}`} />
+              </span>
+            ) : currentUser ? (
+              <span onClick={handleLike}>
+                <i className={`fa-solid fa-thumbs-up ${styles.HeartOutline}`} />
+              </span>
+            ) : (
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip>Log in to like comments!</Tooltip>}
+              >
+                <i className="fa-solid fa-thumbs-up" />
+              </OverlayTrigger>
+            )}
+          </div>
+          {is_owner && !showEditForm && (
+            <MoreDropdown
+              handleEdit={() => setShowEditForm(true)}
+              handleDelete={handleDelete}
+            />
+          )}
+        </div>
       </Media>
     </div>
   );
