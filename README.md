@@ -220,6 +220,9 @@ Upon clicking on the profile image in the navigation bar, additional links are r
 
 ##### Epic 4: Site Owner Administration
 - [As a site owner, I can delete user accounts, posts, and comments on the Travel Tickr platform, so that I can maintain a safe and high-quality user environment.](https://github.com/SandraBergstrom/travel-tickr/issues/26)
+- [As the owner of the application, I want to improve the application's codebase and deployment process to ensure efficiency and maintainability.](https://github.com/SandraBergstrom/travel-tickr/issues/57)
+- [As an owner, I want to create a 404 page to improve the user experience when users land on non-existent pages.](https://github.com/SandraBergstrom/travel-tickr/issues/58)
+
 
 ##### Epic 5: Memory Management
 - [As a user, I can add travel memories shared by others to my bucket list on the Travel Tickr platform, so that I can save and revisit them later.](https://github.com/SandraBergstrom/travel-tickr/issues/27)
@@ -443,14 +446,16 @@ Within each sprint, a MoSCoW method is used to further prioritize user stories. 
 #### Sprint 4 (July 2nd - July 7th, 2023): 
 * [ ] Design and implement footer (Must do) 
 * [x] [USER STORY: Like comments](https://github.com/SandraBergstrom/travel-tickr/issues/54) (Must do)
-* [ ] Testing  (Must do)
-* [ ] Documentatino (Must do)
 * [ ] [USER STORY: Upload multiple photos](https://github.com/SandraBergstrom/travel-tickr/issues/28) (Should do) *- Moved to backlog*
 * [ ] [USER STORY: Photo Album](https://github.com/SandraBergstrom/travel-tickr/issues/29) (Could do) *- Moved to backlog*
 * [ ] [USER STORY: Travel Map](https://github.com/SandraBergstrom/travel-tickr/issues/30) (Could do) *- Moved to backlog*
 * [ ] [USER STORY: Create a trip](https://github.com/SandraBergstrom/travel-tickr/issues/31) (Wont do) *- Moved to backlog*
 * [ ] [USER STORY: Packing list and info](https://github.com/SandraBergstrom/travel-tickr/issues/32) (Wont do) *- Moved to backlog*
 * [x] [USER STORY: Location](https://github.com/SandraBergstrom/travel-tickr/issues/36) (Must do) 
+* [ ] Testing  (Must do)
+* [ ] Documentation (Must do)
+* [ ] [USER STORY: 404-page](https://github.com/SandraBergstrom/travel-tickr/issues/58)
+* [ ] [USER STORY: Improve application and deployment](https://github.com/SandraBergstrom/travel-tickr/issues/57) (Must do)
 
 #### Backlog
 * [ ] [USER STORY: Upload multiple photos](https://github.com/SandraBergstrom/travel-tickr/issues/28) 
