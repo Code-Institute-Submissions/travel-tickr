@@ -12,6 +12,7 @@ import {
 import Avatar from "./Avatar";
 import axios from "axios";
 import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
+import { removeTokenTimestamp } from "../utils/utils";
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
@@ -26,6 +27,7 @@ const NavBar = () => {
     try {
       await axios.post("dj-rest-auth/logout/");
       setCurrentUser(null);
+      removeTokenTimestamp();
     } catch (err) {
       console.log(err);
     }
@@ -48,8 +50,7 @@ const NavBar = () => {
         className={styles.NavLink}
         activeClassName={styles.Active}
       >
-        <i className={`fa-solid fa-shoe-prints ${styles.RotatedIcon}`}></i>
-        Following
+        <i className={`fa-solid fa-shoe-prints ${styles.RotatedIcon}`}></i>Following
       </NavLink>
       <NavLink
         to="/bucketlist"
@@ -59,10 +60,10 @@ const NavBar = () => {
         <i className="fa-solid fa-bucket"></i>Bucketlist
       </NavLink>
       <NavLink to="/" onClick={handleSignOut} className={styles.NavLink}>
-        <i className="fa-solid fa-door-closed"></i>Logout
+        <i className="fa-solid fa-door-closed"></i>Log out
       </NavLink>
       <NavLink className={styles.NavLink} to={`/travelers/${currentUser?.pk}`}>
-        <Avatar src={currentUser?.traveler_image} height={40} />
+        <Avatar src={currentUser?.traveler_image} height={40} alt='traveler' />
         {currentUser?.username}
       </NavLink>
     </>
