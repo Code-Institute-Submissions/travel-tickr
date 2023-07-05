@@ -6,6 +6,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
+import Image from "react-bootstrap/Image";
 
 import Upload from "../../assets/upload.png";
 import Asset from "../../components/Asset";
@@ -15,7 +16,6 @@ import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import alertStyles from "../../styles/AlertMessages.module.css";
 
-import { Image } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/useRedirect";
@@ -45,7 +45,7 @@ function PostCreateForm({ userId }) {
         const response = await axiosReq.get(
           "https://restcountries.com/v3.1/all"
         );
-        setCountries(response.data)
+        setCountries(response.data);
       } catch (err) {
         console.log("Error fetching countries:", err);
       }
@@ -79,7 +79,7 @@ function PostCreateForm({ userId }) {
     formData.append("image", imageInput.current.files[0]);
     formData.append("location", location);
     formData.append("country", country);
-    console.log(formData, "<--- Formdata")
+    console.log(formData, "<--- Formdata");
 
     try {
       const { data } = await axiosReq.post("/posts/", formData);

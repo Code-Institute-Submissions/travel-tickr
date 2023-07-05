@@ -5,7 +5,6 @@ import btnStyles from "../../styles/Button.module.css";
 import CommentEditForm from "./CommentEditForm";
 
 import { Link } from "react-router-dom/";
-import { Media } from "react-bootstrap";
 import Avatar from "../../components/Avatar";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { MoreDropdown } from "../../components/MoreDropdown";
@@ -13,6 +12,7 @@ import { axiosRes, axiosReq } from "../../api/axiosDefaults";
 
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
+import Media from "react-bootstrap/Media";
 
 const Comment = (props) => {
   const {
@@ -117,7 +117,7 @@ const Comment = (props) => {
             <div className="d-flex justify-content-between align-items-end">
               <p>{content}</p>
               <div className="d-flex align-items-center">
-              {likes_count}
+                {likes_count}
                 {is_owner ? (
                   <OverlayTrigger
                     placement="top"

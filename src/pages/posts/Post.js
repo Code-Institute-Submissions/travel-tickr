@@ -5,10 +5,11 @@ import styles from "../../styles/Post.module.css";
 
 import Card from "react-bootstrap/Card";
 import Media from "react-bootstrap/Media";
-import { Link } from "react-router-dom";
-import Avatar from "../../components/Avatar";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
+
+import { Link } from "react-router-dom";
+import Avatar from "../../components/Avatar";
 import { axiosReq, axiosRes } from "../../api/axiosDefaults";
 import { MoreDropdown } from "../../components/MoreDropdown";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
@@ -147,7 +148,11 @@ const Post = (props) => {
         <Card.Img src={image} alt={title} />
       </Link>
       <Card.Body>
-        {title && <Card.Title className={`text-center ${styles.TitleText}`}>{title}</Card.Title>}
+        {title && (
+          <Card.Title className={`text-center ${styles.TitleText}`}>
+            {title}
+          </Card.Title>
+        )}
         {truncated && content && (
           <Card.Text>{content.substring(0, 200)} ...</Card.Text>
         )}
