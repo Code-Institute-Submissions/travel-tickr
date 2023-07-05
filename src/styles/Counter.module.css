@@ -1,6 +1,6 @@
 .counter {
-    color: var(--clr-accent-dark);
-    font-family: 'Roboto', sans-serif;
-    font-size: small;
-    padding: 5px;
+  color: var(--clr-accent-dark);
+  font-family: "Roboto", sans-serif;
+  font-size: small;
+  padding: 5px;
 }

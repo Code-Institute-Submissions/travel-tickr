@@ -26,22 +26,34 @@ The testing.md file provides an overview of the testing conducted on Travel Tick
 ### HTML Validation
 [W3C Markup Validation](https://validator.w3.org/) is a service provided by the W3C that allows you to validate your HTML code against the official specifications. It checks for syntax errors, improper tag usage, and other issues that may affect the structure and semantics of your web pages. Validating your HTML code with W3C Markup Validation helps ensure that your pages are well-formed and adhere to web standards.
 
-All pages passed through the validation and the code was pasted in and I used a filter to remove issues related to the Django templating system. <details><summary>See filter</summary>![Result]()</details>
+The html passed through the validation and the code was pasted in and I used a filter to remove issues related to the React system. <details><summary>See filter</summary>![Result](/docs/testing/html-filter.png)</details>
 
 | **Tested** | **Result** | **View Result** | **Pass** |
 --- | --- | --- | :---:
-|page| No errors | <details><summary>Screenshot of result</summary>![Result]()</details>| :white_check_mark:
+|index| No errors | <details><summary>Screenshot of result</summary>![Result](/docs/testing/html.png)</details>| :white_check_mark:
 
 
 ### CSS Validation
-[W3C Jigsaw](https://jigsaw.w3.org/css-validator/) is a tool provided by the World Wide Web Consortium (W3C) that allows you to validate and check the correctness of your HTML and CSS code. It helps ensure that your web pages comply with the standards set by the W3C, promoting interoperability and accessibility.
+[W3C Jigsaw](https://jigsaw.w3.org/css-validator/) is a tool provided by the World Wide Web Consortium (W3C) that allows you to validate and check the correctness of your CSS code. It helps ensure that your web pages comply with the standards set by the W3C, promoting interoperability and accessibility. I have tested by adding each page to the validator.
 
 | **Tested** | **Result** | **View Result** | **Pass** |
 --- | --- | --- | :---:
-|CSS file | No errors|[Result](http://jigsaw.w3.org/css-validator/validator$link)| :white_check_mark:
+|Landingpage/Home| No errors|[Result](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ftravel-tickr-03d04732f340.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)| :white_check_mark:
+|Login| No errors|[Result](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ftravel-tickr-03d04732f340.herokuapp.com%2Flogin&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)| :white_check_mark:
+|Sign up| No errors|[Result](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ftravel-tickr-03d04732f340.herokuapp.com%2Fsignup&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)| :white_check_mark:
+|Create Memory| No errors|[Result](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ftravel-tickr-03d04732f340.herokuapp.com%2Fposts%2Fcreate&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)| :white_check_mark:
+|Post detail| No errors|[Result](https://travel-tickr-03d04732f340.herokuapp.com/posts/5)| :white_check_mark:
+|Following/Bucketlist| No errors|[Result](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ftravel-tickr-03d04732f340.herokuapp.com%2Ffeed&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)| :white_check_mark:
+|Traveler Profile| No errors|[Result](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ftravel-tickr-03d04732f340.herokuapp.com%2Ftravelers%2F1&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)| :white_check_mark:
+|Edit traveler| No errors|[Result](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ftravel-tickr-03d04732f340.herokuapp.com%2Ftravelers%2F1%2Fedit&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)| :white_check_mark:
+|Edit username| No errors|[Result](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ftravel-tickr-03d04732f340.herokuapp.com%2Ftravelers%2F1%2Fedit%2Fusername&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)| :white_check_mark:
+|Edit password| No errors|[Result](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ftravel-tickr-03d04732f340.herokuapp.com%2Ftravelers%2F1%2Fedit%2Fpassword&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)| :white_check_mark:
+
+Although the validator returned some error messages, these are due to external libraries and frameworks that are known to be reliable and widely used. The custom code written for this project has been thoroughly checked and does not contain any important errors or issues.
 
 ### Python Validation 
 [PEP 8](https://pep8ci.herokuapp.com/) is a style guide for writing Python code to ensure consistency and readability. It provides guidelines on how to format code, naming conventions for variables and functions, and other best practices. Following PEP 8 helps to improve code quality, readability, and maintainability.
+
 
 
 Note: The specific details and validation results for each file can be viewed by expanding the corresponding sections.
@@ -118,10 +130,7 @@ The website was tested on the following browsers:
 
 <br>
 
-
-## Manual Testing
-
-
+## Manual testing
 ### Testing user stories UPDATE
 
 #### As a first-time user...

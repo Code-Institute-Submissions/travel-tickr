@@ -1,64 +1,64 @@
 .Button {
-    font-size: 0.8rem;
-    align-self: center;
-    border-radius: 10px;
-    border-color: transparent;
-    padding: 4px 10px;
-    margin-left: 2px;
-    margin-right: 2px;
-    min-width: 75px;
-  }
-  
-  .Button:hover {
-    opacity: 0.8;
-    border-color: transparent;
-    cursor: pointer;
-  }
-  
-  .Button:hover:active {
-    background-color: var(--clr-accent-dark) !important;
-  }
-  
-  .Button:active {
-    background-color: var(--clr-accent-dark) !important;
-  }
-  
-  .Wide {
-    padding: 10px 50px;
-    width: 100%;
-  }
-  
-  .Blue,
-  .BlueOutline:hover {
-    background-color: var(--clr-accent-dark);
-    color: #ffffff;
-  }
-  
-  .BlueOutline,
-  .Blue:hover {
-    background-color: var(--clr-accent-light);
-    color: var(--clr-primary-light);
-  }
-  
-  .Pink,
-  .PinkOutline:hover {
-    background-color: var(--clr-accent-danger);
-    color: var(--clr-primary-light);
-  }
-  
-  .Pink:hover,
-  .PinkOutline {
-    background-color: var(--clr-accent-pink);
-    color: var(--clr-primary-light);
-  }
-  
-  .Bright {
-    background-color: var(--clr-primary-light);
-    color: var(--clr-accent-dark);
-    border-color: var(--clr-accent-dark);
-  }
+  font-size: 0.8rem;
+  align-self: center;
+  border-radius: 10px;
+  border-color: transparent;
+  padding: 4px 10px;
+  margin-left: 2px;
+  margin-right: 2px;
+  min-width: 75px;
+}
 
-  .Bright:hover {
-    background-color: var(--clr-accent-danger);
-    color: var(--clr-primary-light);
-  }
+.Button:hover {
+  opacity: 0.8;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.Button:hover:active {
+  background-color: var(--clr-accent-dark) !important;
+}
+
+.Button:active {
+  background-color: var(--clr-accent-dark) !important;
+}
+
+.Wide {
+  padding: 10px 50px;
+  width: 100%;
+}
+
+.Blue,
+.BlueOutline:hover {
+  background-color: var(--clr-accent-dark);
+  color: #ffffff;
+}
+
+.BlueOutline,
+.Blue:hover {
+  background-color: var(--clr-accent-light);
+  color: var(--clr-primary-light);
+}
+
+.Pink,
+.PinkOutline:hover {
+  background-color: var(--clr-accent-danger);
+  color: var(--clr-primary-light);
+}
+
+.Pink:hover,
+.PinkOutline {
+  background-color: var(--clr-accent-pink);
+  color: var(--clr-primary-light);
+}
+
+.Bright {
+  background-color: var(--clr-primary-light);
+  color: var(--clr-accent-dark);
+  border-color: var(--clr-accent-dark);
+}
+
+.Bright:hover {
+  background-color: var(--clr-accent-danger);
+  color: var(--clr-primary-light);
+}

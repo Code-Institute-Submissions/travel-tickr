@@ -1,48 +1,40 @@
 .Row {
-    height: calc(100vh - 81px);
-  }
-  .Input {
-    background: var(--clr-primary-pink);
-    border: 1px solid var(--clr-accent-light);
-    box-sizing: border-box;
-    border-radius: 10px;
-    color: var(--clr-accent-dark);
-    text-align: center;
-    padding: 8px;
-  }
-  
-  .Header {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 19px;
-    text-align: center;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--clr-accent-dark);
-    margin-bottom: 30px;
-  }
-  
-  .Link {
-    text-decoration: none;
-    text-align: center;
-    display: block;
-    margin: auto;
-  }
-  
-  .Link span {
-    color: var(--clr-accent-pink);
-    font-weight: 500;
-  }
-  
-  .Container {
-    padding: 30px 10px;
-  }
-  
-  /* .SignInCol {
-    height: 320px;
-  }
-  
-  .SignUpCol {
-    height: 375px;
-  } */
+  height: calc(100vh - 81px);
+}
+.Input {
+  background: var(--clr-primary-pink);
+  border: 1px solid var(--clr-accent-light);
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: var(--clr-accent-dark);
+  text-align: center;
+  padding: 8px;
+}
+
+.Header {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--clr-accent-dark);
+  margin-bottom: 30px;
+}
+
+.Link {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
+.Link span {
+  color: var(--clr-accent-pink);
+  font-weight: 500;
+}
+
+.Container {
+  padding: 30px 10px;
+}
