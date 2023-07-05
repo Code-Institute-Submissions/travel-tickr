@@ -23,10 +23,6 @@
     background-color: var(--clr-accent-dark) !important;
   }
   
-  .Button:focus {
-    background-color: var(--clr-accent-dark);
-  }
-  
   .Wide {
     padding: 10px 50px;
     width: 100%;
