@@ -15,6 +15,7 @@ import UsernameForm from "./pages/travelers/UsernameForm";
 import UserPasswordForm from "./pages/travelers/UserPasswordForm";
 import TravelerEditForm from "./pages/travelers/TravelerEditForm";
 import NotFound from "./components/NotFound";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -54,6 +55,7 @@ function App() {
           />
           <Route exact path="/login" render={() => <LoginForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />
+          <Route exact path="/about" render={() => <AboutPage />} />
           <Route
             exact
             path="/posts/create"
