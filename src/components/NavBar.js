@@ -61,7 +61,7 @@ const NavBar = () => {
         <i className="fa-solid fa-bucket"></i>Bucketlist
       </NavLink>
       <NavLink to="/" onClick={handleSignOut} className={styles.NavLink}>
-        <i className="fa-solid fa-door-closed"></i>Log out
+        <i className="fa-solid fa-door-closed"></i>Logout
       </NavLink>
       <NavLink className={styles.NavLink} to={`/travelers/${currentUser?.pk}`}>
         <Avatar src={currentUser?.traveler_image} height={40} alt="traveler" />
@@ -127,6 +127,14 @@ const NavBar = () => {
               activeClassName={styles.Active}
             >
               <i className="fa-solid fa-house me-2"></i>Home
+            </NavLink>
+            <NavLink
+              exact
+              to="/about"
+              className={styles.NavLink}
+              activeClassName={styles.Active}
+            >
+              <i className="fa-solid fa-circle-info"></i>About
             </NavLink>
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
