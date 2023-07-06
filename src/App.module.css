@@ -81,6 +81,10 @@ figure {
   display: inline-block;
 }
 
+.HeaderMargin {
+  margin-top: 10px;
+}
+
 /* scrollbar */
 *::-webkit-scrollbar {
   width: 5px;
