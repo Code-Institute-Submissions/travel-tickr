@@ -9,7 +9,6 @@ import Button from "react-bootstrap/Button";
 import Asset from "../../components/Asset";
 
 import styles from "../../styles/TravelerPage.module.css";
-import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
@@ -73,16 +72,16 @@ function TravelerPage() {
           <h3 className="m-2">{traveler?.owner}</h3>
           <Row className="justify-content-center no-gutters">
             <Col xs={3} className="my-2">
-              <div>{traveler?.posts_count}</div>
-              <div>posts</div>
+              <div className={styles.Text}>{traveler?.posts_count}</div>
+              <div className={styles.Text}>posts</div>
             </Col>
             <Col xs={3} className="my-2">
-              <div>{traveler?.followers_count}</div>
-              <div>followers</div>
+              <div className={styles.Text}>{traveler?.followers_count}</div>
+              <div className={styles.Text}>followers</div>
             </Col>
             <Col xs={3} className="my-2">
-              <div>{traveler?.following_count}</div>
-              <div>following</div>
+              <div className={styles.Text}>{traveler?.following_count}</div>
+              <div className={styles.Text}>following</div>
             </Col>
           </Row>
         </Col>
@@ -164,7 +163,7 @@ function TravelerPage() {
     <Row>
       <Col className="py-3 p-0 p-lg-2" lg={12}>
         {/* <PopularTravelers mobile /> */}
-        <Container className={appStyles.Content}>
+        <Container className={styles.Content}>
           {hasLoaded ? (
             <>
               {mainTraveler}

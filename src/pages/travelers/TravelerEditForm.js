@@ -16,7 +16,7 @@ import {
 } from "../../contexts/CurrentUserContext";
 
 import btnStyles from "../../styles/Button.module.css";
-import appStyles from "../../App.module.css";
+import styles from "../../styles/TravelerPage.module.css";
 
 const TravelerEditForm = () => {
   const currentUser = useCurrentUser();
@@ -153,7 +153,7 @@ const TravelerEditForm = () => {
     <Form onSubmit={handleSubmit}>
       <Row>
         <Col className="py-2 p-0 p-md-2 text-center" md={7} lg={6}>
-          <Container className={appStyles.Content}>
+          <Container className={styles.Content}>
             <Form.Group>
               {image && (
                 <figure>
@@ -192,7 +192,7 @@ const TravelerEditForm = () => {
           </Container>
         </Col>
         <Col md={5} lg={6} className="d-none d-md-block p-0 p-md-2 text-center">
-          <Container className={appStyles.Content}>{textFields}</Container>
+          <Container className={styles.Content}>{textFields}</Container>
         </Col>
       </Row>
     </Form>

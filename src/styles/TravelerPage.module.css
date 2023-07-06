@@ -1,3 +1,11 @@
+.Content {
+  padding: 10px;
+}
+
+.Text {
+  color: var(--clr-accent-dark);
+}
+
 .TravelerImage {
   object-fit: cover;
   height: 120px;
