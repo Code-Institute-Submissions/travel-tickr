@@ -328,13 +328,15 @@ The wireframes provide a visual representation of the different pages and featur
 ### Surface
 
 #### Design Choices
-
+The design of Travel Tickr embraces a minimalistic yet warm aesthetic, capturing the joy and tranquility we often experience during our travels. The design aimed to mirror the exciting, yet peaceful experiences of exploration and global discovery. This balance was achieved by using clean lines, easy-to-read typography, and a color palette inspired by the Earth's diverse landscapes.
 
 #### Colour
 
 ![Mockup image](/docs/colors.png)
+The color palette was carefully chosen to represent the Earth and its multitude of natural wonders. A warm beige and dark brown color symbolize the earth and ground beneath our feet, bringing warmth and a sense of stability to the design. The contrasting color of a unique blend between dark green and dark blue represents the vast oceans and the lush greenery of nature, offering a refreshing counterpoint to the earthy tones. As the palette moves skyward, a light blue color encapsulates the expanse of the sky. To capture the ethereal beauty of a sunset, a contrasting pink tone has been included, mirroring the captivating hues that dance in the sky as day transitions into night. This comprehensive color palette harmoniously encapsulates the beauty of our planet, inviting users into a visually appealing and relatable space.
 
-#### Fonts
+#### Typography
+The typography chosen for Travel Tickr is both Lato and Roboto, selected for their readability and clean aesthetics. Lato, a sans-serif typeface, offers a warm yet professional tone, while still embodying an unassuming simplicity. It's highly legible at small sizes, making it ideal for body text. In contrast, Roboto, with its wide letterforms and clean lines, is used for headers and subheaders to grab user attention while maintaining readability. The combination of these fonts provides an engaging user experience, with typography that's accessible and friendly, yet polished and professional.
 
 [Back up](#table-of-content)
 

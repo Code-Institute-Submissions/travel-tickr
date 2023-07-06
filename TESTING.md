@@ -14,11 +14,10 @@ The testing.md file provides an overview of the testing conducted on Travel Tick
 4. [Performing tests on various devices](#performing-tests-on-various-devices)
 5. [Browser compability](#browser-compability)
 6. [Automated testing](#automated-testing)
-6. [Manual Testing](#manual-testing)
+7. [Manual Testing](#manual-testing)
     1. [Testing user stories](#testing-user-stories)
     2. [User Experience and Improvements](#user-experience-and-improvements)
     3. [Full testing](#full-testing)
-7. [Backend]()
 8. [Summary](#summary)
 
 
