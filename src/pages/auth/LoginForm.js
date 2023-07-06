@@ -22,6 +22,7 @@ import { useRedirect } from "../../hooks/useRedirect";
 import { setTokenTimestamp } from "../../utils/utils";
 
 function LogInForm() {
+  // Hooks and state initialization
   const SetCurrentUser = useSetCurrentUser();
   useRedirect("loggedIn");
 
@@ -34,6 +35,7 @@ function LogInForm() {
   const history = useHistory();
   const [errors, setErrors] = useState({});
 
+  // Event handler to handle change
   const handleChange = (event) => {
     setLogInData({
       ...logInData,
@@ -41,6 +43,7 @@ function LogInForm() {
     });
   };
 
+  // Event handler to handle submit
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {

@@ -18,6 +18,7 @@ import axios from "axios";
 import { useRedirect } from "../../hooks/useRedirect";
 
 const SignUpForm = () => {
+  // Hooks and state initialization
   useRedirect("loggedIn");
   const [signUpData, setSignUpData] = useState({
     username: "",
@@ -30,6 +31,7 @@ const SignUpForm = () => {
 
   const history = useHistory();
 
+  // Event handler to handle change
   const handleChange = (event) => {
     setSignUpData({
       ...signUpData,
@@ -37,6 +39,7 @@ const SignUpForm = () => {
     });
   };
 
+  // Event handler to handle submit
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {

@@ -28,6 +28,7 @@ const UsernameForm = () => {
   const setCurrentUser = useSetCurrentUser();
 
   useEffect(() => {
+    // Set the initial value of teh username input if the current user is the owner
     if (currentUser?.traveler_id?.toString() === id) {
       setUsername(currentUser.username);
     } else {
@@ -35,9 +36,11 @@ const UsernameForm = () => {
     }
   }, [currentUser, history, id]);
 
+  // Event handlers
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
+      // Send request to update the username
       await axiosRes.put("/dj-rest-auth/user/", {
         username,
       });
@@ -45,7 +48,7 @@ const UsernameForm = () => {
         ...prevUser,
         username,
       }));
-      history.goBack();
+      history.goBack(); // Go back to previous page after successfully updating
     } catch (err) {
       console.log(err);
       setErrors(err.response?.data);

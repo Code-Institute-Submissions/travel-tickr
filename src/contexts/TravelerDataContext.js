@@ -9,6 +9,7 @@ export const SetTravelerDataContext = createContext();
 export const useTravelerData = () => useContext(TravelerDataContext);
 export const useSetTravelerData = () => useContext(SetTravelerDataContext);
 
+// Provider component for managing traveler data
 export const TravelerDataProvider = ({ children }) => {
   const [travelerData, setTravelerData] = useState({
     pageTraveler: { results: [] },
@@ -16,6 +17,7 @@ export const TravelerDataProvider = ({ children }) => {
   });
   const currentUser = useCurrentUser();
 
+  // Handle follow action for a clicked traveler
   const handleFollow = async (clickedTraveler) => {
     try {
       const { data } = await axiosRes.post("/followers/", {
@@ -42,6 +44,7 @@ export const TravelerDataProvider = ({ children }) => {
     }
   };
 
+  // Handle unfollow actionf or clicked traveler
   const handleUnFollow = async (clickedTraveler) => {
     try {
       await axiosRes.delete(`/followers/${clickedTraveler.following_id}`);
@@ -65,6 +68,7 @@ export const TravelerDataProvider = ({ children }) => {
   };
 
   useEffect(() => {
+    // Fetch popular travelers data on component mount or when the current user changes
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(

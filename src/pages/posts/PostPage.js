@@ -26,6 +26,7 @@ function PostPage() {
   const [comments, setComments] = useState({ results: [] });
 
   useEffect(() => {
+    // Fetch the post and comments data from the API
     const handleMount = async () => {
       try {
         const [{ data: post }, { data: comments }] = await Promise.all([

@@ -1,6 +1,7 @@
 import jwtDecode from "jwt-decode";
 import { axiosReq } from "../api/axiosDefaults";
 
+// Fetch more data for infinitive scrolling
 export const fetchMoreData = async (resource, setResource) => {
   try {
     const { data } = await axiosReq.get(resource.next);
@@ -16,6 +17,7 @@ export const fetchMoreData = async (resource, setResource) => {
   } catch (err) {}
 };
 
+// Helper function to update traveler data when following another travler
 export const followHelper = (traveler, clickedTraveler, following_id) => {
   return traveler.id === clickedTraveler.id
     ? // If this is the traveler I clicked on, update its followers
@@ -33,6 +35,7 @@ export const followHelper = (traveler, clickedTraveler, following_id) => {
       traveler;
 };
 
+// Helper to update traveler data when unfollowing another user
 export const unfollowHelper = (traveler, clickedTraveler) => {
   return traveler.id === clickedTraveler.id
     ? {
@@ -45,15 +48,18 @@ export const unfollowHelper = (traveler, clickedTraveler) => {
     : traveler;
 };
 
+// Function to set expiration time stamp fo the refresh token in local storage
 export const setTokenTimestamp = (data) => {
   const refreshTokenTimestamp = jwtDecode(data?.refresh_token).exp;
   localStorage.setItem("refreshTokenTimestamp", refreshTokenTimestamp);
 };
 
+// Function to check if the refresh token has an expiration timestamp in local storage
 export const shouldRefreshToken = () => {
   return !!localStorage.getItem("refreshTokenTimestamp");
 };
 
+// Function to remove the expiration timestamp of the refresh token from local storage
 export const removeTokenTimestamp = () => {
   localStorage.removeItem("refreshTokenTimestamp");
 };

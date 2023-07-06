@@ -57,6 +57,7 @@ function TravelerPage() {
     fetchData();
   }, [id, setTravelerData]);
 
+  // Display the main traveler profile information
   const mainTraveler = (
     <>
       {traveler?.is_owner && <TravelerEditDropdown id={traveler?.id} />}

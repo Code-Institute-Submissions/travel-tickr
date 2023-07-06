@@ -17,6 +17,7 @@ import { useHistory } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
+// Form component for editing a post
 function PostEditForm() {
   const [errors, setErrors] = useState({});
 
@@ -32,11 +33,13 @@ function PostEditForm() {
   const { id } = useParams();
 
   useEffect(() => {
+    // Fetch the post data from the server
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(`/posts/${id}/`);
         const { title, content, image, is_owner } = data;
 
+        // Check if the current user is the owner of the post
         is_owner ? setPostData({ title, content, image }) : history.push("/");
       } catch (err) {
         console.log(err);

@@ -16,7 +16,9 @@ const PopularTravelers = ({ mobile }) => {
     >
       {popularTravelers.results.length ? (
         <>
-          <h5 className={`d-flex justify-content-center ${appStyles.HeaderMargin}`}>
+          <h5
+            className={`d-flex justify-content-center ${appStyles.HeaderMargin}`}
+          >
             Popular Travelers
           </h5>
           <hr />

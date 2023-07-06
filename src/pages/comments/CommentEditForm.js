@@ -6,10 +6,13 @@ import { axiosRes } from "../../api/axiosDefaults";
 import styles from "../../styles/CommentCreateEditForm.module.css";
 
 function CommentEditForm(props) {
+  // Props destructuring
   const { id, content, setShowEditForm, setComments } = props;
 
+  // State initialization
   const [formContent, setFormContent] = useState(content);
 
+  // Event handlers
   const handleChange = (event) => {
     setFormContent(event.target.value);
   };

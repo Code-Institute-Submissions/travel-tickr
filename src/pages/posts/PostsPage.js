@@ -26,6 +26,7 @@ function PostsPage({ message, filter = "" }) {
   const currentUser = useCurrentUser();
 
   useEffect(() => {
+    // Fetch posts based on filter and search query
     const fetchPosts = async () => {
       try {
         const { data } = await axiosReq.get(`/posts/?${filter}search=${query}`);
@@ -35,10 +36,14 @@ function PostsPage({ message, filter = "" }) {
         console.log(err);
       }
     };
+
+    // Delay fetching posts after a query change to improve user experience
     setHasLoaded(false);
     const timer = setTimeout(() => {
       fetchPosts();
     }, 1000);
+
+    // Clean up function to clear the time
     return () => {
       clearTimeout(timer);
     };

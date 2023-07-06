@@ -16,6 +16,7 @@ import { MoreDropdown } from "../../components/MoreDropdown";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const Post = (props) => {
+  // Props destructuring
   const {
     id,
     owner,
@@ -37,10 +38,12 @@ const Post = (props) => {
     country,
   } = props;
 
+  // Custom hooks
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
   const history = useHistory();
 
+  // Event handlers
   const handleEdit = () => {
     history.push(`/posts/${id}/edit`);
   };

@@ -27,6 +27,7 @@ const UserPasswordForm = () => {
 
   const [errors, setErrors] = useState({});
 
+  // Event handler
   const handleChange = (event) => {
     setUserData({
       ...userData,
@@ -44,8 +45,9 @@ const UserPasswordForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
+      // Send request to change the users password
       await axiosRes.post("/dj-rest-auth/password/change/", userData);
-      history.goBack();
+      history.goBack(); // Go back to previous page after successfull change
     } catch (err) {
       console.log(err);
       setErrors(err.response?.data);

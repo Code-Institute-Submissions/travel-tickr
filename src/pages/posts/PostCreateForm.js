@@ -22,8 +22,9 @@ import { useRedirect } from "../../hooks/useRedirect";
 
 function PostCreateForm({ userId }) {
   useRedirect("loggedOut");
-  const [errors, setErrors] = useState({});
 
+  // State and ref initialization
+  const [errors, setErrors] = useState({});
   const [postData, setPostData] = useState({
     title: "",
     content: "",
@@ -32,9 +33,7 @@ function PostCreateForm({ userId }) {
     country: "",
   });
   const { title, content, image, location, country } = postData;
-
   const [countries, setCountries] = useState([]);
-
   const imageInput = useRef(null);
   const history = useHistory();
 
@@ -53,6 +52,7 @@ function PostCreateForm({ userId }) {
     fetchCountries();
   }, []);
 
+  // Event handlers
   const handleChange = (event) => {
     setPostData({
       ...postData,
@@ -91,6 +91,7 @@ function PostCreateForm({ userId }) {
     }
   };
 
+  // Text fields JSX
   const textFields = (
     <div className="text-center">
       <Form.Group>

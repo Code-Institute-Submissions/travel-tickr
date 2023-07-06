@@ -4,16 +4,13 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Image from "react-bootstrap/Image";
 
-import styles from "../styles/AboutPage.module.css"
-import appStyles from "../App.module.css"
+import styles from "../styles/AboutPage.module.css";
+import appStyles from "../App.module.css";
 
 const AboutPage = () => {
   return (
     <Row>
-      <Col
-        md={6}
-        className={`my-auto d-none d-md-block p-2`}
-      >
+      <Col md={6} className={`my-auto d-none d-md-block p-2`}>
         <Image
           className={`${appStyles.FillerImage}`}
           src={
@@ -21,10 +18,7 @@ const AboutPage = () => {
           }
         />
       </Col>
-      <Col
-        md={6}
-        className={`my-auto d-md-block p-2`}
-      >
+      <Col md={6} className={`my-auto d-md-block p-2`}>
         <div className={styles.Info}>
           <h1>About</h1>
           <p>Welcome to the Travel Tickr About page!</p>

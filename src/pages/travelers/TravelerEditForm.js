@@ -40,6 +40,7 @@ const TravelerEditForm = () => {
 
   useEffect(() => {
     const handleMount = async () => {
+      // Check if the current user is the owner of the traveler profile
       if (currentUser?.traveler_id?.toString() === id) {
         try {
           const { data } = await axiosReq.get(`/travelers/${id}/`);
@@ -64,6 +65,7 @@ const TravelerEditForm = () => {
     handleMount();
   }, [currentUser, history, id]);
 
+  // Event handlers
   const handleChange = (event) => {
     setTravelerData({
       ...travelerData,
@@ -96,6 +98,7 @@ const TravelerEditForm = () => {
     }
   };
 
+  // Textfields 
   const textFields = (
     <>
       <Form.Group>

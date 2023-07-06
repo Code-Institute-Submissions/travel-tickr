@@ -15,6 +15,7 @@ import Tooltip from "react-bootstrap/Tooltip";
 import Media from "react-bootstrap/Media";
 
 const Comment = (props) => {
+  // Props destructuring
   const {
     traveler_id,
     traveler_image,
@@ -28,11 +29,12 @@ const Comment = (props) => {
     like_id,
   } = props;
 
+  // State and hooks initialization
   const [showEditForm, setShowEditForm] = useState(false);
-
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
 
+  // Event handlers
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/comments/${id}/`);

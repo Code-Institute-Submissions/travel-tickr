@@ -22,14 +22,17 @@ const LocationForm = () => {
     fetchCountries();
   }, []);
 
+  // Handle change in the location name input
   const handleLocationChange = (event) => {
     setLocationName(event.target.value);
   };
 
+  // Handle change in the country selection
   const handleCountryChange = (event) => {
     setSelectedCountry(event.target.value);
   };
 
+  // Handle change in the form submission
   const handleLocationFormSubmit = async (event) => {
     event.preventDefault();
 

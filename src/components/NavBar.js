@@ -14,6 +14,7 @@ import axios from "axios";
 import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
 import { removeTokenTimestamp } from "../utils/utils";
 
+// The navigation bar component for the application
 const NavBar = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
@@ -33,6 +34,7 @@ const NavBar = () => {
     }
   };
 
+  // Icon for adding a memory
   const addMemoryIcon = (
     <NavLink
       to="/posts/create"
@@ -43,6 +45,7 @@ const NavBar = () => {
     </NavLink>
   );
 
+  // Icons shown when user is logged in
   const loggedInIcons = (
     <>
       <NavLink
@@ -70,6 +73,7 @@ const NavBar = () => {
     </>
   );
 
+  // Icons shown when user is logged out
   const loggedOutIcons = (
     <>
       <NavLink

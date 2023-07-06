@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../styles/Avatar.module.css";
 
+// Avatar component renders an image with optional text as a user avatar
 const Avatar = ({ src, height = 45, text }) => {
   return (
     <span>

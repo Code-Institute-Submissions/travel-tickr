@@ -9,9 +9,13 @@ import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 
 function CommentCreateForm(props) {
+  // Props destructuring
   const { post, setPost, setComments, travelerImage, traveler_id } = props;
+
+  // State initialization
   const [content, setContent] = useState("");
 
+  // Event handlers
   const handleChange = (event) => {
     setContent(event.target.value);
   };

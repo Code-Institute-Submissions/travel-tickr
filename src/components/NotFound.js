@@ -2,6 +2,7 @@ import React from "react";
 import NoResults from "../assets/no-results.png";
 import Asset from "../components/Asset";
 
+// Component displayed when a page is not found
 const NotFound = () => {
   return (
     <div className="styles.marginTop">

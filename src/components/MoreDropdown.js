@@ -20,6 +20,8 @@ const ThreeDots = React.forwardRef(({ onClick }, ref) => (
 
 export function TravelerEditDropdown({ id }) {
   const history = useHistory();
+
+  // Render dropdown menu for editing traveler details
   return (
     <Dropdown className={`ml-auto px-3 ${styles.Absolute}`} drop="left">
       <Dropdown.Toggle as={ThreeDots} />
@@ -50,6 +52,7 @@ export function TravelerEditDropdown({ id }) {
 }
 
 export const MoreDropdown = ({ handleEdit, handleDelete }) => {
+  // Render more options dropdown menu
   return (
     <Dropdown className={`ml-auto ${styles.Dots}`} drop="left">
       <Dropdown.Toggle as={ThreeDots} />
