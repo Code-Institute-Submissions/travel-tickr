@@ -1,7 +1,7 @@
 .Post {
   background-color: white;
   border: 1px solid #dadadf;
-  border-radius: 2px;
+  border-radius: 0.375rem;
   margin-bottom: 16px;
   text-align: center;
 }
