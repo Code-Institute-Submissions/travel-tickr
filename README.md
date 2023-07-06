@@ -4,12 +4,12 @@ Travel Tickr is your ultimate destination for all things travel. Whether you're 
 
 Join Travel Tickr today and embark on a journey of discovery, connection, and endless travel inspiration.
 
-![Mockup image](#) <br>
+![Mockup image](/docs/mockup.png) <br>
 Developer: [Sandra Bergström](https://github.com/SandraBergstrom) <br>
-[Live webapp](#) <br>
-[Repository](#) <br>
-[APi](#) <br>
-[API Repository](#) <br>
+[Live webapp](https://travel-tickr-03d04732f340.herokuapp.com/) <br>
+[Repository](https://github.com/SandraBergstrom/travel-tickr) <br>
+[APi](https://travel-tickr-api-e57198555b47.herokuapp.com/) <br>
+[API Repository](https://github.com/SandraBergstrom/travel-tickr-api) <br>
 
 
 ## Table of Content
@@ -28,6 +28,9 @@ Developer: [Sandra Bergström](https://github.com/SandraBergstrom) <br>
     + [User Stories](#user-stories)
   * [Structure](#structure)
     + [Database](#database)
+  * [Component Architecture]()
+    + [Component Hierarchy]()
+    + [Component Reusability]()
   * [Skeleton](#skeleton)
     + [Wireframes](#wireframes)
   * [Surface](#surface)
@@ -206,6 +209,7 @@ Upon clicking on the profile image in the navigation bar, additional links are r
 - [As a user, I can delete my own posts on the Travel Tickr platform, so that I can remove content that is no longer relevant or desired.](https://github.com/SandraBergstrom/travel-tickr/issues/17)
 
 ##### Epic 3: Interactions and Engagement
+- [As a user I can view the about page so that I can gain information about Travel Tickr](https://github.com/SandraBergstrom/travel-tickr/issues/61)
 - [As a user, I can search for specific posts or users on the Travel Tickr platform, so that I can discover new travel stories and connect with like-minded travelers.](https://github.com/SandraBergstrom/travel-tickr/issues/18)
 - [As a user, I can sort posts based on criteria such as date, popularity, or relevance, so that I can find the most relevant and interesting content.](https://github.com/SandraBergstrom/travel-tickr/issues/19)
 - [As a user, I can like posts shared by other users on the Travel Tickr platform, so that I can show appreciation for inspiring content.](https://github.com/SandraBergstrom/travel-tickr/issues/20)
@@ -242,11 +246,45 @@ Upon clicking on the profile image in the navigation bar, additional links are r
 The Travel Tickr utilizes the following database schema:
 <details><summary>See Database Schema</summary>
 <img src="/docs/database-diagram.png">
-</details>
+</details> <br>
 
-##### Traveler App
+### Component Architecture and Reusability
+Travel Tickr is a social web application that empowers users to share travel experiences, explore new destinations, and interact with other travel enthusiasts. The app's architecture comprises several reusable components that streamline development and ensure a consistent user experience.
 
-....
+#### Core Components
+- **Asset:** This component handles the display of a spinner or an image, along with an optional message. It's used across various parts of the application, such as NotFound, PostCreateForm, PostPage, PostsPage, PopularTravelers, and TravelerPage, to provide visual feedback during data loading or to display specific images for information. 
+- **Avatar:** This component displays user profile images. It's reused in the NavBar, Posts, Comments, and Traveler sections to maintain consistency and personalization across the application.
+- **MoreDropdown:** A general-purpose dropdown menu component reused in Comment, Post, and the Traveler's profile page for various context-based actions.
+- **NavBar:** A navigation bar component shown on all pages to ensure seamless navigation across the app.
+- **NotFound:** A component shown when a requested resource is not found or a certain result does not exist.
+
+#### Component Pages
+Authentication:
+- **LoginForm** & **SignupForm**: Components handling user authentication processes.
+
+Comments:
+- **Comment**: Used to display user comments.
+- **CommentCreateForm** & **CommentEditForm**: Forms used for creating and editing comments.
+
+Posts:
+- **Post**: Component to display user posts.
+- **PostCreateForm** & **PostEditForm**: Forms used for creating and editing posts.
+- **PostPage**: Detailed view of a specific post.
+- **PostsPage**: List view of posts. It serves as the homepage, 'Following' page where posts by followed users are shown, and the 'Bucketlist' page for displaying posts added to a user's bucketlist.
+
+Travelers:
+- **PopularTraveler**s: This component shows the most followed travelers. It's displayed on the PostsPage for both mobile and desktop views, and on the PostPage for larger screens.
+- **Traveler**: Component to show user profile details.
+- **TravelerEditForm**: Form for editing user profile.
+- **TravelerPage**: Combines the Traveler component with a list of that traveler's posts.
+- **UsernameForm** & **UsernamePassword**: Forms for changing username and password.
+
+Other:
+- **AboutPage**: A component to display information about the application or any relevant context.
+
+The use of the React library in the Travel Tickr project has significantly contributed to enhancing the user experience. React's component-based architecture has helped create reusable components such as Asset, Avatar, MoreDropdown, NavBar, and others. These components not only ensure consistent look and feel across the application but also make the codebase more maintainable and easier to update or extend.
+
+One particular feature where React has been instrumental is the implementation of infinite scrolling using the react-infinite-scroll-component. This feature greatly enhances user experience by loading data incrementally as the user scrolls, providing a seamless browsing experience without traditional pagination interruptions. Coupled with the axios library for asynchronous data fetching, the application is able to provide users with a non-blocking, smooth, and enjoyable browsing experience. The use of the react-router-dom also enhances navigation experience, allowing us to create a single-page application with multiple views that load instantly, providing a near-native user experience.
 
 [Back up](#table-of-content)
 
@@ -307,27 +345,36 @@ The wireframes provide a visual representation of the different pages and featur
 - Python
 - JSX (JavaScript XML)
 
-### Frameworks
-- Django: A high-level Python web framework used for building the Recipe Collective website.
+### Frameworks.
 - React: A JavaScript library for building user interfaces. It is commonly used for creating dynamic and interactive components in web applications.
-- Cloudinary: A cloud-based media management platform used for storing and serving images in the Recipe Collective project.
+- Cloudinary: A cloud-based media management platform used for storing and serving images in the Travel Tickr project.
+- Bootstrap and React-bootstrap: The widely used CSS framework adapted for React. Used for faster and easier web development.
 
 ### Database
-- ElephantSQL: ElephantSQL is a PostgreSQL database as a service. It is used as the database for the Recipe Collective project, providing a reliable and scalable storage solution for the application's data.
+- ElephantSQL: ElephantSQL is a PostgreSQL database as a service. It is used as the database for the Travel Tickr project, providing a reliable and scalable storage solution for the application's data.
 
 ### Tools
 - Git: A distributed version control system used for tracking changes in the project's source code.
 - GitHub: A web-based hosting service for version control repositories, used for storing and managing the project's source code.
-- Gitpod: An online integrated development environment (IDE) used for developing and testing the Recipe Collective project.
-- Heroku: A cloud platform that enables deployment and hosting of web applications. Heroku was used for deploying the Recipe Collective project to a live server.
-- Adobe Photoshop: A professional image editing software used for advanced image manipulation and design in the Recipe Collective project.
-- Balsamiq: A wireframing tool used for creating mockups and prototypes of the Recipe Collective website.
-- Lucidchart: Lucidchart is a web-based diagramming tool that offers a wide range of diagramming capabilities, including ER diagrams. It provides an intuitive interface and collaboration features, making it suitable for both individual and team use.
-- Google Fonts: A collection of free and open-source fonts used for typography on the Recipe Collective website.
-- Font Awesome: A library of icons used for adding scalable vector icons to the Recipe Collective website.
+- Gitpod: An online integrated development environment (IDE) used for developing and testing the Travel Tickr project.
+- Heroku: A cloud platform that enables deployment and hosting of web applications. Heroku was used for deploying the Travel Tickr project to a live server.
+- Adobe Photoshop: A professional image editing software used for advanced image manipulation and design in the Travel Tickrproject.
+- Balsamiq: A wireframing tool used for creating mockups and prototypes of the Travel Tickr webapp.
+- Google Fonts: A collection of free and open-source fonts used for typography on the Travel Tickr webapp.
+- Font Awesome: A library of icons used for adding scalable vector icons to the Travel Tickr webapp.
 
 ### Supporting Libraries and Packages
+- @testing-library/jest-dom, @testing-library/react, @testing-library/user-event: These libraries are part of the Testing Library, a lightweight solution for testing JavaScript and React code.
+- axios: Promise-based HTTP client for making asynchronous HTTP requests in JavaScript.
 
+- jwt-decode: A small browser library that helps decoding JWTs token which are Base64Url encoded.
+- react-dom: Serves as the entry point to the DOM and server renderers for React.
+- react-infinite-scroll-component: A component to implement 'infinite scroll' in a ReactJS application.
+- react-router-dom: A routing library for React, it allows the application to have multiple 'pages' or views.
+- react-scripts: Includes scripts and configuration used by Create React App.
+- web-vitals: A library for measuring, reporting and analyzing web vital metrics.
+- @babel/plugin-proposal-private-property-in-object (Dev): A Babel plugin transforming private properties in objects.
+- msw (Dev): Mock Service Worker library used for mocking your REST and GraphQL APIs on both client and server side.
 
 [Back up](#table-of-content)
 
@@ -444,7 +491,7 @@ Within each sprint, a MoSCoW method is used to further prioritize user stories. 
 **Sprint 3 recap:** Although I have decided to move the "Location" user story to the next sprint, we have successfully accomplished a significant portion of the planned tasks for Sprint 3. 
 
 #### Sprint 4 (July 2nd - July 7th, 2023): 
-* [ ] Design and implement footer (Must do) 
+* [ ] [USER STORY: About page](https://github.com/SandraBergstrom/travel-tickr/issues/61) (Must do) 
 * [x] [USER STORY: Like comments](https://github.com/SandraBergstrom/travel-tickr/issues/54) (Must do)
 * [ ] [USER STORY: Upload multiple photos](https://github.com/SandraBergstrom/travel-tickr/issues/28) (Should do) *- Moved to backlog*
 * [ ] [USER STORY: Photo Album](https://github.com/SandraBergstrom/travel-tickr/issues/29) (Could do) *- Moved to backlog*

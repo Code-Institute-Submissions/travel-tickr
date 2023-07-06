@@ -3,7 +3,7 @@ The testing.md file provides an overview of the testing conducted on Travel Tick
 
 ## Table of Content
 
-1. [Code Validation](#html-validation)
+1. [Code Quality and Validation](#code-quality-and-validation)
     1. [HTML Validation](#html-validation)
     2. [CSS Validation](#css-validation)
     3. [JavaScript]()
@@ -22,7 +22,7 @@ The testing.md file provides an overview of the testing conducted on Travel Tick
 8. [Summary](#summary)
 
 
-## Code Validation
+## Code Quality and Validation
 
 ### HTML Validation
 [W3C Markup Validation](https://validator.w3.org/) is a service provided by the W3C that allows you to validate your HTML code against the official specifications. It checks for syntax errors, improper tag usage, and other issues that may affect the structure and semantics of your web pages. Validating your HTML code with W3C Markup Validation helps ensure that your pages are well-formed and adhere to web standards.
@@ -57,9 +57,12 @@ Although the validator returned some error messages, these are due to external l
 <br>
 
 ### JSX Validation
-[ESLint](https://eslint.org/) was used as part of the development process. ESLint is a static code analysis tool that identifies problematic patterns found in JavaScript code. It doesn't only catch potential errors to make the code more consistent but also ensures our code adheres to certain style guidelines. This helps maintain the overall code quality and also makes sure our codebase is easier for others to understand and contribute to.
+In the development process of Travel Tickr, I have utilized [ESLint](https://eslint.org/), a powerful static code analysis tool, to ensure high code quality and adherence to coding standards. ESLint not only helps catch potential errors, but it also enforces consistent code style and promotes best practices. This ensures that our codebase is well-maintained, easier to understand, and facilitates collaboration with other developers.
 
-During development, any issues identified by ESLint are displayed in the terminal, like this:
+#### ESLint Warnings During Development
+During development, ESLint was integrated into the IDE. This integration enables real-time analysis of the code as it's written, providing immediate feedback on potential issues. ESLint rules are applied to the code, and if violations or possible errors are detected, warnings or errors are displayed directly in the terminal.
+
+For example, when working on a component, ESLint might show warnings like this:
 
 ```bash
 Compiled with warnings.
@@ -67,6 +70,11 @@ Compiled with warnings.
 src/components/NotFound.js
   Line 3:8:  'styles' is defined but never used  no-unused-vars
 ```
+
+| **Tested** | **Result** | **View Result** | **Pass** |
+--- | --- | --- | :---:
+|Eslint during development|No errors|See below|:white_check_mark:
+
 Throughout the development of Travel Tickr, ESLint has been instrumental in identifying and resolving problematic code patterns. The codebase has been kept clean and adheres to the recommended JavaScript best practices, as shown in the terminal output below:
 
 ```bash
@@ -78,18 +86,28 @@ You can now view Travel Tickr in the browser.
   On Your Network:  http://10.0.5.2:3000
   ```
 
-Alongside ESLint, [Prettier](https://prettier.io/) is also employed in the development process. Prettier is an opinionated code formatter that imposes a uniform code style throughout the project by parsing the code and re-printing it according to its predefined rules. This helps me in maintaining clean and consistently formatted code. Prettier integrates well with most editors and requires no additional configuration, making it easy to use. By using Prettier alongside ESLint, I can ensure that my code remains easy to read, understand, and maintain, which ultimately streamlines the development process.
-
+#### Running **'npx eslint'**
+When running npx eslint in the terminal, the linting check is performed on the entire codebase, including files that may not be currently open or actively being edited. This enables the detection of linting errors that may not have been captured by the "regular" ESLint setup during development.
 
 | **Tested** | **Result** | **View Result** | **Pass** |
 --- | --- | --- | :---:
+|Eslint|No errors|See below|:white_check_mark:
+
+When there are no ESLint errors, the npx eslint command will not display any feedback or output. This is the expected result when following these steps:
+
+1. Open the project.
+2. Open a terminal.
+3. Run the following command:
+```bash
+npx eslint
+```
+
+Alongside ESLint, [Prettier](https://prettier.io/) is also employed in the development process. Prettier is an opinionated code formatter that imposes a uniform code style throughout the project by parsing the code and re-printing it according to its predefined rules. This helps me in maintaining clean and consistently formatted code. Prettier integrates well with most editors and requires no additional configuration, making it easy to use. By using Prettier alongside ESLint, I can ensure that my code remains easy to read, understand, and maintain, which ultimately streamlines the development process.
 
 ## Accessibility
 [The WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/) was used to assess the accessibility of the website. WAVE helps identify potential accessibility issues and provides guidance on how to improve the accessibility of web content.
 
 During the evaluation, the following issues were identified:
-
-
 
 [Back to the top](#table-of-content)
 
@@ -126,10 +144,11 @@ Overall, Travel Tickr webapps performed well in terms of performance, providing 
 
 ## Performing tests on various devices 
 The website was tested on the following devices:
-- Samsung Galaxy Note S20 ultra
-- Samsung Galaxy Note S22 ultra
-- Apple iPhone 12
-- OnePlus 8
+| **Tested** | **Reported issues** | **Pass** |
+--- | --- | :---:
+|Samsung Galaxy Note S20 ultra| None | :white_check_mark:
+|Apple iPhone X | Can't login| :heavy_multiplication_x:
+|OnePlus 8|None|:white_check_mark:
 
 In addition, the website was tested using Google Chrome Developer Tools Device Toggeling option for all available device options.
 
@@ -206,7 +225,7 @@ Ran all test suites.
 <br>
 
 ### User Experience and improvements
-I conducted user testing with 10 individuals to gather feedback on their experience using the website. I asked them to perform the following tasks and provide feedback on their experience:
+I conducted user testing with 5 individuals to gather feedback on their experience using the website. I asked them to perform the following tasks and provide feedback on their experience:
 
 - Create an account
 - Update the profile
