@@ -107,35 +107,34 @@ Alongside ESLint, [Prettier](https://prettier.io/) is also employed in the devel
 [The WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/) was used to assess the accessibility of the website. WAVE helps identify potential accessibility issues and provides guidance on how to improve the accessibility of web content.
 
 During the evaluation, the following issues were identified:
+| **Tested** | **Result** | **View Result** | **Pass** |
+--- | --- | --- | :---:
+|All pages|Contrast Errors *|<details><summary>Screenshot of result</summary>![Result](/docs/testing/wave-home.png)</details> | :white_check_mark:
+
+* The lighter blue color used in the Navbar creates contrast errors, but it is a deliberate design choice that I have chosen to maintain. Despite the contrast issue, I believe the color is still sufficiently visible and have made a decision to retain it in its current form.
 
 [Back to the top](#table-of-content)
 
 <br>
 
 ## Performance 
-Travel Tickr website was tested using [Google Lighthouse in Google Chrome Developer Tools](https://developer.chrome.com/docs/lighthouse/). The performance scores were evaluated for both desktop and mobile devices. Here are the summarized results:
+The Travel Tickr website was subjected to testing through the [Google Lighthouse in Google Chrome Developer Tools](https://developer.chrome.com/docs/lighthouse/). function integrated within Google Chrome Developer Tools. This tool offers a comprehensive evaluation of Performance, Accessibility, Best Practices, and SEO parameters. The testing was carried out for both desktop and mobile interfaces and the results are documented as follows:
 
-### Desktop Performance
-- Average performance score: 92/100
-- The majority of pages received scores above 90/100, indicating excellent performance.
-- The Logout page received a score of 85/100 due to preventing back/forward cache restoration, which is intentional to maintain security.
+### Performance on Desktop Interface
+The homepage, having the highest image density, was selected for performance testing since it naturally bears the greatest performance load. Consequently, the performance score was found to be 63 out of 100.
 
-| **Tested** | **Performance Score** | **View Result** | **Pass** |
---- | --- | --- | :---:
-|page| score | <details><summary>Screenshot of result</summary>![Result]()</details> | :white_check_mark:
+| **Performance** | **Accessibility* | **Best Practice | **SEO** |**View Result** | **Pass** |
+--- | --- | --- | --- | --- | :---:
+|63/100| 94/100 | 92/100 | 100/100 |<details><summary>Screenshot of result</summary>![Result](/docs/testing/lighthouse-desktop.png)</details> | :white_check_mark:
 
 
-### Mobile Performance
-- Average performance score: 77/100
-- The pages showed slightly lower performance compared to desktop, but still maintained a satisfactory score.
-- The Logout page received a score of 71/100 due to preventing back/forward cache restoration, which is intentional to maintain security.
+### Performance on Mobile Interface
+For consistency in testing conditions and to assess the website's behavior on different platforms, the same homepage was scrutinized for performance on mobile devices. 
+**Performance** | **Accessibility* | **Best Practice | **SEO** |**View Result** | **Pass** |
+--- | --- | --- | --- | --- | :---:
+|59/100| 95/100 | 92/100 | 100/100 |<details><summary>Screenshot of result</summary>![Result](/docs/testing/lighthouse.-mobile.png)</details> | :white_check_mark:
 
-| **Tested** | **Performance** | **View Result** | **Pass** |
---- | --- | --- | :---:
-|page| score | <details><summary>Screenshot of result</summary>![Result]()</details> | :white_check_mark:
-
-
-Overall, Travel Tickr webapps performed well in terms of performance, providing a smooth user experience on both desktop and mobile devices.
+In conclusion, the Travel Tickr web application have demonstrated satisfactory performance in the evaluation. Despite the room for improvement in certain areas, notably the performance metric, the overall results are positive with impressive scores in accessibility, best practices, and SEO. The balance between aesthetic appeal and operational efficiency is carefully maintained, making the Travel Tickr web application an effective solution for its intended user base. Further enhancements in performance optimization could further improve the user experience, thereby fortifying Travel Tickr's position as a reliable and user-friendly travel companion.
 
 [Back to the top](#table-of-content)
 
