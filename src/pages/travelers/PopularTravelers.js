@@ -16,9 +16,10 @@ const PopularTravelers = ({ mobile }) => {
     >
       {popularTravelers.results.length ? (
         <>
-          <p className="d-flex justify-content-center">
-            Most followed travelers
-          </p>
+          <h5 className="d-flex justify-content-center">
+            Popular Travelers
+          </h5>
+          <hr />
           {mobile ? (
             <div className="d-flex justify-content-around">
               {popularTravelers.results.slice(0, 4).map((traveler) => (
