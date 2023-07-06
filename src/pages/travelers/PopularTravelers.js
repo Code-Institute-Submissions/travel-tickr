@@ -27,7 +27,7 @@ const PopularTravelers = ({ mobile }) => {
             </div>
           ) : (
             popularTravelers.results
-              .slice(0, 4)
+              .slice(0, 10)
               .map((traveler) => (
                 <Traveler key={traveler.id} traveler={traveler} />
               ))
