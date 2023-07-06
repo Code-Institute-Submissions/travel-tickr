@@ -222,10 +222,11 @@ Upon clicking on the profile image in the navigation bar, additional links are r
 - [As a user I can see other users profile so that I can learn more about them](https://github.com/SandraBergstrom/travel-tickr/issues/51)
 
 
-##### Epic 4: Site Owner Administration
+##### Epic 4: Site Owner Administration and Functionality
 - [As a site owner, I can delete user accounts, posts, and comments on the Travel Tickr platform, so that I can maintain a safe and high-quality user environment.](https://github.com/SandraBergstrom/travel-tickr/issues/26)
 - [As the owner of the application, I want to improve the application's codebase and deployment process to ensure efficiency and maintainability.](https://github.com/SandraBergstrom/travel-tickr/issues/57)
 - [As an owner, I want to create a 404 page to improve the user experience when users land on non-existent pages.](https://github.com/SandraBergstrom/travel-tickr/issues/58)
+- [As a Project Owner, I can conduct thorough testing so that the application is robust, error-free, and provides a smooth user experience.](https://github.com/SandraBergstrom/travel-tickr/issues/56)
 
 
 ##### Epic 5: Memory Management
@@ -387,8 +388,21 @@ GitHub Projects has been utilized to facilitate agile project management. User s
 ### User Stories as GitHub Issues
 Each user story has been created as a GitHub issue, capturing the desired functionality from the user's perspective. The user stories are linked to their corresponding GitHub issues, allowing easy access to the acceptance criteria, tasks, and comments associated with each user story.
 
+### Commit and Issue Linking
+In the spirit of maintaining transparency and traceability in the project's development, commits associated with a user story or a bug have been linked directly to the corresponding GitHub issue. This feature of GitHub helps in providing a complete picture of the changes made to address each user story or fix each bug.
+
+By exploring the associated issue, users can track the journey from identifying the requirement or issue to the final resolution implemented in the code. This also makes it possible to verify how each commit contributes to the overall development of the application, enhancing the comprehensibility of the project's evolution.
+
+See example:
+<details><summary>Github Issues Traceback</summary>
+<img src="/docs/github-issues.png">
+</details> <br>
+<details><summary>Commit List Links</summary>
+<img src="/docs/commit-list.png">
+</details> <br>
+
 ### Bug Tracking
-Bugs encountered during the development process have also been logged as GitHub issues. These issues contain details about the specific bug, its impact, and steps to reproduce it. By linking the bugs in the README.md to their respective GitHub issues, users can gain insights into the bugs' resolution progress and view any additional comments.
+Bugs encountered during the development process have also been logged as GitHub issues. These issues contain details about the specific bug, its impact, and steps to reproduce it. By linking the bugs in the README.md to their respective GitHub issues and commits, it's possible to gain insights into the bugs' resolution progress and view any additional comments.
 
 ### Iterative Development Approach
 The Travel Tickr project follows an iterative development approach, allowing for continuous improvement and progress while adhering to time constraints. The development process is structured into sprints, with each sprint typically lasting around 6 days.
@@ -459,7 +473,7 @@ Within each sprint, a MoSCoW method is used to further prioritize user stories. 
 * [x] Plan Sprint 2 (Must do)
 
 #### Sprint 3 (June 25th - July 1st, 2023): 
-* [ ] Design and implement footer (Could do) *- Moved to next sprint*
+* [ ] [USER STORY: About page](https://github.com/SandraBergstrom/travel-tickr/issues/61) (Must do) *- Moved to next sprint*
 * [x] [USER STORY: Profile page](https://github.com/SandraBergstrom/travel-tickr/issues/51) (Must do)
 * [x] [USER STORY: Update profile](https://github.com/SandraBergstrom/travel-tickr/issues/13) (Must do)
 * [x] [USER STORY: Popular Profiles](https://github.com/SandraBergstrom/travel-tickr/issues/50) (Must do)
@@ -503,6 +517,7 @@ Within each sprint, a MoSCoW method is used to further prioritize user stories. 
 * [ ] Documentation (Must do)
 * [ ] [USER STORY: 404-page](https://github.com/SandraBergstrom/travel-tickr/issues/58)
 * [ ] [USER STORY: Improve application and deployment](https://github.com/SandraBergstrom/travel-tickr/issues/57) (Must do)
+* [ ] [USER STORY: Test application](https://github.com/SandraBergstrom/travel-tickr/issues/56) (Must do)
 
 #### Backlog
 * [ ] [USER STORY: Upload multiple photos](https://github.com/SandraBergstrom/travel-tickr/issues/28) 
@@ -547,12 +562,14 @@ To view the complete testing details and results, please [click here](TESTING.md
 [Back up](#table-of-content)
 
 ## Deployment
-The website was deployed using Heroku by following these steps:
-1. Set DEBUG to False in the settings.py file.
-2. Commit and push your code to the GitHub repository.
-3. Clear the 'static' folder in Cloudinary to ensure the latest static files are used during deployment. This step is important to avoid any potential conflicts between cached versions of static files and the updated versions being deployed. Clearing the 'static' folder ensures that the latest versions of static files are used during the deployment process, preventing any eTag errors or inconsistencies.
-4. Navigate to the project's deploy page in Heroku.
-5. Choose the manual deployment option to deploy the latest code changes.
+The website was deployed using Heroku, following the steps below:
+
+1. **Create a Heroku Account**: If you do not have a Heroku account already, create one. Heroku is a platform that enables developers to build, run, and operate applications entirely in the cloud.
+2. **Prepare your Application**: Commit and push your code to your GitHub repository. Ensure that all necessary changes have been made and the latest version of the application is ready for deployment.
+3. **Create a New Application on Heroku**: From your Heroku dashboard, create a new application. Choose an appropriate name for your application and select a region.
+4. **Set Environment Variables**: Ensure the environmental variables are also added to your Heroku app settings under the Config Vars section. This is done to protect sensitive data and also to allow the services to communicate with your Heroku app.
+5.**Deployment Process**: In the Heroku dashboard, navigate to the "Deploy" section of your application. Here, you will be able to link your GitHub repository to your Heroku app. Ensure that the repository and branch that contain the version of your app that you wish to deploy are selected. Finally, click "Deploy Branch" under the "Manual deploy" section.
+6. **Verify Deployment**: After the deployment process completes, Heroku will provide a URL to the live application. Open this URL in your browser to ensure the application has been deployed successfully and is functioning as expected.
 
 You can for fork the repository by following these steps:
 1. Go to the GitHub repository
