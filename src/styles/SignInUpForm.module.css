@@ -22,6 +22,9 @@
   color: var(--clr-accent-dark);
   margin-bottom: 30px;
 }
+.Content {
+  padding: 10px;
+}
 
 .Link {
   text-decoration: none;
