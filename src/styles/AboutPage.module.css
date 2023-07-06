@@ -1,0 +1,16 @@
+.Info {
+    /* text-align: center; */
+    margin: 20px;
+}
+
+.Info h1 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.Info p {
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: center;
+}
