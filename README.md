@@ -77,15 +77,27 @@ The objective of Travel Tickr is to create a travel memory platform that caters 
 
 ### Strategy
 #### Project Goals 
-- **Create a Travel Memory Platform:** Develop a user-friendly web application that allows travelers to save and share their travel memories in the form of text and pictures. Provide a seamless experience for users to upload photos, write accompanying stories, and organize their memories into albums. Enable users to create, read, comment, and vote/like on contents.
+- **Create a Travel Memory Platform:** Develop a user-friendly web application that allows travelers to save and share their travel memories in the form of text and pictures. Provide a seamless experience for users to upload photos, write accompanying stories, and organize their memories into albums. Enable users to create, read, comment, and vote/like on contents.<br>
+  Mapped to User Story: [14,](https://github.com/SandraBergstrom/travel-tickr/issues/14) [15,](https://github.com/SandraBergstrom/travel-tickr/issues/15) [16,](https://github.com/SandraBergstrom/travel-tickr/issues/16) [17](https://github.com/SandraBergstrom/travel-tickr/issues/17)
 
-- **Build a Traveler Community:** Foster a vibrant community of travelers by enabling users to connect with each other, follow fellow travelers, and like and comment on their travel experiences. Implement features that allow users to search, filter, and categorize content, enhancing the discoverability of travel stories and recommendations.
+- **Build a Traveler Community:** Foster a vibrant community of travelers by enabling users to connect with each other, follow fellow travelers, and like and comment on their travel experiences. Implement features that allow users to search, filter, and categorize content, enhancing the discoverability of travel stories and recommendations.<br>
+  Mapped to User Story: [18,](https://github.com/SandraBergstrom/travel-tickr/issues/18) [19,](https://github.com/SandraBergstrom/travel-tickr/issues/19) [20,](https://github.com/SandraBergstrom/travel-tickr/issues/20) [21,](https://github.com/SandraBergstrom/travel-tickr/issues/21) [23,](https://github.com/SandraBergstrom/travel-tickr/issues/23) [24,](https://github.com/SandraBergstrom/travel-tickr/issues/24) [25,](https://github.com/SandraBergstrom/travel-tickr/issues/25) [50,](https://github.com/SandraBergstrom/travel-tickr/issues/50) [51,](https://github.com/SandraBergstrom/travel-tickr/issues/51) [61](https://github.com/SandraBergstrom/travel-tickr/issues/61)
+  
+- **Offer Seamless Travel Exploration:** Implement features that enhance the travel exploration process, such as enable travelers to search and filter content based on username, popularity, date created, title, content keywords, and category. Provide search functionality that allows users to easily find relevant content and resources.<br>
+  Mapped to User Story: [18,](https://github.com/SandraBergstrom/travel-tickr/issues/18) [19](https://github.com/SandraBergstrom/travel-tickr/issues/19) [27,](https://github.com/SandraBergstrom/travel-tickr/issues/27) [36](https://github.com/SandraBergstrom/travel-tickr/issues/36)
 
-- **Offer Seamless Travel Exploration:** Implement features that enhance the travel exploration process, such as enable travelers to search and filter content based on username, popularity, date created, title, content keywords, and category. Provide search functionality that allows users to easily find relevant content and resources.
+- **Provide a Clean and Intuitive User Interface:** Design an aesthetically pleasing and user-friendly interface that reflects the essence of a travel journal. Ensure the application meets accessibility guidelines, follows UX design principles, and provides a set of user interactions that intuitively guide users through the platform. Implement responsive design to ensure the application is accessible and functional across different devices.<br>
+  Mapped to all user stories.
+  
+- **Implement Advanced Features *(if time permits)*:** Explore the possibility of implementing additional features, such as a world map where users' travel photos are geographically marked, a trip creation functionality that provide users with destination-specific information, safety warnings, packing checklists, and reminders for passport expiration.and a bucket list feature. Automatically create photo albums when a photo has a date that is within the time line of the created trip. A bucket list feature that will allow users to add destinations and travel experiences discovered through content shared by other users to their personal list of aspirations. Provide users with the ability to curate and manage their bucket list, making it a valuable tool for planning and tracking their travel goals.<br>
+  Mapped to User Story: [28,](https://github.com/SandraBergstrom/travel-tickr/issues/28)
 
-- **Provide a Clean and Intuitive User Interface:** Design an aesthetically pleasing and user-friendly interface that reflects the essence of a travel journal. Ensure the application meets accessibility guidelines, follows UX design principles, and provides a set of user interactions that intuitively guide users through the platform. Implement responsive design to ensure the application is accessible and functional across different devices.
+  [29,](https://github.com/SandraBergstrom/travel-tickr/issues/29)
+  [30,](https://github.com/SandraBergstrom/travel-tickr/issues/30)
+  [31,](https://github.com/SandraBergstrom/travel-tickr/issues/31)
+  [32](https://github.com/SandraBergstrom/travel-tickr/issues/32)
+  
 
-- **Implement Advanced Features *(if time permits)*:** Explore the possibility of implementing additional features, such as a world map where users' travel photos are geographically marked, a trip creation functionality that provide users with destination-specific information, safety warnings, packing checklists, and reminders for passport expiration.and a bucket list feature. Automatically create photo albums when a photo has a date that is within the time line of the created trip. A bucket list feature that will allow users to add destinations and travel experiences discovered through content shared by other users to their personal list of aspirations. Provide users with the ability to curate and manage their bucket list, making it a valuable tool for planning and tracking their travel goals.
 
 #### User Goals
 - **Capture and Preserve Travel Memories:** Users want to save and preserve their travel memories, including photos, stories, and experiences, in a secure and organized manner.
@@ -282,6 +294,27 @@ Travelers:
 
 Other:
 - **AboutPage**: A component to display information about the application or any relevant context.
+
+#### Component relation to User Story
+| **Component** | **User Story** |
+| ----------- | ----------- |
+|LoginForm|[10,](https://github.com/SandraBergstrom/travel-tickr/issues/10) [11,](https://github.com/SandraBergstrom/travel-tickr/issues/11) [12](https://github.com/SandraBergstrom/travel-tickr/issues/12)|
+|SignupForm|[10](https://github.com/SandraBergstrom/travel-tickr/issues/10)|
+|Navbar|All user stories|
+|Avatar|[13,](https://github.com/SandraBergstrom/travel-tickr/issues/13) [51](https://github.com/SandraBergstrom/travel-tickr/issues/51)|
+|TravelerEditForm|[13](https://github.com/SandraBergstrom/travel-tickr/issues/13)|
+|PostCreateForm|[14,](https://github.com/SandraBergstrom/travel-tickr/issues/14) [31](https://github.com/SandraBergstrom/travel-tickr/issues/31)|
+|Post|[15,](https://github.com/SandraBergstrom/travel-tickr/issues/15) [16,](https://github.com/SandraBergstrom/travel-tickr/issues/16) [17,](https://github.com/SandraBergstrom/travel-tickr/issues/17) [27,](https://github.com/SandraBergstrom/travel-tickr/issues/27) [36](https://github.com/SandraBergstrom/travel-tickr/issues/36)|
+|PostEditForm|[16](https://github.com/SandraBergstrom/travel-tickr/issues/16)|
+|PostsPage|[15,](https://github.com/SandraBergstrom/travel-tickr/issues/15) [19,](https://github.com/SandraBergstrom/travel-tickr/issues/19) [27](https://github.com/SandraBergstrom/travel-tickr/issues/27)|
+|PostPage|[15,](https://github.com/SandraBergstrom/travel-tickr/issues/15) [21,](https://github.com/SandraBergstrom/travel-tickr/issues/21) [22](https://github.com/SandraBergstrom/travel-tickr/issues/22)|
+|Comment|[22,](https://github.com/SandraBergstrom/travel-tickr/issues/22) [23,](https://github.com/SandraBergstrom/travel-tickr/issues/23) [24](https://github.com/SandraBergstrom/travel-tickr/issues/24)|
+|CommentCreateForm|[21](https://github.com/SandraBergstrom/travel-tickr/issues/21)|
+|CommentEditForm|[23](https://github.com/SandraBergstrom/travel-tickr/issues/23)|
+|Traveler|[50,](https://github.com/SandraBergstrom/travel-tickr/issues/50) [51](https://github.com/SandraBergstrom/travel-tickr/issues/51)|
+|PopularTravelers|[50](https://github.com/SandraBergstrom/travel-tickr/issues/50)|
+|About Page|[61](https://github.com/SandraBergstrom/travel-tickr/issues/61)|
+|NotFound|[58](https://github.com/SandraBergstrom/travel-tickr/issues/58)|
 
 The use of the React library in the Travel Tickr project has significantly contributed to enhancing the user experience. React's component-based architecture has helped create reusable components such as Asset, Avatar, MoreDropdown, NavBar, and others. These components not only ensure consistent look and feel across the application but also make the codebase more maintainable and easier to update or extend.
 
