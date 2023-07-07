@@ -15,59 +15,71 @@ Developer: [Sandra Bergström](https://github.com/SandraBergstrom) <br>
 ## Table of Content
 
 - [User Experience](#user-experience)
-  * [Objective:](#objective)
+  * [Objective:](#objective-)
   * [Strategy](#strategy)
-    + [Project Goals ](#project-goals)
+    + [Project Goals](#project-goals)
     + [User Goals](#user-goals)
     + [Site Owner Goals](#site-owner-goals)
     + [Target Audience](#target-audience)
     + [User Requirements and Expectations](#user-requirements-and-expectations)
   * [Scope](#scope)
     + [Features](#features)
+      - [User Account Management](#user-account-management)
+      - [Post Management](#post-management)
+      - [Interactions and Engagement](#interactions-and-engagement)
+      - [Navigation](#navigation-)
+      - [Travel Memory Management](#travel-memory-management)
     + [Future Features](#future-features)
     + [User Stories](#user-stories)
+      - [Epic 1: User Account Management](#epic-1--user-account-management)
+      - [Epic 2: Post (CRUD) Management](#epic-2--post--crud--management)
+      - [Epic 3: Interactions and Engagement](#epic-3--interactions-and-engagement)
+      - [Epic 4: Site Owner Administration and Functionality](#epic-4--site-owner-administration-and-functionality)
+      - [Epic 5: Memory Management](#epic-5--memory-management)
+      - [Epic 6: Trip Planning and Information](#epic-6--trip-planning-and-information)
   * [Structure](#structure)
     + [Database](#database)
-  * [Component Architecture]()
-    + [Component Hierarchy]()
-    + [Component Reusability]()
+  * [Component Architecture and Reusability](#component-architecture-and-reusability)
+    + [Core Components](#core-components)
+    + [Component Pages](#component-pages)
+    + [Component relation to User Story](#component-relation-to-user-story)
   * [Skeleton](#skeleton)
     + [Wireframes](#wireframes)
   * [Surface](#surface)
     + [Design Choices](#design-choices)
     + [Colour](#colour)
-    + [Fonts](#fonts)
+    + [Typography](#typography)
 - [Technologies Used](#technologies-used)
   * [Languages](#languages)
-  * [Frameworks](#frameworks)
+  * [Frameworks.](#frameworks)
   * [Database](#database-1)
   * [Tools](#tools)
   * [Supporting Libraries and Packages](#supporting-libraries-and-packages)
 - [Methodology](#methodology)
   * [Agile Project Management with GitHub Projects](#agile-project-management-with-github-projects)
   * [User Stories as GitHub Issues](#user-stories-as-github-issues)
+  * [Commit and Issue Linking](#commit-and-issue-linking)
   * [Bug Tracking](#bug-tracking)
   * [Iterative Development Approach](#iterative-development-approach)
-    + [Sprint 1 (June 13th - June 18th, 2023): ](#sprint-1-june-13th---june-18th-2023)
-    + [Sprint 2 (June 19th - June 24th, 2023):](#sprint-2-june-19th---june-24th-2023)
-    + [Sprint 3 (June 25th - July 1st, 2023): ](#sprint-3-june-25th---july-1st-2023)
-  * [Backlog and Subsequent Iterations ](#backlog-and-subsequent-iterations)
+    + [Sprint 1 (June 13th - June 18th, 2023):](#sprint-1--june-13th---june-18th--2023--)
+    + [Sprint 2 (June 19th - June 24th, 2023):](#sprint-2--june-19th---june-24th--2023--)
+    + [Sprint 3 (June 25th - July 1st, 2023):](#sprint-3--june-25th---july-1st--2023--)
+    + [Sprint 4 (July 2nd - July 7th, 2023):](#sprint-4--july-2nd---july-7th--2023--)
+    + [Backlog](#backlog)
+  * [Backlog and Subsequent Iterations](#backlog-and-subsequent-iterations)
 - [Bugs](#bugs)
   * [Known bugs](#known-bugs)
-  * [Fixed bugs ](#fixed-bugs)
+  * [Fixed bugs](#fixed-bugs)
 - [Testing](#testing)
 - [Deployment](#deployment)
 - [Credits](#credits)
   * [Media](#media)
-  * [Django Documentation:](#django-documentation)
-  * [W3 Schools:](#w3-schools)
-  * [Stackoverflow:](#stackoverflow)
-  * [Geeksforgeeks: ](#geeksforgeeks)
-  * [Various tutorials and YouTube channels:](#various-tutorials-and-youtube-channels)
-  * [Other open-source projects and packages:](#other-open-source-projects-and-packages)
+  * [Fonts](#fonts)
+  * [Other](#other)
+  * [Django Documentation:](#django-documentation-)
 - [Acknowledgements](#acknowledgements)
 
-<!-- TOC end -->
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## User Experience
 The travel memory platform is designed to cater to a diverse range of users who share a common interest in travel and creating and sharing travel memories. 
@@ -639,15 +651,10 @@ All images used in the webapp is from [Pexels](https://www.pexels.com/sv-se/) an
 ### Other
 [API to fetch countries](https://restcountries.com/)
 
-[Pillow - Image module ](https://pillow.readthedocs.io/en/stable/reference/Image.html)
-
-### Django Documentation:
-[django-versatileimagefield - Custom filters](https://django-versatileimagefield.readthedocs.io/en/2.1/writing_custom_sizers_and_filters.html)
-
 [Back up](#table-of-content)
 
 ## Acknowledgements
-I would like to express my gratitude to Code Institute's project "Moments" as it served as a significant source of inspiration for my own project. I am also incredibly thankful to my mentor, Jubrile Akolade, for providing guidance and valuable feedback throughout the development process. Additionally, I extend my appreciation to Kay Welfare for being readily available, offering support, and providing assistance whenever needed. Their contributions have been instrumental in the successful completion of this project.
+I would like to express my gratitude to Code Institute's project "Moments" as it served as a significant source of inspiration for my own project. I am also incredibly thankful to my mentor, Jubrile Akolade, for providing guidance and valuable feedback throughout the development process. Additionally, I extend my appreciation to Kay Welfare for being readily available, offering support, and providing assistance whenever needed. Their contributions have been essential in the successful completion of this project.
 
 I would also like to extend my gratitude to two of the testers who have made significant contributions: [Debbie](https://github.com/DebbieBergstrom) and [Kim](https://github.com/KimBergstroem). They have been instrumental in providing necessary feedback, identifying errors, and offering valuable tips. Their involvement has greatly contributed to the overall refinement of the project.
 
