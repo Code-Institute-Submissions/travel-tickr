@@ -1,25 +1,26 @@
 # Travel Tickr
-The testing.md file provides an overview of the testing conducted on Travel Tickr webapp. It covers code validation, accessibility, performance, testing on various devices, browser compatibility, testing user stories, and user feedback and improvements. Each section describes the tools used, the issues found (if any), and the corresponding test results.
+The testing.md file provides an overview of the testing conducted on Travel Tickr webapp. It covers code validation, accessibility, performance, testing on various devices, browser compatibility, testing user stories, full manual testing and user feedback and improvements. Each section describes the tools used, the issues found (if any), and the corresponding test results.
 
 ## Table of Content
 
-1. [Code Quality and Validation](#code-quality-and-validation)
-    1. [HTML Validation](#html-validation)
-    2. [CSS Validation](#css-validation)
-    3. [JavaScript]()
-2. [Accessibility](#accessibility)
-3. [Performance](#performance)
-    1. [Desktop Performance](#desktop-performance)
-    2. [Mobile Performance](#mobile-performance)
-4. [Performing tests on various devices](#performing-tests-on-various-devices)
-5. [Browser compability](#browser-compability)
-6. [Automated testing](#automated-testing)
-7. [Manual Testing](#manual-testing)
-    1. [Testing user stories](#testing-user-stories)
-    2. [User Experience and Improvements](#user-experience-and-improvements)
-    3. [Full testing](#full-testing)
-8. [Summary](#summary)
+- [Code Quality and Validation](#code-quality-and-validation)
+  * [HTML Validation](#html-validation)
+  * [CSS Validation](#css-validation)
+  * [JSX Validation](#jsx-validation)
+- [Accessibility](#accessibility)
+- [Performance](#performance)
+  * [Performance on Desktop Interface](#performance-on-desktop-interface)
+  * [Performance on Mobile Interface](#performance-on-mobile-interface)
+- [Performing tests on various devices](#performing-tests-on-various-devices)
+- [Browser compability](#browser-compability)
+- [Automated testing](#automated-testing)
+- [Manual testing](#manual-testing)
+  * [Testing user stories](#testing-user-stories)
+  * [User Experience and improvements](#user-experience-and-improvements)
+  * [Full testing Unauthorized user](#full-testing-unauthorized-user)
+- [Summary](#summary)
 
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## Code Quality and Validation
 
@@ -32,6 +33,9 @@ The html passed through the validation and the code was pasted in and I used a f
 --- | --- | --- | :---:
 |index| No errors | <details><summary>Screenshot of result</summary>![Result](/docs/testing/html.png)</details>| :white_check_mark:
 
+[Back to the top](#table-of-content)
+
+<br>
 
 ### CSS Validation
 [W3C Jigsaw](https://jigsaw.w3.org/css-validator/) is a tool provided by the World Wide Web Consortium (W3C) that allows you to validate and check the correctness of your CSS code. It helps ensure that your web pages comply with the standards set by the W3C, promoting interoperability and accessibility. I have tested by adding each page to the validator.
@@ -103,13 +107,17 @@ npx eslint
 
 Alongside ESLint, [Prettier](https://prettier.io/) is also employed in the development process. Prettier is an opinionated code formatter that imposes a uniform code style throughout the project by parsing the code and re-printing it according to its predefined rules. This helps me in maintaining clean and consistently formatted code. Prettier integrates well with most editors and requires no additional configuration, making it easy to use. By using Prettier alongside ESLint, I can ensure that my code remains easy to read, understand, and maintain, which ultimately streamlines the development process.
 
+[Back to the top](#table-of-content)
+
+<br>
+
 ## Accessibility
 [The WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/) was used to assess the accessibility of the website. WAVE helps identify potential accessibility issues and provides guidance on how to improve the accessibility of web content.
 
 During the evaluation, the following issues were identified:
 | **Tested** | **Result** | **View Result** | **Pass** |
 --- | --- | --- | :---:
-|All pages|Contrast Errors *|<details><summary>Screenshot of result</summary>![Result](/docs/testing/wave-home.png)</details> | :white_check_mark:
+|All pages| 4 Contrast Errors|<details><summary>Screenshot of result</summary>![Result](/docs/testing/wave-home.png)</details> | :white_check_mark:
 
 * The lighter blue color used in the Navbar creates contrast errors, but it is a deliberate design choice that I have chosen to maintain. Despite the contrast issue, I believe the color is still sufficiently visible and have made a decision to retain it in its current form.
 
@@ -127,7 +135,6 @@ The homepage, having the highest image density, was selected for performance tes
 --- | --- | --- | --- | --- | :---:
 |63/100| 94/100 | 92/100 | 100/100 |<details><summary>Screenshot of result</summary>![Result](/docs/testing/lighthouse-desktop.png)</details> | :white_check_mark:
 
-
 ### Performance on Mobile Interface
 For consistency in testing conditions and to assess the website's behavior on different platforms, the same homepage was scrutinized for performance on mobile devices. 
 **Performance** | **Accessibility* | **Best Practice | **SEO** |**View Result** | **Pass** |
@@ -144,6 +151,7 @@ In conclusion, the Travel Tickr web application have demonstrated satisfactory p
 The website was tested on the following devices:
 | **Tested** | **Reported issues** | **Pass** |
 --- | --- | :---:
+|Various desktops|None| :white_check_mark:
 |Samsung Galaxy Note S20 ultra| None | :white_check_mark:
 |Apple iPhone X | Can't login| :heavy_multiplication_x:
 |OnePlus 8|None|:white_check_mark:
@@ -201,7 +209,7 @@ Ran all test suites.
 <br>
 
 ## Manual testing
-### Testing user stories UPDATE
+### Testing user stories
 #### **Epic 1: User Account Management**
 
 | **User Story** | **Action** | **Expected Result** | **Pass** |
@@ -280,7 +288,14 @@ Each participant was encouraged to provide feedback and report any issues or imp
 
 | **Feature** | **Feedback** | **Result** | **Pass** |
 |--- | --- | --- | :---:
+|About|*"I miss an about page to shortly read about the Travel Tickr"*| A simple about page was added.| :white_check_mark:
+|Popular Travelers | *"On my mobile phone the popular profile section is too close to the navbar"*|Added extra 20px top padding on App main on small screens. |:white_check_mark:
+|Login|*"I can make an account, but I can't login on my phone"*|This issue, the inability for users to log in via an iPhone X, stems from the instructional project provided by the school. Regrettably, it exceeds my current skill set to rectify prior to the project's due date.| :heavy_multiplication_x:
+|Post icons|*"It's not 100% clear what the icons do on the post, specially the bucket icon. Would be good with some kind of information"*| Given the time limitations, I swiftly integrated an overlay trigger for each icon, offering contextual messages that reflect the user's actions, such as whether a post has been 'liked', 'unliked', 'added', or remains 'unadded'.|:white_check_mark:
 
+[Back to the top](#table-of-content)
+
+<br>
 
 ### Full testing Unauthorized user
 
@@ -386,4 +401,10 @@ Each participant was encouraged to provide feedback and report any issues or imp
 [Back to the top](#table-of-content)
 
 ## Summary
-... 
+The application largely demonstrated effective functionality across its features during testing. Both authorized and unauthorized user operations were successfully carried out, from basic navigation tasks such as logging in and signing up, to more intricate tasks such as adding and deleting memories (posts), managing user following, and manipulating bucket list items.
+
+The navigation bar, posts list, account creation, and login processes for unauthorized users all passed the tests. For authorized users, the application performed efficiently across the home page, following page, bucket list page, and traveler's profile page. The ability to add, update, and delete memories and comments were all functional. The search functionality, liking and unliking of posts, and following and unfollowing users also worked as expected. This testing phase indicates that the application is reliable, offering a smooth and comprehensive user experience.
+
+[Back to the top](#table-of-content)
+
+<br>
