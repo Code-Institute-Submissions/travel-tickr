@@ -67,16 +67,10 @@ Developer: [Sandra Bergström](https://github.com/SandraBergstrom) <br>
     + [Sprint 4 (July 2nd - July 7th, 2023):](#sprint-4--july-2nd---july-7th--2023--)
     + [Backlog](#backlog)
   * [Backlog and Subsequent Iterations](#backlog-and-subsequent-iterations)
-- [Bugs](#bugs)
-  * [Known bugs](#known-bugs)
-  * [Fixed bugs](#fixed-bugs)
+- [Bugs](#bugs) 
 - [Testing](#testing)
 - [Deployment](#deployment)
 - [Credits](#credits)
-  * [Media](#media)
-  * [Fonts](#fonts)
-  * [Other](#other)
-  * [Django Documentation:](#django-documentation-)
 - [Acknowledgements](#acknowledgements)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
