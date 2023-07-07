@@ -200,22 +200,62 @@ Ran all test suites.
 
 <br>
 
-## Manual testing
-### Testing user stories UPDATE
+## `Manual testing`
+### `Testing user stories UPDATE`
+#### **`Epic 1: User Account Management`**
 
-#### As a first-time user...
 | **User Story** | **Action** | **Expected Result** | **Pass** |
---- | --- | --- | :---:
+| --- | --- | --- | :---: |
+| [As a first-time user I can register for an account on the Travel Tickr platform, so that I can start exploring and sharing my travel memories.](https://github.com/SandraBergstrom/travel-tickr/issues/10#issue-1760697175) | Enter registration details and submit the registration form. | User is successfully registered and redirected to the platform's homepage. |  :white_check_mark: |
+| [As a user I can log in to the Travel Tickr platform using my registered email and password, so that I can access my account and personalized features.](https://github.com/SandraBergstrom/travel-tickr/issues/11#issue-1760711902) | Enter login credentials and click on the login button. | User is successfully logged in and redirected to their account dashboard. |  :white_check_mark:
+| [As a user I can log out of the Travel Tickr platform, so that I can secure my account and maintain privacy.](https://github.com/SandraBergstrom/travel-tickr/issues/12#issue-1760721017) | Click on the logout button or link. | User is successfully logged out and redirected to the platform's homepage. |  :white_check_mark:
+| [As a user I can update my profile information on the Travel Tickr platform, so that my profile reflects my current preferences and interests.](https://github.com/SandraBergstrom/travel-tickr/issues/13#issue-1760735056) | Access the profile settings, make desired changes, and save the updated profile information. | User's profile information is successfully updated and reflects the changes made. |  :white_check_mark:
 
+#### **`Epic 2: Post (CRUD) Management`**
 
-#### As a returning user...
 | **User Story** | **Action** | **Expected Result** | **Pass** |
---- | --- | --- | :---:
+| --- | --- | --- | :---: |
+| [As a user I can upload a photo with accompanying text to create a memory post on the Travel Tickr platform, so that I can share my travel experiences with others.](https://github.com/SandraBergstrom/travel-tickr/issues/14#issue-1760758217) | Select a photo, enter relevant text, and submit the post creation form. | The post is successfully created and visible to other users on the platform. |  :white_check_mark:
+|[As a user I can view and read posts on the Travel Tickr platform, so that I can explore and discover travel stories shared by other users.](https://github.com/SandraBergstrom/travel-tickr/issues/15#issue-1760773076) | Navigate to the posts section or homepage and browse through the available posts. | Posts from other users are displayed, and their content is visible for reading. |  :white_check_mark:
+| [As a user I can update my own posts on the Travel Tickr platform, so that I can make edits or additions to my shared content.](https://github.com/SandraBergstrom/travel-tickr/issues/16#issue-1760784374) | Access the post editing options, make desired changes, and save the updated post. |The post is successfully updated with the new changes made by the user. |  :white_check_mark:
+| [As a user I can delete my own posts on the Travel Tickr platform, so that I can remove content that is no longer relevant or desired.](https://github.com/SandraBergstrom/travel-tickr/issues/17#issue-1760793663) | Access the post deletion options and confirm the deletion action. | The post is successfully deleted from the platform and no longer visible to other users. |  :white_check_mark:
+​
+#### **`Epic 3: Interactions and Engagement`**
 
-
-#### As a site owner...
 | **User Story** | **Action** | **Expected Result** | **Pass** |
---- | --- | --- | :---:
+| --- | --- | --- | :---: |
+|[As a user I can view the about page so that I can gain information about Travel Tickr.](https://github.com/SandraBergstrom/travel-tickr/issues/61#issue-1791310004) | Click on the about page link in the platform's navigation. | The about page is successfully displayed, providing information about Travel Tickr. |  :white_check_mark:
+|[As a user I can search for specific posts or users on the Travel Tickr platform, so that I can discover new travel stories and connect with like-minded travelers.](https://github.com/SandraBergstrom/travel-tickr/issues/18#issue-1760797581) | Enter search keywords in the search bar and initiate the search. | Relevant posts or users matching the search criteria are displayed to the user. |  :white_check_mark:
+|[As a user I can sort posts based on criteria such as date, popularity, or relevance, so that I can find the most relevant and interesting content.](https://github.com/SandraBergstrom/travel-tickr/issues/19#issue-1760802832) | Select a sorting option from the available choices in the navbar (e.g., by travelers you follow or posts added to the bucketlist). | The posts are rearranged and displayed according to the selected sorting criteria. |  :white_check_mark:
+|[As a user I can like posts shared by other users on the Travel Tickr platform, so that I can show appreciation for inspiring content.](https://github.com/SandraBergstrom/travel-tickr/issues/54#issue-1786449433) | Click on the like button/icon associated with a post. | The post receives a like from the user, and the like count is increased. |  :white_check_mark:
+|[As a user I can comment on posts shared by other users on the Travel Tickr platform, so that I can engage in discussions and interact with the travel community.](https://github.com/SandraBergstrom/travel-tickr/issues/21#issue-1760822647) | Enter a comment in the comment section of a post and submit it. | The comment is successfully posted and visible to other users, fostering discussions and interactions. | :white_check_mark:
+|[As a user I can view and read comments on posts on the Travel Tickr platform, so that I can follow the conversations and opinions shared by other users.](https://github.com/SandraBergstrom/travel-tickr/issues/22#issue-1760825975) | Navigate to the comment section of a post. | Comments made by other users on the post are displayed, allowing the user to read and follow the conversations. | :white_check_mark:
+|[As a user I can update my own comments on the Travel Tickr platform, so that I can make edits or corrections to my shared opinions.](https://github.com/SandraBergstrom/travel-tickr/issues/23#issue-1760829919) | Access the comment editing options, make desired changes, and save the updated comment. | The comment is successfully updated with the new changes made by the user. | :white_check_mark:
+|[As a user I can delete my own comments on the Travel Tickr platform, so that I can remove or retract my previous statements.](https://github.com/SandraBergstrom/travel-tickr/issues/24#issue-1760834441)| Access the comment deletion options and confirm the deletion action. | The comment is successfully deleted from the platform and no longer visible to other users. | :white_check_mark:
+| [As a user I can follow other users on the Travel Tickr platform, so that I can stay updated on their travel journeys and experiences.](https://github.com/SandraBergstrom/travel-tickr/issues/25#issue-1760848479) | Access the user's profile and click on the follow button. | The user is successfully followed, and their updates appear in the user's feed. | :white_check_mark:
+| [As a user I can see who the most popular travelers are, so that I can get inspired by them.](https://github.com/SandraBergstrom/travel-tickr/issues/25#issue-1760848479) | Access the posts pages to view the leaderboard. | The most popular travelers, based on predefined criteria (number of followers), are displayed to the user. | :white_check_mark:
+| [As a user I can view other users' profiles, so that I can learn more about them.](https://github.com/SandraBergstrom/travel-tickr/issues/51#issue-1780269929) | Click on a user's profile or username to access their profile page. | The user's profile page is displayed, showcasing information and content related to the user. | :white_check_mark:
+​
+#### **`Epic 4: Site Owner Administration and Functionality`**
+
+| **User Story** | **Action** | **Expected Result** | **Pass** |
+| --- | --- | --- | :---: |
+| [As a site owner I can delete user accounts, posts, and comments on the Travel Tickr platform, so that I can maintain a safe and high-quality user environment.](https://github.com/SandraBergstrom/travel-tickr/issues/26#issue-1760851438) | Access the site owner/administration panel, select the desired user/post/comment, and initiate the deletion process. | The selected user account, post, or comment is successfully deleted from the platform. | :white_check_mark:
+|[ As a site owner I want to improve the application's codebase and deployment process to ensure efficiency and maintainability.](https://github.com/SandraBergstrom/travel-tickr/issues/57#issue-1788931900) | Implement codebase improvements and optimize the deployment process. | The application's codebase is enhanced, and the deployment process becomes more efficient and maintainable. | :white_check_mark:
+| [As a site owner I want to create a 404 page to improve the user experience when users land on non-existent pages.](https://github.com/SandraBergstrom/travel-tickr/issues/58#issue-1788996452) | Create a custom 404 page with relevant information and design. | When users land on non-existent pages, the custom 404 page is displayed, improving the user experience. | :white_check_mark:
+| [As a site owner I can conduct thorough testing to ensure that the application is robust, error-free, and provides a smooth user experience.](https://github.com/SandraBergstrom/travel-tickr/issues/56#issue-1787873703) | Perform comprehensive testing, including functional, integration, and performance testing. | The application passes the tests and is robust, error-free, and provides a smooth user experience. | :white_check_mark:
+​
+### **`Epic 5: Memory Management`**
+
+| **User Story** | **Action** | **Expected Result** | **Pass** |
+| --- | --- | --- | :---: |
+| [As a user I can add travel memories shared by others to my bucket list on the Travel Tickr platform, so that I can save and revisit them later.](https://github.com/SandraBergstrom/travel-tickr/issues/27#issue-1760854822) | Click on the bucket icon associated with a travel memory. | The travel memory is successfully added to the user's bucket list. | :white_check_mark:
+​
+### **`Epic 6: Trip Planning and Information`**
+
+| **User Story** | **Action** | **Expected Result** | **Pass** |
+| --- | --- | --- | :---: |
+| [As a user I can see a post's location so that I can know where the memory was made.](https://github.com/SandraBergstrom/travel-tickr/issues/36#issue-1761935754) | View a post and check for the location information associated with it. | The location information is displayed alongside the post, allowing the user to know where the memory was made. | :white_check_mark:
 
 
 [Back to the top](#table-of-content)
