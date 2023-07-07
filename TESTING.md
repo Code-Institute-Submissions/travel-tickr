@@ -200,9 +200,9 @@ Ran all test suites.
 
 <br>
 
-## `Manual testing`
-### `Testing user stories UPDATE`
-#### **`Epic 1: User Account Management`**
+## Manual testing
+### Testing user stories UPDATE
+#### **Epic 1: User Account Management**
 
 | **User Story** | **Action** | **Expected Result** | **Pass** |
 | --- | --- | --- | :---: |
@@ -211,7 +211,7 @@ Ran all test suites.
 | [As a user I can log out of the Travel Tickr platform, so that I can secure my account and maintain privacy.](https://github.com/SandraBergstrom/travel-tickr/issues/12#issue-1760721017) | Click on the logout button or link. | User is successfully logged out and redirected to the platform's homepage. |  :white_check_mark:
 | [As a user I can update my profile information on the Travel Tickr platform, so that my profile reflects my current preferences and interests.](https://github.com/SandraBergstrom/travel-tickr/issues/13#issue-1760735056) | Access the profile settings, make desired changes, and save the updated profile information. | User's profile information is successfully updated and reflects the changes made. |  :white_check_mark:
 
-#### **`Epic 2: Post (CRUD) Management`**
+#### **Epic 2: Post (CRUD) Management**
 
 | **User Story** | **Action** | **Expected Result** | **Pass** |
 | --- | --- | --- | :---: |
@@ -220,7 +220,7 @@ Ran all test suites.
 | [As a user I can update my own posts on the Travel Tickr platform, so that I can make edits or additions to my shared content.](https://github.com/SandraBergstrom/travel-tickr/issues/16#issue-1760784374) | Access the post editing options, make desired changes, and save the updated post. |The post is successfully updated with the new changes made by the user. |  :white_check_mark:
 | [As a user I can delete my own posts on the Travel Tickr platform, so that I can remove content that is no longer relevant or desired.](https://github.com/SandraBergstrom/travel-tickr/issues/17#issue-1760793663) | Access the post deletion options and confirm the deletion action. | The post is successfully deleted from the platform and no longer visible to other users. |  :white_check_mark:
 ​
-#### **`Epic 3: Interactions and Engagement`**
+#### **Epic 3: Interactions and Engagement**
 
 | **User Story** | **Action** | **Expected Result** | **Pass** |
 | --- | --- | --- | :---: |
@@ -236,7 +236,7 @@ Ran all test suites.
 | [As a user I can see who the most popular travelers are, so that I can get inspired by them.](https://github.com/SandraBergstrom/travel-tickr/issues/25#issue-1760848479) | Access the posts pages to view the leaderboard. | The most popular travelers, based on predefined criteria (number of followers), are displayed to the user. | :white_check_mark:
 | [As a user I can view other users' profiles, so that I can learn more about them.](https://github.com/SandraBergstrom/travel-tickr/issues/51#issue-1780269929) | Click on a user's profile or username to access their profile page. | The user's profile page is displayed, showcasing information and content related to the user. | :white_check_mark:
 ​
-#### **`Epic 4: Site Owner Administration and Functionality`**
+#### **Epic 4: Site Owner Administration and Functionality**
 
 | **User Story** | **Action** | **Expected Result** | **Pass** |
 | --- | --- | --- | :---: |
@@ -245,13 +245,13 @@ Ran all test suites.
 | [As a site owner I want to create a 404 page to improve the user experience when users land on non-existent pages.](https://github.com/SandraBergstrom/travel-tickr/issues/58#issue-1788996452) | Create a custom 404 page with relevant information and design. | When users land on non-existent pages, the custom 404 page is displayed, improving the user experience. | :white_check_mark:
 | [As a site owner I can conduct thorough testing to ensure that the application is robust, error-free, and provides a smooth user experience.](https://github.com/SandraBergstrom/travel-tickr/issues/56#issue-1787873703) | Perform comprehensive testing, including functional, integration, and performance testing. | The application passes the tests and is robust, error-free, and provides a smooth user experience. | :white_check_mark:
 ​
-### **`Epic 5: Memory Management`**
+### **Epic 5: Memory Management**
 
 | **User Story** | **Action** | **Expected Result** | **Pass** |
 | --- | --- | --- | :---: |
 | [As a user I can add travel memories shared by others to my bucket list on the Travel Tickr platform, so that I can save and revisit them later.](https://github.com/SandraBergstrom/travel-tickr/issues/27#issue-1760854822) | Click on the bucket icon associated with a travel memory. | The travel memory is successfully added to the user's bucket list. | :white_check_mark:
 ​
-### **`Epic 6: Trip Planning and Information`**
+### **Epic 6: Trip Planning and Information**
 
 | **User Story** | **Action** | **Expected Result** | **Pass** |
 | --- | --- | --- | :---: |
