@@ -324,37 +324,19 @@ One particular feature where React has been instrumental is the implementation o
 #### Wireframes
 The wireframes provide a visual representation of the different pages and features of the web application. They serve as a blueprint for the design and layout of each page, helping to visualize the user interface and overall user experience. These wireframes were created using Balsamiq, a tool that enables quick and intuitive sketching of design ideas.
 
-<details><summary>Log in (landing page)</summary>
-<img src="#">
+<details><summary>Home / Following / Bucketlist</summary>
+<img src="/docs/wireframes/home.png">
 </details>
 <details><summary>About</summary>
-<img src="#">
+<img src="/docs/wireframes/about.png">
 </details>
-<details><summary>Sign Up</summary>
-<img src="#">
-</details>
-<details><summary>Home Page</summary>
-<img src="#">
-</details>
-<details><summary>My Memories</summary>
-<img src="#">
-</details>
-<details><summary>My Bucketlist</summary>
-<img src="#">
-</details>
-<details><summary>Add/Update Memory</summary>
-<img src="#">
-</details>
-<details><summary>Memory Detail</summary>
-<img src="#">
+<details><summary>Sign Up / Login</summary>
+<img src="/docs/wireframes/login-signup.png">
 </details>
 <details><summary>Traveler Profile</summary>
-<img src="#">
+<img src="/docs/wireframes/traveler-profile.png">
 </details>
-<details><summary>Logout</summary>
-<img src="#">
-</details>
-<br>
+
 
 ### Surface
 
