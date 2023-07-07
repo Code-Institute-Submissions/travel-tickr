@@ -24,19 +24,8 @@ Developer: [Sandra Bergström](https://github.com/SandraBergstrom) <br>
     + [User Requirements and Expectations](#user-requirements-and-expectations)
   * [Scope](#scope)
     + [Features](#features)
-      - [User Account Management](#user-account-management)
-      - [Post Management](#post-management)
-      - [Interactions and Engagement](#interactions-and-engagement)
-      - [Navigation](#navigation-)
-      - [Travel Memory Management](#travel-memory-management)
     + [Future Features](#future-features)
     + [User Stories](#user-stories)
-      - [Epic 1: User Account Management](#epic-1--user-account-management)
-      - [Epic 2: Post (CRUD) Management](#epic-2--post--crud--management)
-      - [Epic 3: Interactions and Engagement](#epic-3--interactions-and-engagement)
-      - [Epic 4: Site Owner Administration and Functionality](#epic-4--site-owner-administration-and-functionality)
-      - [Epic 5: Memory Management](#epic-5--memory-management)
-      - [Epic 6: Trip Planning and Information](#epic-6--trip-planning-and-information)
   * [Structure](#structure)
     + [Database](#database)
   * [Component Architecture and Reusability](#component-architecture-and-reusability)
@@ -563,7 +552,7 @@ For a comprehensive view of the project progress, user stories, and bug tracking
 
 | **Bug** | **Status** |
 | ----------- | ----------- |
-| None |-|
+| [Wrong message when hover bucket as not logged in](https://github.com/SandraBergstrom/travel-tickr/issues/63#issue-1794309359) |Due to current priorities and time constraints, this bug have been moved to the backlog and will be addressed as time allows.|
 
 
 ### Fixed bugs 
