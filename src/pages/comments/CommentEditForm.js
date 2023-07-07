@@ -36,6 +36,7 @@ function CommentEditForm(props) {
         }),
       }));
       setShowEditForm(false);
+      props.setSuccessMessage('Comment updated successfully!'); 
     } catch (err) {
       console.log(err);
     }

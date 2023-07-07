@@ -6,7 +6,7 @@ import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
 
 import appStyles from "../../App.module.css";
-import alertStyles from "../../styles/AlertMessages.module.css"
+import alertStyles from "../../styles/AlertMessages.module.css";
 import { useParams } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import Post from "./Post";
@@ -30,6 +30,7 @@ function PostPage() {
 
   const routeLocation = useLocation();
   const [alertMessage, setAlertMessage] = useState(null);
+  const [commentSuccessMessage, setCommentSuccessMessage] = useState("");
 
   useEffect(() => {
     // Fetch the post and comments data from the API
@@ -64,6 +65,16 @@ function PostPage() {
     }
   }, [routeLocation]);
 
+  useEffect(() => {
+    if (commentSuccessMessage) {
+      const timer = setTimeout(() => {
+        setCommentSuccessMessage("");
+      }, 5000); // 5000 ms = 5 seconds
+
+      return () => clearTimeout(timer);
+    }
+  }, [commentSuccessMessage]);
+
   return (
     <>
       {alertMessage && (
@@ -78,6 +89,14 @@ function PostPage() {
         <Col className="py-2 p-0 p-lg-2" lg={8}>
           <Post {...post.results[0]} setPosts={setPost} postPage />
           <Container className={appStyles.Content}>
+            {commentSuccessMessage && (
+              <Alert
+                variant="success"
+                className={alertStyles["alert-success-custom"]}
+              >
+                {commentSuccessMessage}
+              </Alert>
+            )}
             {currentUser ? (
               <CommentCreateForm
                 traveler_id={currentUser.traveler_id}
@@ -85,6 +104,7 @@ function PostPage() {
                 post={id}
                 setPost={setPost}
                 setComments={setComments}
+                setCommentSuccessMessage={setCommentSuccessMessage}
               />
             ) : comments.results.length ? (
               "Comments"
@@ -97,6 +117,7 @@ function PostPage() {
                     {...comment}
                     setPost={setPost}
                     setComments={setComments}
+                    setCommentSuccessMessage={setCommentSuccessMessage}
                   />
                 ))}
                 dataLength={comments.results.length}

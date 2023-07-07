@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import styles from "../../styles/Comment.module.css";
 import counterStyles from "../../styles/Counter.module.css";
 import CommentEditForm from "./CommentEditForm";
+import alertStyles from "../../styles/AlertMessages.module.css";
 
 import { Link } from "react-router-dom/";
 import Avatar from "../../components/Avatar";
@@ -13,6 +14,7 @@ import { axiosRes, axiosReq } from "../../api/axiosDefaults";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import Media from "react-bootstrap/Media";
+import Alert from "react-bootstrap/Alert";
 
 const Comment = (props) => {
   // Props destructuring
@@ -27,12 +29,25 @@ const Comment = (props) => {
     setComments,
     likes_count,
     like_id,
+    setCommentSuccessMessage
   } = props;
 
   // State and hooks initialization
   const [showEditForm, setShowEditForm] = useState(false);
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
+  const [successMessage, setSuccessMessage] = useState(null);
+
+
+  useEffect(() => {
+    if (successMessage) {
+      const timer = setTimeout(() => {
+        setSuccessMessage(null);
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [successMessage]);
 
   // Event handlers
   const handleDelete = async () => {
@@ -51,6 +66,8 @@ const Comment = (props) => {
         ...prevComments,
         results: prevComments.results.filter((comment) => comment.id !== id),
       }));
+
+      setCommentSuccessMessage("Comment deleted successfully!");
     } catch (err) {}
   };
 
@@ -95,68 +112,81 @@ const Comment = (props) => {
   };
 
   return (
-    <div>
-      <hr />
-      <Media className={styles.mediaGroup}>
-        <Link to={`/travelers/${traveler_id}`}>
-          <Avatar src={traveler_image} />
-        </Link>
-        <Media.Body className={styles.Body}>
-          <div className="d-flex">
-            <span className={styles.Owner}>{owner}</span>
-            <span className={styles.Date}>{updated_at}</span>
-          </div>
-          {showEditForm ? (
-            <CommentEditForm
-              id={id}
-              traveler_id={traveler_id}
-              content={content}
-              traveler_image={traveler_image}
-              setComments={setComments}
-              setShowEditForm={setShowEditForm}
-            />
-          ) : (
-            <div className="d-flex justify-content-between align-items-end">
-              <p className={styles.commentText}>{content}</p>
+    <>
+      {successMessage && (
+        <Alert
+          variant="success"
+          className={alertStyles["alert-success-custom"]}
+        >
+          {successMessage}
+        </Alert>
+      )}
+      <div>
+        <hr />
+        <Media className={styles.mediaGroup}>
+          <Link to={`/travelers/${traveler_id}`}>
+            <Avatar src={traveler_image} />
+          </Link>
+          <Media.Body className={styles.Body}>
+            <div className="d-flex">
+              <span className={styles.Owner}>{owner}</span>
+              <span className={styles.Date}>{updated_at}</span>
             </div>
-          )}
-        </Media.Body>
-        <div className={styles.iconsRight}>
-          <div className="d-flex align-items-end">
-            <span className={counterStyles.counter}>{likes_count}</span>
-            {is_owner ? (
-              <OverlayTrigger
-                placement="top"
-                overlay={<Tooltip>You can't like your own comment!</Tooltip>}
-              >
-                <i className="fa-solid fa-thumbs-up"></i>
-              </OverlayTrigger>
-            ) : like_id ? (
-              <span onClick={handleUnlike}>
-                <i className={`fa-solid fa-thumbs-up ${styles.Heart}`} />
-              </span>
-            ) : currentUser ? (
-              <span onClick={handleLike}>
-                <i className={`fa-solid fa-thumbs-up ${styles.HeartOutline}`} />
-              </span>
+            {showEditForm ? (
+              <CommentEditForm
+                id={id}
+                traveler_id={traveler_id}
+                content={content}
+                traveler_image={traveler_image}
+                setComments={setComments}
+                setShowEditForm={setShowEditForm}
+                setSuccessMessage={setSuccessMessage}
+              />
             ) : (
-              <OverlayTrigger
-                placement="top"
-                overlay={<Tooltip>Log in to like comments!</Tooltip>}
-              >
-                <i className="fa-solid fa-thumbs-up" />
-              </OverlayTrigger>
+              <div className="d-flex justify-content-between align-items-end">
+                <p className={styles.commentText}>{content}</p>
+              </div>
+            )}
+          </Media.Body>
+          <div className={styles.iconsRight}>
+            <div className="d-flex align-items-end">
+              <span className={counterStyles.counter}>{likes_count}</span>
+              {is_owner ? (
+                <OverlayTrigger
+                  placement="top"
+                  overlay={<Tooltip>You can't like your own comment!</Tooltip>}
+                >
+                  <i className="fa-solid fa-thumbs-up"></i>
+                </OverlayTrigger>
+              ) : like_id ? (
+                <span onClick={handleUnlike}>
+                  <i className={`fa-solid fa-thumbs-up ${styles.Heart}`} />
+                </span>
+              ) : currentUser ? (
+                <span onClick={handleLike}>
+                  <i
+                    className={`fa-solid fa-thumbs-up ${styles.HeartOutline}`}
+                  />
+                </span>
+              ) : (
+                <OverlayTrigger
+                  placement="top"
+                  overlay={<Tooltip>Log in to like comments!</Tooltip>}
+                >
+                  <i className="fa-solid fa-thumbs-up" />
+                </OverlayTrigger>
+              )}
+            </div>
+            {is_owner && !showEditForm && (
+              <MoreDropdown
+                handleEdit={() => setShowEditForm(true)}
+                handleDelete={handleDelete}
+              />
             )}
           </div>
-          {is_owner && !showEditForm && (
-            <MoreDropdown
-              handleEdit={() => setShowEditForm(true)}
-              handleDelete={handleDelete}
-            />
-          )}
-        </div>
-      </Media>
-    </div>
+        </Media>
+      </div>
+    </>
   );
 };
 
