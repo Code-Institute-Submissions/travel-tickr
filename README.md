@@ -90,14 +90,7 @@ The objective of Travel Tickr is to create a travel memory platform that caters 
   Mapped to all user stories.
   
 - **Implement Advanced Features *(if time permits)*:** Explore the possibility of implementing additional features, such as a world map where users' travel photos are geographically marked, a trip creation functionality that provide users with destination-specific information, safety warnings, packing checklists, and reminders for passport expiration.and a bucket list feature. Automatically create photo albums when a photo has a date that is within the time line of the created trip. A bucket list feature that will allow users to add destinations and travel experiences discovered through content shared by other users to their personal list of aspirations. Provide users with the ability to curate and manage their bucket list, making it a valuable tool for planning and tracking their travel goals.<br>
-  Mapped to User Story: [28,](https://github.com/SandraBergstrom/travel-tickr/issues/28)
-
-  [29,](https://github.com/SandraBergstrom/travel-tickr/issues/29)
-  [30,](https://github.com/SandraBergstrom/travel-tickr/issues/30)
-  [31,](https://github.com/SandraBergstrom/travel-tickr/issues/31)
-  [32](https://github.com/SandraBergstrom/travel-tickr/issues/32)
-  
-
+  Mapped to User Story: [28,](https://github.com/SandraBergstrom/travel-tickr/issues/28) [29,](https://github.com/SandraBergstrom/travel-tickr/issues/29) [30,](https://github.com/SandraBergstrom/travel-tickr/issues/30) [31,](https://github.com/SandraBergstrom/travel-tickr/issues/31) [32](https://github.com/SandraBergstrom/travel-tickr/issues/32)
 
 #### User Goals
 - **Capture and Preserve Travel Memories:** Users want to save and preserve their travel memories, including photos, stories, and experiences, in a secure and organized manner.
@@ -110,7 +103,7 @@ The objective of Travel Tickr is to create a travel memory platform that caters 
 
 - **Plan Future Adventures:** Users seek inspiration and resources to plan their future travel adventures, including destination-specific information, safety guidelines, and packing checklists.
 
-- **Curate a Personal Bucket List:** Users aspire to create and manage their own bucket list of destinations and travel experiences they wish to explore in the future.
+- **Curate a Personal Bucket List:** Users aspire to create their own bucket list of destinations and travel experiences they wish to explore in the future.
 
 - **Access a User-Friendly Platform:** Users expect a user-friendly and intuitive platform that is easy to navigate, provides a seamless uploading and sharing experience, and offers search and filter functionalities for finding relevant content.
 
@@ -183,28 +176,30 @@ By considering these user requirements and expectations, Travel Tickr can provid
 - Update Comments: Users can edit or correct their own comments to modify their shared opinions.
 - Delete Comments: Users can remove their own comments to retract or remove their previous statements.
 - Follow Users: Users can follow other users to stay updated on their travel journeys and experiences.
-- Site Owner Administration
-- Account, Post, and Comment Management: Site owners can delete user accounts, posts, and comments to maintain a safe and high-quality user environment.
+- Site Owner Administration: Account, Post, and Comment Management: Site owners can delete user accounts, posts, and comments to maintain a safe and high-quality user environment.
 
 ##### Navigation:
-###### Profile Navigation:
-Upon clicking on the profile image in the navigation bar, additional links are revealed, providing access to specific profile-related pages and actions:
+###### Universal Navigation:
+Every page includes a prominent navigation bar at the top, offering accessible features across the platform. Interactive elements such as posts, traveler profiles, and comments are equipped with a recognizable icon displaying three vertically aligned dots, indicating an additional dropdown menu for user interaction. 
 
-##### Unauthorized users
+###### Unauthenticated Users:
+Unauthenticated users are presented with a clean, intuitive navigation bar comprising a logo and links to essential pages including 'About', 'Login', and 'Sign Up'.
 
-#### Future Features
+###### Authenticated Users:
+Upon successful login, the navigation bar adapts to include exclusive features tailored for authenticated users. The 'Login' and 'Sign Up' links are replaced with additional options, namely 'Following', 'Bucketlist', 'Logout', and a direct link to their profile page.
+
+###### Authenticated and Current Users:
+For authenticated users viewing their own posts, comments, and profile, an additional layer of interactivity is provided. The recognizable icon displaying three dots reveals a dropdown menu when interacted with. This menu presents options to update or delete the corresponding content, providing users with full control over their own contributions to the platform.
 
 ##### Travel Memory Management
 - Add to Bucket List: Users will be able to add travel memories shared by others to their bucket list on the Travel Tickr platform, allowing them to save and revisit those memories later.
+
+#### Future Features
 - Multiple Photos per Post: Users will have the ability to upload several photos to a single post on the Travel Tickr platform, enabling them to share a collection of images for a particular memory.
 - Create Albums: Users will be able to create albums on the Travel Tickr platform, providing them with the capability to organize and categorize their travel memories.
-
-##### Visual Showcase
-- Word Map with Photos: Users will have the option to display a word map on their profile, with photos spread out as pins representing the locations of their travel memories on the Travel Tickr platform. This feature will allow users to visually showcase their travel experiences.
-
-##### Trip Planning and Information
 - Trip Creation and Auto-generated Photo Album: Users will be able to create a trip on the Travel Tickr platform before embarking on a journey. An auto-generated photo album will be created, incorporating photos taken during the trip. This feature will make it convenient for users to capture and share their travel moments seamlessly.
 - Trip Planning Resources: Users will have access to automated packing lists and information about destinations on the Travel Tickr platform. This information will include weather forecasts, safety warnings, recommended vaccinations, and other relevant details, ensuring that users are well-prepared for their travel plans.
+- Word Map with Photos: Users will have the option to display a word map on their profile, with photos spread out as pins representing the locations of their travel memories on the Travel Tickr platform. This feature will allow users to visually showcase their travel experiences.
 
 #### User Stories
 
@@ -256,10 +251,7 @@ Upon clicking on the profile image in the navigation bar, additional links are r
 
 ### Structure
 #### Database
-The Travel Tickr utilizes the following database schema:
-<details><summary>See Database Schema</summary>
-<img src="/docs/database-diagram.png">
-</details> <br>
+For more detailed information about the database, kindly refer to [the API's](https://github.com/SandraBergstrom/travel-tickr-api) [README document](https://github.com/SandraBergstrom/travel-tickr-api/blob/main/README.md).
 
 ### Component Architecture and Reusability
 Travel Tickr is a social web application that empowers users to share travel experiences, explore new destinations, and interact with other travel enthusiasts. The app's architecture comprises several reusable components that streamline development and ensure a consistent user experience.
@@ -402,7 +394,6 @@ The typography chosen for Travel Tickr is both Lato and Roboto, selected for the
 ### Supporting Libraries and Packages
 - @testing-library/jest-dom, @testing-library/react, @testing-library/user-event: These libraries are part of the Testing Library, a lightweight solution for testing JavaScript and React code.
 - axios: Promise-based HTTP client for making asynchronous HTTP requests in JavaScript.
-
 - jwt-decode: A small browser library that helps decoding JWTs token which are Base64Url encoded.
 - react-dom: Serves as the entry point to the DOM and server renderers for React.
 - react-infinite-scroll-component: A component to implement 'infinite scroll' in a ReactJS application.
@@ -481,6 +472,9 @@ Within each sprint, a MoSCoW method is used to further prioritize user stories. 
 * [ ] Do so navigation bar and authorization works (Could do) *- Moved to next sprint*
 * [ ] Design and implement footer (Could do) *- Moved to next sprint*
 
+**Sprint 1 recap:**
+In sprint 1 I accomplished critical planning and documentation tasks, and successfully created the backend of the project including the creation of numerous apps and models. The initiation of the frontend was also embarked upon, though several elements have been postponed to the subsequent sprint.
+
 #### Sprint 2 (June 19th - June 24th, 2023):
 * [ ] Location (Must do)  *- Moved to next sprint and user story created*
 * [x] Test deploy project on Heroku (Must do) 
@@ -506,6 +500,9 @@ Within each sprint, a MoSCoW method is used to further prioritize user stories. 
 * [ ] [USER STORY: Update Comment](https://github.com/SandraBergstrom/travel-tickr/issues/23) (Could do) *- Moved to next sprint*
 * [ ] [USER STORY: Delete Comment](https://github.com/SandraBergstrom/travel-tickr/issues/24) (Could do) *- Moved to next sprint*
 * [x] Plan Sprint 2 (Must do)
+
+**Sprint 2 recap:**
+During sprint 2 the focus was on the further development of the frontend, with significant progress made on the implementation of the navigation bar and authorization. Additionally, several crucial user stories pertaining to user registration, login, logout, and post creation and viewing were completed, while a few tasks and user stories have been transitioned to the next sprint.
 
 #### Sprint 3 (June 25th - July 1st, 2023): 
 * [ ] [USER STORY: About page](https://github.com/SandraBergstrom/travel-tickr/issues/61) (Must do) *- Moved to next sprint*
@@ -540,7 +537,7 @@ Within each sprint, a MoSCoW method is used to further prioritize user stories. 
 **Sprint 3 recap:** Although I have decided to move the "Location" user story to the next sprint, we have successfully accomplished a significant portion of the planned tasks for Sprint 3. 
 
 #### Sprint 4 (July 2nd - July 7th, 2023): 
-* [ ] [USER STORY: About page](https://github.com/SandraBergstrom/travel-tickr/issues/61) (Must do) 
+* [x] [USER STORY: About page](https://github.com/SandraBergstrom/travel-tickr/issues/61) (Must do) 
 * [x] [USER STORY: Like comments](https://github.com/SandraBergstrom/travel-tickr/issues/54) (Must do)
 * [ ] [USER STORY: Upload multiple photos](https://github.com/SandraBergstrom/travel-tickr/issues/28) (Should do) *- Moved to backlog*
 * [ ] [USER STORY: Photo Album](https://github.com/SandraBergstrom/travel-tickr/issues/29) (Could do) *- Moved to backlog*
@@ -548,11 +545,10 @@ Within each sprint, a MoSCoW method is used to further prioritize user stories. 
 * [ ] [USER STORY: Create a trip](https://github.com/SandraBergstrom/travel-tickr/issues/31) (Wont do) *- Moved to backlog*
 * [ ] [USER STORY: Packing list and info](https://github.com/SandraBergstrom/travel-tickr/issues/32) (Wont do) *- Moved to backlog*
 * [x] [USER STORY: Location](https://github.com/SandraBergstrom/travel-tickr/issues/36) (Must do) 
-* [ ] Testing  (Must do)
-* [ ] Documentation (Must do)
-* [ ] [USER STORY: 404-page](https://github.com/SandraBergstrom/travel-tickr/issues/58)
-* [ ] [USER STORY: Improve application and deployment](https://github.com/SandraBergstrom/travel-tickr/issues/57) (Must do)
-* [ ] [USER STORY: Test application](https://github.com/SandraBergstrom/travel-tickr/issues/56) (Must do)
+* [x] Documentation (Must do)
+* [x] [USER STORY: 404-page](https://github.com/SandraBergstrom/travel-tickr/issues/58)
+* [x] [USER STORY: Improve application and deployment](https://github.com/SandraBergstrom/travel-tickr/issues/57) (Must do)
+* [x] [USER STORY: Test application](https://github.com/SandraBergstrom/travel-tickr/issues/56) (Must do)
 
 #### Backlog
 * [ ] [USER STORY: Upload multiple photos](https://github.com/SandraBergstrom/travel-tickr/issues/28) 
@@ -561,6 +557,8 @@ Within each sprint, a MoSCoW method is used to further prioritize user stories. 
 * [ ] [USER STORY: Create a trip](https://github.com/SandraBergstrom/travel-tickr/issues/31)
 * [ ] [USER STORY: Packing list and info](https://github.com/SandraBergstrom/travel-tickr/issues/32)
 
+**Sprint 4 recap:** 
+The focus was on finalizing the project and completing essential user stories. The About page, the ability to like comments, and the implementation of the location feature were successfully accomplished. Documentation, including the creation of a 404-page, and improving application deployment were also completed. While some user stories were moved to the backlog for future consideration, the application was thoroughly tested to ensure its functionality and quality.
 
 ### Backlog and Subsequent Iterations 
 The user stories are tracked on the project board, and the "To do" column represents the backlog of user stories (also see above), indicating the tasks that will be addressed in subsequent iterations.
