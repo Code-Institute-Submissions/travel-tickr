@@ -171,13 +171,27 @@ const Post = (props) => {
               <i className="far fa-heart" />
             </OverlayTrigger>
           ) : like_id ? (
-            <span onClick={handleUnlike}>
-              <i className={`fas fa-heart ${styles.Heart}`} />
-            </span>
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>No more love!</Tooltip>}
+            >
+              <div>
+                <span onClick={handleUnlike}>
+                  <i className={`fas fa-heart ${styles.Heart}`} />
+                </span>
+              </div>
+            </OverlayTrigger>
           ) : currentUser ? (
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Love it!</Tooltip>}
+            >
+              <div>
             <span onClick={handleLike}>
               <i className={`far fa-heart ${styles.HeartOutline}`} />
             </span>
+            </div>
+            </OverlayTrigger>
           ) : (
             <OverlayTrigger
               placement="top"
@@ -187,18 +201,37 @@ const Post = (props) => {
             </OverlayTrigger>
           )}
           <span className={counterStyles.counter}>{likes_count}</span>
+          <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>See Comments!</Tooltip>}
+            >
           <Link to={`/posts/${id}`}>
             <i className="far fa-comments" />
           </Link>
+          </OverlayTrigger>
           <span className={counterStyles.counter}>{comments_count}</span>
           {bucketlist_id ? (
-            <span onClick={handleRemoveFromBucketlist}>
-              <i className={`fa-solid fa-bucket ${styles.Heart}`} />
-            </span>
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Remove from bucketlist!</Tooltip>}
+            >
+              <div>
+                <span onClick={handleRemoveFromBucketlist}>
+                  <i className={`fa-solid fa-bucket ${styles.Heart}`} />
+                </span>
+              </div>
+            </OverlayTrigger>
           ) : (
-            <span onClick={handleBucketlist}>
-              <i className={`fa-solid fa-bucket ${styles.HeartOutline}`} />
-            </span>
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Add to bucketlist!</Tooltip>}
+            >
+              <div>
+                <span onClick={handleBucketlist}>
+                  <i className={`fa-solid fa-bucket ${styles.HeartOutline}`} />
+                </span>
+              </div>
+            </OverlayTrigger>
           )}
           <span className={counterStyles.counter}>{bucketlists_count}</span>
         </div>
