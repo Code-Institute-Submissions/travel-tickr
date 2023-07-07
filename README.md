@@ -575,33 +575,40 @@ For a comprehensive view of the project progress, user stories, and bug tracking
 
 | **Bug** | **Status** |
 | ----------- | ----------- |
-| []()|  |
-|||
+| None |-|
+
 
 ### Fixed bugs 
-
+Here is a summary of the identified bugs along with brief descriptions of their fixes. For more detailed information, please follow the provided link to the corresponding GitHub issue, where you can track the entire process including the bug report, commits, and the steps taken to resolve the issue.
 | **Bug** | **Fix** |
 | ----------- | ----------- |
 |[Npm start error message](https://github.com/SandraBergstrom/travel-tickr/issues/38)| Run "nvm install 16" |
-
+|[Can't follow some travelers](https://github.com/SandraBergstrom/travel-tickr/issues/60#issue-1789572956)|Remove the .active css dark since that was making the button all dark when pressed which looked strange.(see also backend fix in issues details)|
+|[Can't signup from other than home page](https://github.com/SandraBergstrom/travel-tickr/issues/59#issue-1789453694)|Add "/" to navlink. See details and link to commit in bug report|
+|[Filter for bucketlist not working](https://github.com/SandraBergstrom/travel-tickr/issues/53#issue-1784111361)|Add correct sorting and connection to filter|
+|[Can't run React app](https://github.com/SandraBergstrom/travel-tickr/issues/52#issue-1783788144)|See steps in issue|
+|[No posts showing on home page](https://github.com/SandraBergstrom/travel-tickr/issues/49#issue-1776392035)|Remove filter|
+|[Filter function is not working](https://github.com/SandraBergstrom/travel-tickr/issues/48#issue-1775479887)|Correct imports and typos|
+|[Redirect after signup](https://github.com/SandraBergstrom/travel-tickr/issues/47#issue-1772735540)|Correct history push|
+|[Search input in the navbar, closes the menu when clicked.](https://github.com/SandraBergstrom/travel-tickr/issues/46#issue-1769602822)|Exclude search input from click event.|
+|[Can't start react](https://github.com/SandraBergstrom/travel-tickr/issues/37#issue-1762328569)|Add react template|
+|[]()||
 
 [Back up](#table-of-content)
 
 ## Testing
-The Travel Tickr ....
-
-To view the complete testing details and results, please [click here](TESTING.md).
+The testing phase indicates that the application is reliable, offering a smooth and comprehensive user experience. To view the complete testing details and results, please [click here](TESTING.md).
 
 [Back up](#table-of-content)
 
 ## Deployment
 The website was deployed using Heroku, following the steps below:
 
-1. **Create a Heroku Account**: If you do not have a Heroku account already, create one. Heroku is a platform that enables developers to build, run, and operate applications entirely in the cloud.
+1. **Create a [Heroku](https://dashboard.heroku.com/) Account**: If you do not have a Heroku account already, create one. Heroku is a platform that enables developers to build, run, and operate applications entirely in the cloud.
 2. **Prepare your Application**: Commit and push your code to your GitHub repository. Ensure that all necessary changes have been made and the latest version of the application is ready for deployment.
 3. **Create a New Application on Heroku**: From your Heroku dashboard, create a new application. Choose an appropriate name for your application and select a region.
 4. **Set Environment Variables**: Ensure the environmental variables are also added to your Heroku app settings under the Config Vars section. This is done to protect sensitive data and also to allow the services to communicate with your Heroku app.
-5.**Deployment Process**: In the Heroku dashboard, navigate to the "Deploy" section of your application. Here, you will be able to link your GitHub repository to your Heroku app. Ensure that the repository and branch that contain the version of your app that you wish to deploy are selected. Finally, click "Deploy Branch" under the "Manual deploy" section.
+5. **Deployment Process**: In the Heroku dashboard, navigate to the "Deploy" section of your application. Here, you will be able to link your GitHub repository to your Heroku app. Ensure that the repository and branch that contain the version of your app that you wish to deploy are selected. Finally, click "Deploy Branch" under the "Manual deploy" section.
 6. **Verify Deployment**: After the deployment process completes, Heroku will provide a URL to the live application. Open this URL in your browser to ensure the application has been deployed successfully and is functioning as expected.
 
 You can for fork the repository by following these steps:
@@ -624,30 +631,24 @@ You can clone the repository by following these steps:
 I would like to express my sincere gratitude to the following resources, which have been instrumental in the development of the Travel Tickr:
 
 ### Media
-...
+All images used in the webapp is from [Pexels](https://www.pexels.com/sv-se/) and some have been altered in [Adobe Photoshop](https://www.adobe.com/se/products/photoshop/landpb.html?gclid=EAIaIQobChMIv4js09T8_wIV5BJ7Ch3VUAH4EAAYASAAEgJeOPD_BwE&mv=search&mv=search&sdid=LZ32SYVR&ef_id=EAIaIQobChMIv4js09T8_wIV5BJ7Ch3VUAH4EAAYASAAEgJeOPD_BwE:G:s&s_kwcid=AL!3085!3!340816129392!e!!g!!adobe%20photoshop!1469952956!58520335113&gad=1) by me. The images that are uploaded belong to the users except from the user Sandra that is using images from Pexels. 
+
+### Fonts
+[Google Fonts](https://fonts.google.com/)
+
+### Other
+[API to fetch countries](https://restcountries.com/)
+
+[Pillow - Image module ](https://pillow.readthedocs.io/en/stable/reference/Image.html)
+
 ### Django Documentation:
-...
-
-### W3 Schools:
-...
-
-### Stackoverflow:
-...
-
-### Geeksforgeeks: 
-...
-
-### Various tutorials and YouTube channels:
-....
-
-### Other open-source projects and packages:
-....
+[django-versatileimagefield - Custom filters](https://django-versatileimagefield.readthedocs.io/en/2.1/writing_custom_sizers_and_filters.html)
 
 [Back up](#table-of-content)
 
 ## Acknowledgements
-I would like to acknowledge ...
+I would like to express my gratitude to Code Institute's project "Moments" as it served as a significant source of inspiration for my own project. I am also incredibly thankful to my mentor, Jubrile Akolade, for providing guidance and valuable feedback throughout the development process. Additionally, I extend my appreciation to Kay Welfare for being readily available, offering support, and providing assistance whenever needed. Their contributions have been instrumental in the successful completion of this project.
 
-I am truly grateful for their contributions, which have greatly enriched my learning and development.
+I would also like to extend my gratitude to two of the testers who have made significant contributions: [Debbie](https://github.com/DebbieBergstrom) and [Kim](https://github.com/KimBergstroem). They have been instrumental in providing necessary feedback, identifying errors, and offering valuable tips. Their involvement has greatly contributed to the overall refinement of the project.
 
 [Back up](#table-of-content)
