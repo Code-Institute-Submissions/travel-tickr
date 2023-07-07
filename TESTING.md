@@ -302,101 +302,101 @@ Each participant was encouraged to provide feedback and report any issues or imp
 #### Navbar 
 |**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
 |--- | --- | --- | --- | :---:
-|Logo|Redirects to index.page|Clicked on logo|index page loads|:white_check_mark:
-|Login|Redirects to the login page|clicked on link "Login"|loads the login page and form|:white_check_mark:
-|Sign up|Redirects to to the signup page and form|clicked on the link "Sign up"|loads the sign up page and form|:white_check_mark:
+|Logo|Redirects to index.page|Clicked on logo|Works as expected|:white_check_mark:
+|Login|Redirects to the login page|clicked on link "Login"|Works as expected|:white_check_mark:
+|Sign up|Redirects to to the signup page and form|clicked on the link "Sign up"|Works as expected|:white_check_mark:
 
 #### Posts list
 |**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
 |--- | --- | --- | --- | :---:
-|Search|Search result should only contain the post with the specified title|Try to search for a post by a specific title and verify that the search result only includes that post|:white_check_mark:
-|Like a post|The functionality should prompt the user to log in before they can like the post|Like a post and verify that a popup comes with text to login.|:white_check_mark:
-|Comment on a Post|The functionality should prompt the user to log in before they can comment.|Varify that I can not make a comment and be prompted to login. |:white_check_mark:
-|Like a comment|The functionality should prompt the user to log in before they can like the comment|Like a comment and verify that a popup comes with text to login.|:white_check_mark:
-|Add to bucketlist|The functionality should prompt the user to log in before they can add post to the bucketlist|Add a post to bucketlist and verify that a popup comes with text to login.|:white_check_mark:
+|Search|Search result should only contain the post with the specified title|Try to search for a post by a specific title and verify that the search result only includes that post|Works as expected|:white_check_mark:
+|Like a post|The functionality should prompt the user to log in before they can like the post|Like a post and verify that a popup comes with text to login.|Works as expected|:white_check_mark:
+|Comment on a Post|The functionality should prompt the user to log in before they can comment.|Varify that I can not make a comment and be prompted to login. |Works as expected|:white_check_mark:
+|Like a comment|The functionality should prompt the user to log in before they can like the comment|Like a comment and verify that a popup comes with text to login.|Works as expected|:white_check_mark:
+|Add to bucketlist|The functionality should prompt the user to log in before they can add post to the bucketlist|Add a post to bucketlist and verify that a popup comes with text to login.|Works as expected|:white_check_mark:
 
 #### Create an account
 |**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
 |--- | --- | --- | --- | :---:
-|No match passwords|The account creation should fail, and an error message should be displayed indicating password mismatch.|Provide different passwords.|:white_check_mark:
-|No username|The account creation should fail, and an error message should be displayed indicating a missing username.|Submit the form without entering a username.|:white_check_mark:
-|Submit valid data|The account should be successfully created, and the user should be redirected to the home page.|Submit the form with a valid username and matching passwords.|:white_check_mark:
+|No match passwords|The account creation should fail, and an error message should be displayed indicating password mismatch.|Provide different passwords.|Works as expected|:white_check_mark:
+|No username|The account creation should fail, and an error message should be displayed indicating a missing username.|Submit the form without entering a username.|Works as expected|:white_check_mark:
+|Submit valid data|The account should be successfully created, and the user should be redirected to the home page.|Submit the form with a valid username and matching passwords.|Works as expected|:white_check_mark:
 
 #### Log in
 |**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
 |--- | --- | --- | --- | :---:
-|No/wrong username|The login should fail, and an error message should be displayed indicating a missing username.|Attempt to log in without entering a username and then the wrong username.|:white_check_mark:
-|No/wrong password|The login should fail, and an error message should be displayed indicating a missing password.|Attempt to log in without entering a password and then the wrong password.|:white_check_mark:
-|Valid username and password|The login should be successful, and the user should be redirected to the home page.|Log in with a valid username and password.|:white_check_mark:
+|No/wrong username|The login should fail, and an error message should be displayed indicating a missing username.|Attempt to log in without entering a username and then the wrong username.|Works as expected|:white_check_mark:
+|No/wrong password|The login should fail, and an error message should be displayed indicating a missing password.|Attempt to log in without entering a password and then the wrong password.|Works as expected|:white_check_mark:
+|Valid username and password|The login should be successful, and the user should be redirected to the home page.|Log in with a valid username and password.|Works as expected|:white_check_mark:
 
 ### Authorized user
 #### Navbar
 |**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
 |--- | --- | --- | --- | :---:
 |Logo|Redirects to index.page|Clicked on logo|index page loads|:white_check_mark:
-|Add Memory|Redirect to the create a post page|Press the + icon with the text Memory|:white_check_mark:
-|Home|The user should remain on the home page or go there if on another page.|Click on the "Home" link in the navbar.|:white_check_mark:
-|Following|The user should be navigated to the feed page, where only posts from travelers they follow are displayed.|Click on the "Following" link in the navbar.|:white_check_mark:
-|Bucketlist |The user should be navigated to the bucketlist page, where their added posts are displayed.|"Bucketlist" link in the navbar.|:white_check_mark:
-|Avatar|The user should be navigated to the profile page of the logged-in traveler.|Click on the avatar in the navbar.|:white_check_mark:
-|Logout |The user should be logged out and redirected to the home page.|Click on the "Logout" link in the navbar.|:white_check_mark:
+|Add Memory|Redirect to the create a post page|Press the + icon with the text Memory|Works as expected|:white_check_mark:
+|Home|The user should remain on the home page or go there if on another page.|Click on the "Home" link in the navbar.|Works as expected|:white_check_mark:
+|Following|The user should be navigated to the feed page, where only posts from travelers they follow are displayed.|Click on the "Following" link in the navbar.|Works as expected|:white_check_mark:
+|Bucketlist |The user should be navigated to the bucketlist page, where their added posts are displayed.|"Bucketlist" link in the navbar.|Works as expected|:white_check_mark:
+|Avatar|The user should be navigated to the profile page of the logged-in traveler.|Click on the avatar in the navbar.|Works as expected|:white_check_mark:
+|Logout |The user should be logged out and redirected to the home page.|Click on the "Logout" link in the navbar.|Works as expected|:white_check_mark:
 
 #### Memory (post):
 |**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
 |--- | --- | --- | --- | :---:
-|No image|The memory creation should fail, and an error message should be displayed indicating a missing image.|Try to add a memory without an image.|:white_check_mark:
-|No title|The memory creation should fail, and an error message should be displayed indicating a missing title.|Try to add a memory without a title.|:white_check_mark:
-|No text content|The memory creation should fail, and an error message should be displayed indicating a missing text.|Try to add a memory without a text content.|:white_check_mark:
-|Cancel button|The memory creation process should be canceled, and the user should be returned to the previous page.|Press the cancel button while adding a memory.|:white_check_mark:
-|Add a memory|The memory should be successfully created, and it should be displayed on the home page.|Fill in all the fields and press the save button while adding a memory.|:white_check_mark:
-|Update a memory|A valid post update should be saved.|Update one of your own posts by accessing the memory detail view, going to the menu, and selecting the update option. Cancel the update process and successfully update a post.|:white_check_mark:
-|Cance update|Canceling should exit the update process|Cancel the update process by pressing the cancel button|:white_check_mark:
-||The user should first see an alert about deleting, then if pressing the post should be successfully deleted.|Delete one of your own posts by accessing the memory detail view, going to the menu, and selecting the delete option.|:white_check_mark:
+|No image|The memory creation should fail, and an error message should be displayed indicating a missing image.|Try to add a memory without an image.|Works as expected|:white_check_mark:
+|No title|The memory creation should fail, and an error message should be displayed indicating a missing title.|Try to add a memory without a title.|Works as expected|:white_check_mark:
+|No text content|The memory creation should fail, and an error message should be displayed indicating a missing text.|Try to add a memory without a text content.|Works as expected|:white_check_mark:
+|Cancel button|The memory creation process should be canceled, and the user should be returned to the previous page.|Press the cancel button while adding a memory.|Works as expected|:white_check_mark:
+|Add a memory|The memory should be successfully created, and it should be displayed on the home page.|Fill in all the fields and press the save button while adding a memory.|Works as expected|:white_check_mark:
+|Update a memory|A valid post update should be saved.|Update one of your own posts by accessing the memory detail view, going to the menu, and selecting the update option. Cancel the update process and successfully update a post.|Works as expected|:white_check_mark:
+|Cance update|Canceling should exit the update process|Cancel the update process by pressing the cancel button|Works as expected|:white_check_mark:
+||The user should first see an alert about deleting, then if pressing the post should be successfully deleted.|Delete one of your own posts by accessing the memory detail view, going to the menu, and selecting the delete option.|Works as expected|:white_check_mark:
 
 #### Comments
 |**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
 |--- | --- | --- | --- | :---:
-|Add a comment to another user's post|The comment should be successfully added to the post and the comments counter should increase.|Scroll to the comments field, add a comment, and save it.|:white_check_mark:
-|Update comment|A valid comment update should be saved.|Update one of your own comments on another user's post by accessing the memory detail view, scrolling to the comments field, accessing the menu for your comment, and selecting the update option.|:white_check_mark:
-|Cancel update|Canceling should exit the update process,|Cancel the update process |:white_check_mark:
-|Delete a Comment|First a warning alert should be visible and if the user continues to click the comment should be successfully deleted.|Delete one of your own comments by accessing the comment, accessing the menu, and selecting the delete option.|:white_check_mark:
-|Like a Comment|The comment should be successfully liked and the counter should increase|Like another user's comment by accessing the comment and pressing the thumbs-up icon.|:white_check_mark:
-|Unlike a Comment|The comment should be successfully unliked and the counter should decrease.|Press the thumbs icon again to unlike the comment.|:white_check_mark:
+|Add a comment to another user's post|The comment should be successfully added to the post and the comments counter should increase.|Scroll to the comments field, add a comment, and save it.|Works as expected|:white_check_mark:
+|Update comment|A valid comment update should be saved.|Update one of your own comments on another user's post by accessing the memory detail view, scrolling to the comments field, accessing the menu for your comment, and selecting the update option.|Works as expected|:white_check_mark:
+|Cancel update|Canceling should exit the update process,|Cancel the update process |Works as expected|:white_check_mark:
+|Delete a Comment|First a warning alert should be visible and if the user continues to click the comment should be successfully deleted.|Delete one of your own comments by accessing the comment, accessing the menu, and selecting the delete option.|Works as expected|:white_check_mark:
+|Like a Comment|The comment should be successfully liked and the counter should increase|Like another user's comment by accessing the comment and pressing the thumbs-up icon.|Works as expected|:white_check_mark:
+|Unlike a Comment|The comment should be successfully unliked and the counter should decrease.|Press the thumbs icon again to unlike the comment.|Works as expected|:white_check_mark:
 
 
 #### Home Page
 |**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
 |--- | --- | --- | --- | :---:
-|Search|The search functionality should return relevant posts based on the search query.|Search for a post.|:white_check_mark:
-|Like post|The post should be successfully liked, and the like count should increment.|Like a post.|:white_check_mark:
-|Add to bucketlist|The post should be successfully added to bucketlist, and the like count should increment.|Like a post.|:white_check_mark:
-|Infinity scroll|The home page should load more posts as the user scrolls down, demonstrating infinite scrolling.|Scroll through the home page.|:white_check_mark:
+|Search|The search functionality should return relevant posts based on the search query.|Search for a post.|Works as expected|:white_check_mark:
+|Like post|The post should be successfully liked, and the like count should increment.|Like a post.|Works as expected|:white_check_mark:
+|Add to bucketlist|The post should be successfully added to bucketlist, and the like count should increment.|Like a post.|Works as expected|:white_check_mark:
+|Infinity scroll|The home page should load more posts as the user scrolls down, demonstrating infinite scrolling.|Scroll through the home page.|Works as expected|:white_check_mark:
 
 #### Following page
 |**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
 |--- | --- | --- | --- | :---:
-|No followers|Page should display the appropriate icon and text to prompt you to follow another traveler.|Go to the following feed page by clicking the link in the navbar|:white_check_mark:
-|Follow|The user should be successfully followed, their posts should appear in the "Following" page, the users followers count should increase with 1 as will the followers follower count.|Click the follow button on a user.|:white_check_mark:
-|Unfollow|The user should be successfully unfollowed, their posts should not appear in the "Following" feed anymore. Users followers count should go down by one|Click the follow button on a user.|:white_check_mark:
+|No followers|Page should display the appropriate icon and text to prompt you to follow another traveler.|Go to the following feed page by clicking the link in the navbar|Works as expected|:white_check_mark:
+|Follow|The user should be successfully followed, their posts should appear in the "Following" page, the users followers count should increase with 1 as will the followers follower count.|Click the follow button on a user.|Works as expected|:white_check_mark:
+|Unfollow|The user should be successfully unfollowed, their posts should not appear in the "Following" feed anymore. Users followers count should go down by one|Click the follow button on a user.|Works as expected|:white_check_mark:
 
 #### Bucketlist page
 |**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
 |--- | --- | --- | --- | :---:
-|No bucketlist items|Page should display the appropriate icon and text to prompt you to add posts to the bucketlist.|Go to the bucketlist page by clicking the link in the navbar|:white_check_mark:
-|Add to bucketlist|The post should be successfully added and the counter for that posts bucketlists should increase by one.|Click the bucket on a post.|:white_check_mark:
-|Remove post|The post should be successfully removed from the bucketlist and the counter should go down with one.|Click the bucket on a post.|:white_check_mark:
+|No bucketlist items|Page should display the appropriate icon and text to prompt you to add posts to the bucketlist.|Go to the bucketlist page by clicking the link in the navbar|Works as expected|:white_check_mark:
+|Add to bucketlist|The post should be successfully added and the counter for that posts bucketlists should increase by one.|Click the bucket on a post.|Works as expected|:white_check_mark:
+|Remove post|The post should be successfully removed from the bucketlist and the counter should go down with one.|Click the bucket on a post.|Works as expected|:white_check_mark:
 
 #### Travelers profile page
 |**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
 |--- | --- | --- | --- | :---:
-|Go to profile|Users profile page should be displayed.|Click on your avatar to navigate to your profile.|:white_check_mark:
-|Menu|Dropdown list with options to update profile, change username and password will appear.|Click the 3 dots in the upper right corner and go to the "Update Profile" option.|:white_check_mark:
-|Update profile|The profile should be successfully updated, and the changes should be reflected on the profile page.|Update your profile information and press the save button.|:white_check_mark:
-|Cancel update|The profile update process should be canceled, and the user should be returned to the profile page.|Press the cancel button while updating the profile.|:white_check_mark:
-|Change username|The username should be successfully changed, and the updated username should be displayed on the profile page.|Change the username and press the save button.|:white_check_mark:
-|Cancel update|The username change process should be canceled, and the user should be returned to the profile page.|Press the cancel button while changing the username.|:white_check_mark:
-|Change password|The password should be successfully changed, and the user should be prompted to log in again with the new password.|Change the password and press the save button.|:white_check_mark:
-|Cancel update|The password change process should be canceled, and the user should be returned to the profile page.|Press the cancel button while changing the password.|:white_check_mark:
+|Go to profile|Users profile page should be displayed.|Click on your avatar to navigate to your profile.|Works as expected|:white_check_mark:
+|Menu|Dropdown list with options to update profile, change username and password will appear.|Click the 3 dots in the upper right corner and go to the "Update Profile" option.|Works as expected|:white_check_mark:
+|Update profile|The profile should be successfully updated, and the changes should be reflected on the profile page.|Update your profile information and press the save button.|Works as expected|:white_check_mark:
+|Cancel update|The profile update process should be canceled, and the user should be returned to the profile page.|Press the cancel button while updating the profile.|Works as expected|:white_check_mark:
+|Change username|The username should be successfully changed, and the updated username should be displayed on the profile page.|Change the username and press the save button.|Works as expected|:white_check_mark:
+|Cancel update|The username change process should be canceled, and the user should be returned to the profile page.|Press the cancel button while changing the username.|Works as expected|:white_check_mark:
+|Change password|The password should be successfully changed, and the user should be prompted to log in again with the new password.|Change the password and press the save button.|Works as expected|:white_check_mark:
+|Cancel update|The password change process should be canceled, and the user should be returned to the profile page.|Press the cancel button while changing the password.|Works as expected|:white_check_mark:
 
 [Back to the top](#table-of-content)
 
