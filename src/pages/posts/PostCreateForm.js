@@ -82,7 +82,9 @@ function PostCreateForm({ userId }) {
 
     try {
       const { data } = await axiosReq.post("/posts/", formData);
-      history.push(`/posts/${data.id}`);
+      history.push(`/posts/${data.id}`, {
+        message: "Your memory was successfully posted.",
+      });
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {

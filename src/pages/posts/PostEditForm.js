@@ -79,7 +79,9 @@ function PostEditForm() {
 
     try {
       await axiosReq.put(`/posts/${id}/`, formData);
-      history.push(`/posts/${id}`);
+      history.push(`/posts/${id}`, {
+        message: "Your memory was successfully updated.",
+      });
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
@@ -109,7 +111,7 @@ function PostEditForm() {
         </Alert>
       ))}
       <Form.Group>
-        <Form.Label>A few words about this moment...</Form.Label>
+        <Form.Label>Tell us about this moment...</Form.Label>
         <Form.Control
           as="textarea"
           rows={6}
