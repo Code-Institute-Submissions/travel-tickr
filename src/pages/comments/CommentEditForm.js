@@ -36,7 +36,7 @@ function CommentEditForm(props) {
         }),
       }));
       setShowEditForm(false);
-      props.setSuccessMessage('Comment updated successfully!'); 
+      props.setSuccessMessage("Comment updated successfully!");
     } catch (err) {
       console.log(err);
     }
@@ -55,7 +55,7 @@ function CommentEditForm(props) {
       </Form.Group>
       <div className="text-right">
         <button
-          className={styles.Button}
+          className={styles.Bright}
           onClick={() => setShowEditForm(false)}
           type="button"
         >

@@ -29,7 +29,7 @@ const Comment = (props) => {
     setComments,
     likes_count,
     like_id,
-    setCommentSuccessMessage
+    setCommentSuccessMessage,
   } = props;
 
   // State and hooks initialization
@@ -37,7 +37,6 @@ const Comment = (props) => {
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
   const [successMessage, setSuccessMessage] = useState(null);
-
 
   useEffect(() => {
     if (successMessage) {
